@@ -1,0 +1,17 @@
+.break-min(@rule) {
+  @media screen and (min-width: (unit(@break-min/@base,rem)) ) {
+    @rule();
+  }
+}
+
+.break-mid(@rule) {
+  @media screen and (min-width: (unit(@break-mid/@base,rem)) ) {
+    @rule();
+  }
+}
+
+.break-max(@rule) {
+  @media screen and (min-width: (unit(@break-max/@base,rem)) ) {
+    @rule();
+  }
+}

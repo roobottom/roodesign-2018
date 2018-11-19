@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of hands-on design leader Jon Roobottom">
+    <title>{{ title or site_title }}</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700,700i" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ theme:css }}">
+</head>
+
+
+<body>
+
+  <header class="site-header">
+    <nav class="site-navigation">
+      <ul>
+        <li><a href="/"><svg width="28" height="35" xmlns="http://www.w3.org/2000/svg"><g id="svg-logo" fill="none" fill-rule="evenodd"><path d="M13.6 8.507L.707 21.4 13.6 34.293 26.493 21.4 13.6 8.507z"/><path d="M20.388 1L27.2 7.808 13.6 21.4 0 7.808 6.812 1 13.6 7.784z"/></g></svg></a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="#">My work</a><li>
+      </ul>
+    </nav>
+    <h1>{{ title }}</h1>
+  </header>
+
+
+
+  {{ template_content }}
+
+
+  <script src="{{ theme:js }}"></script>
+
+</body>
+
+</html>
