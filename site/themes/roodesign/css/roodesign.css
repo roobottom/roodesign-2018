@@ -155,24 +155,255 @@ a img {
 :focus {
   outline: 0;
 }
+@font-face {
+  font-family: 'carlson';
+  src: url('/site/themes/roodesign/fonts/carlson.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'Fira Sans', sans-serif;
+  color: black;
+  -webkit-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga" 1;
+  font-variant: normal;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  font-size: 1.0625rem;
+  line-height: 1.41176471;
+}
+@media screen and (min-width: 63.75rem) {
+  body {
+    font-size: 1.1875rem;
+    line-height: 1.47368421;
+  }
+}
+@supports ((-webkit-font-variant-ligatures: common-ligatures) or (font-variant-ligatures: common-ligatures)) {
+  body {
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    -webkit-font-variant-ligatures: common-ligatures;
+    font-variant-ligatures: common-ligatures;
+  }
+}
+p {
+  margin-top: 1em;
+}
+p:first-child {
+  margin-top: auto;
+}
+h1 {
+  font-family: 'carlson', serif;
+  font-weight: normal;
+  font-size: 2.4375rem;
+  line-height: 1;
+}
+@media screen and (min-width: 42.5rem) {
+  h1 {
+    font-size: 5.5vw;
+  }
+}
+h2 {
+  font-weight: 300;
+  font-size: 2.25rem;
+  line-height: 1.11111111;
+  margin-bottom: 1.0625rem;
+}
+@media screen and (min-width: 90rem) {
+  h2 {
+    font-size: 3.1875rem;
+    line-height: 1.09803922;
+  }
+}
+@media screen and (min-width: 90rem) {
+  h2 {
+    margin-bottom: 1.1875rem;
+  }
+}
+figcaption {
+  font-size: 0.875rem;
+  line-height: 1.42857143;
+  color: #555555;
+}
+i,
+em {
+  font-style: italic;
+}
+b,
+strong {
+  font-weight: bold;
+}
+sup,
+sub {
+  position: relative;
+}
+sup {
+  top: -0.3em;
+}
+sub {
+  bottom: -0.3em;
+}
+@supports (font-variant-position: sub) {
+  sub,
+  sup {
+    position: inherit;
+    top: auto;
+    bottom: auto;
+  }
+  sub {
+    font-variant-position: sub;
+  }
+  sup {
+    font-variant-position: super;
+  }
+}
+.prose li ul,
+.prose li ol {
+  margin-left: 2em;
+}
+.prose ol li {
+  list-style-position: outside;
+}
+.prose ul li {
+  list-style-position: inside;
+}
+@media screen and (min-width: 42.5rem) {
+  .prose ul li {
+    list-style-position: outside;
+  }
+}
+.prose li {
+  margin-top: 0.2em;
+}
+.prose > ul > li:first-child,
+.prose > ol > li:first-child {
+  margin-top: 0;
+}
+.prose ul li li {
+  list-style-type: circle;
+}
+.prose ul li li li {
+  list-style: square;
+}
+.prose ol li li {
+  list-style-type: lower-alpha;
+}
+.prose ol li li li {
+  list-style-type: lower-roman;
+}
+.prose table {
+  border-collapse: collapse;
+  font-size: 1.0625rem;
+  line-height: 1.41176471;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+@media screen and (min-width: 63.75rem) {
+  .prose table {
+    font-size: 1.1875rem;
+    line-height: 1.47368421;
+  }
+}
+.prose thead tr {
+  border-bottom: 1px solid;
+}
+.prose td,
+.prose th {
+  padding: 0.5em;
+  line-height: 1;
+  vertical-align: top;
+}
+.prose th {
+  font-weight: bold;
+}
+.prose td {
+  text-align: "." center;
+}
+.prose a {
+  color: inherit;
+}
+.prose code {
+  font-family: 'Fira Mono', monospace;
+  font-size: 81%;
+}
+.prose p > code,
+.prose li > code {
+  padding: 0.1875rem;
+  margin: 0 -0.1875rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0.375rem;
+}
+.prose pre {
+  background-color: rgba(0, 0, 0, 0.05);
+  overflow: auto;
+}
+.prose pre > code {
+  margin: 1rem;
+  display: block;
+}
+.prose mark,
+.prose h2:target,
+.prose h3:target,
+.prose h4:target,
+.prose h5:target,
+.prose h6:target {
+  background-image: linear-gradient(-100deg, rgba(250, 246, 133, 0.3), rgba(250, 246, 133, 0.7) 95%, rgba(250, 246, 133, 0.1));
+}
+.prose mark {
+  padding: 0 .35em;
+  margin: 0 -0.35em;
+  border-radius: 1em 0;
+}
 .site-header {
-  padding: 0 1.875rem;
+  padding: 2rem 1.875rem;
+  background: #3052BB;
+  color: white;
 }
 @media screen and (min-width: 42.5rem) {
   .site-header {
-    padding: 0 2.5rem;
+    padding: 2rem 2.5rem;
   }
 }
 @media screen and (min-width: 63.75rem) {
   .site-header {
-    padding: 0 2.5rem;
+    padding: 2rem 2.5rem;
   }
 }
 @media screen and (min-width: 90rem) {
   .site-header {
-    padding: 0 auto;
+    padding: 2rem 3.75rem;
+    margin: 0 auto;
     max-width: 1432.5rem;
   }
+}
+.site-header,
+.site-header > * {
+  position: relative;
+}
+.site-header__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.site-header__background path {
+  fill: #1538A4;
+}
+.site-header__title {
+  font-size: 11vw;
+}
+@media screen and (min-width: 63.75rem) {
+  .site-header__title {
+    font-size: 13vw;
+  }
+}
+.navigation li {
+  list-style: none;
+}
+.navigation a {
+  color: white;
+  text-decoration: none;
+}
+.navigation__logo {
+  stroke: white;
 }
 
 /*# sourceMappingURL=roodesign.css.map */

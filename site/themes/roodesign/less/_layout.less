@@ -1,8 +1,9 @@
 .gutter() {
-  padding: 0 unit(@gutter/@base,rem);
-  .break-min({ padding: 0 unit(@gutter-min/@base,rem); });
-  .break-mid({ padding: 0 unit(@gutter-mid/@base,rem); });
-  .break-max({ padding: 0 auto; max-width: unit(@break-max - (@gutter-max * 2) / @base,rem); });
+  @v: unit(32/@base,rem);
+  padding: @v unit(@gutter/@base,rem);
+  .break-min({ padding: @v unit(@gutter-min/@base,rem); });
+  .break-mid({ padding: @v unit(@gutter-mid/@base,rem); });
+  .break-max({ padding: @v unit(@gutter-max/@base,rem);; margin: 0 auto; max-width: unit(@break-max - (@gutter-max * 2) / @base,rem); });
 }
 
 .grid() {

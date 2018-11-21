@@ -1,4 +1,25 @@
 .site-header {
   .gutter();
-  
+  background: #3052BB;
+  color: white;
+
+
+  &, >* {
+    position: relative;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    path {
+      fill: #1538A4;
+    }
+  }
+
+  &__title {
+    font-size: 11vw;
+    .break-mid({ font-size: 13vw;});
+  }
+
 }

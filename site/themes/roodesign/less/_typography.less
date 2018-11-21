@@ -1,0 +1,212 @@
+//global type settings
+#type {
+  #size() {
+    .sm() {
+      font-size: unit(14/@base,rem);
+      line-height: 20/14;
+    }
+    .p() {
+      font-size: unit(17/@base,rem);
+      line-height: 24/17;
+      .break-mid({
+        font-size: unit(19/@base,rem);
+        line-height: 28/19;
+      });
+    }
+    .h2() {
+      font-size: unit(36/@base,rem);
+      line-height: 40/36;
+      .break-max({
+        font-size: unit(51/@base,rem);
+        line-height: 56/51;
+      });
+    }
+  }
+}
+
+@font-face {
+    font-family: 'carlson';
+    src: url('/site/themes/roodesign/fonts/carlson.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  color: black;
+  font-feature-settings: "liga" 1;
+  font-variant: normal;
+  font-kerning: normal;
+  #type > #size > .p;
+}
+@supports (font-variant-ligatures: common-ligatures) {
+  body {
+    font-feature-settings: normal;
+    font-variant-ligatures: common-ligatures;
+  }
+}
+
+p {
+  margin-top: 1em;
+  &:first-child {
+    margin-top: auto;
+  }
+}
+
+
+h1 {
+  font-family: 'carlson', serif;
+  font-weight: normal;
+  .break-min({
+    font-size: 5.5vw;
+  });
+  font-size: unit(39/@base,rem);
+  line-height: 1;
+
+
+}
+
+h2 {
+  font-weight: 300;
+  #type > #size > .h2;
+  margin-bottom: unit(17/@base,rem);
+  .break-max({
+    margin-bottom: unit(19/@base,rem);
+  });
+}
+
+
+
+figcaption {
+  #type > #size > .sm;
+  color: #555555;
+}
+
+
+i, em {
+  font-style: italic;
+}
+b, strong {
+  font-weight: bold;
+}
+
+sup, sub {
+  position: relative;
+}
+
+sup {
+  top: -0.3em;
+}
+sub {
+  bottom: -0.3em;
+}
+
+@supports (font-variant-position: sub) {
+  sub,sup {
+    position: inherit;
+    top: auto;
+    bottom: auto;
+  }
+  sub {
+    font-variant-position: sub;
+  }
+  sup {
+    font-variant-position: super;
+  }
+}
+
+.prose {
+
+  li ul, li ol {
+    margin-left: 2em;
+  }
+  ol li {
+    list-style-position: outside;
+  }
+  ul li {
+    list-style-position: inside;
+    .break-min({
+      list-style-position: outside;
+    });
+  }
+  li {
+    margin-top: 0.2em;
+  }
+  >ul>li,>ol>li {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  ul li li {list-style-type: circle;}
+  ul li li li {list-style: square;}
+
+  ol li li {list-style-type: lower-alpha;}
+  ol li li li {list-style-type: lower-roman;}
+
+  //tables
+  table {
+    border-collapse: collapse;
+    #type > #size > .p;
+    font-variant-numeric: lining-nums tabular-nums;
+  }
+
+  thead tr {
+    border-bottom: 1px solid;
+  }
+
+  td, th {
+    padding: 0.5em;
+    line-height: 1;
+    vertical-align: top;
+  }
+
+  th {
+    font-weight: bold;
+  }
+
+  td {
+    text-align: "." center;
+  }
+
+  //links
+  a {
+    color: inherit;
+  }
+
+  //code
+  code {
+    font-family: 'Fira Mono', monospace;
+    font-size: 81%;
+  }
+
+
+  p>code,
+  li>code {
+    padding: unit(3/@base,rem);
+    margin: 0 unit(-3/@base,rem);
+    background-color: fade(black,5%);
+    border-radius: unit(6/@base,rem);
+  }
+
+  //code blocks
+  pre {
+    background-color: fade(black,5%);
+    overflow: auto;
+    >code {
+      margin: unit(16/@base,rem);
+      display: block;
+    }
+  }
+
+  //mark
+  mark, h2:target, h3:target, h4:target,h5:target,h6:target {
+    background-image: linear-gradient(-100deg,hsla(58,92%,75%,.3),hsla(58,92%,75%,.7) 95%,hsla(58,92%,75%,.1));
+  }
+  mark {
+    padding: 0 .35em;
+    margin: 0 -.35em;
+    border-radius: 1em 0;
+  }
+
+}
