@@ -1,7 +1,8 @@
 .site-header {
-  .gutter();
-  background: #3052BB;
-  color: white;
+  .v-space();
+  .break-min({
+    .v-space(@bottom:0);
+  });
 
 
   &, >* {
@@ -13,13 +14,22 @@
     top: 0;
     left: 0;
     path {
-      fill: #1538A4;
+      fill: #F8DE6A;
     }
   }
 
   &__title {
-    font-size: 11vw;
-    .break-mid({ font-size: 13vw;});
+
+    .grid();
+
+    >h1 {
+      .grid-column(2,12);
+      font-size: 7vw;
+      .break-min({ text-align: center; });
+    }
+
+
   }
+
 
 }

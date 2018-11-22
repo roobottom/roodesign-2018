@@ -3,16 +3,49 @@
   li {list-style: none;}
 
   a {
-    color: white;
+    color: black;
     text-decoration: none;
   }
 
-  &--main {
 
+  .active {
+    font-weight: 900;
   }
 
   &__logo {
-    stroke: white;
+    stroke: black;
+  }
+
+  &__items {
+    .break-min({
+      display: flex;
+      justify-content: space-between;
+    });
+
+  }
+
+
+
+  //main navigation
+
+  &--main {
+    .grid();
+    margin-bottom: unit(@v-space/@base,rem);
+    text-align: right;
+    .break-min({
+      text-align: left;
+    });
+
+  }
+
+  &--main &__logo {
+    .grid-column(1,2,1,2);
+    justify-self: start;
+  }
+
+  &--main &__items {
+    .grid-column(2,13,2,3);
+    align-self: center;
   }
 
 }

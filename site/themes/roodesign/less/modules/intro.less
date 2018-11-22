@@ -1,0 +1,23 @@
+.intro {
+  .grid();
+
+  &__welcome {
+    >p {#type > #size > .lg;}
+    grid-column: 1 / span 2;
+    .break-min({ grid-column: 3 / span 8; });
+    .break-mid({ grid-column: 4 / span 6; });
+    .break-max({ grid-column: 5 / span 4; });
+    position: relative;
+  }
+
+  .icon--blip {
+    position: absolute;
+    left: unit(-20/@base, rem);
+    .break-min({
+      left: unit(-1 * (16 + @grid-gap)/@base, rem);
+    });
+
+    top: unit(4/@base,rem);
+  }
+
+}

@@ -13,6 +13,14 @@
         line-height: 28/19;
       });
     }
+    .lg() {
+      font-size: unit(19/@base,rem);
+      line-height: 24/19;
+      .break-min({
+        font-size: unit(23/@base,rem);
+        line-height: 32/23;
+      });
+    }
     .h2() {
       font-size: unit(36/@base,rem);
       line-height: 40/36;
@@ -48,10 +56,12 @@ body {
 
 p {
   margin-top: 1em;
-  &:first-child {
+  &:first-of-type {
     margin-top: auto;
   }
 }
+
+
 
 
 h1 {

@@ -7,34 +7,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Portfolio of hands-on design leader Jon Roobottom">
     <title>{{ title or site_title }}</title>
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700,700i" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700,700i,900" rel="stylesheet"/>
     <link rel="stylesheet" href="{{ theme:css }}">
 </head>
 
 
-<body class="{{ template }}">
+<body class="template-{{ template }}">
 
   <header class="site-header">
     <svg xmlns="http://www.w3.org/2000/svg" class="site-header__background" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
       <path d="M0 0h100L0 100z" fill-rule="evenodd"/>
     </svg>
-    <nav class="navigation navigation--main">
-      <ul>
-        <li><a href="/"><svg width="28" height="35" xmlns="http://www.w3.org/2000/svg"><g class="navigation__logo" fill="none" fill-rule="evenodd"><path d="M13.6 8.507L.707 21.4 13.6 34.293 26.493 21.4 13.6 8.507z"/><path d="M20.388 1L27.2 7.808 13.6 21.4 0 7.808 6.812 1 13.6 7.784z"/></g></svg></a></li>
-        <li><a href="/">Home</a></li>
-        <li><a href="#">My work</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Articles</a></li>
-        <li><a href="#">About me</a></li>
-        <li><a href="#">Contact me</a></li>
-      </ul>
-    </nav>
-    <h1 class="site-header__title">{{ title }}</h1>
+
+    <div class="wrapper">
+      <nav class="navigation navigation--main">
+        <a href="/" class="navigation__logo"><svg width="28" height="35" xmlns="http://www.w3.org/2000/svg"><g class="navigation__logo" fill="none" fill-rule="evenodd"><path d="M13.6 8.507L.707 21.4 13.6 34.293 26.493 21.4 13.6 8.507z"/><path d="M20.388 1L27.2 7.808 13.6 21.4 0 7.808 6.812 1 13.6 7.784z"/></g></svg></a>
+        <ul class="navigation__items">
+          <li><a href="/" class="active">Home</a></li>
+          <!-- <li><a href="#">My work</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Articles</a></li>
+          <li><a href="#">About me</a></li> -->
+          <li><a href="#">Contact me</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__title">
+        <h1>{{ title | widont }}</h1>
+      </div>
+    </div>
+
   </header>
 
 
+  <main class="site-main">
+    <div class="wrapper">
+    {{ template_content }}
+  </div>
+  </main>
 
-  {{ template_content }}
+  <footer class="site-footer">
+    <div class="wrapper site-footer__content">
+
+      <div class="site-footer__copyright"><strong>&copy; 2001-{{ now format='Y' }} Jon Roobottom</strong><br/><a href="https://www.dropbox.com/s/mg3scgc291nhmk0/jon-roobottom-cv-2018.pdf?dl=0">Download my CV (resumé)</a></div>
+      <ul class="site-footer__social">
+        <li><a href="https://github.com/roobottom" title="Jon Roobottom's Github profile">{{ partial:icon name="github"}}</a></li>
+        <li><a href="https://medium.com/@roobottom" title="Jon Roobottom's articles on Medium">{{ partial:icon name="medium"}}</a></li>
+        <li><a href="https://www.linkedin.com/in/roobottom/" title="Jon Roobottom's LinkedIn profile">{{ partial:icon name="linkedin"}}</a></li>
+        <li><a href="https://twitter.com/roobottom"  title="Jon Roobottom's Twitter profile">{{ partial:icon name="twitter"}}</a></li>
+      </ul>
+
+    </div>
+  </footer>
 
 
   <script src="{{ theme:js }}"></script>
