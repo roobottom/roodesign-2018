@@ -1,0 +1,16 @@
+<section class="hero" style="background-color: {{ header_colour }}; color: {{ header_text_colour }};">
+  <svg xmlns="http://www.w3.org/2000/svg" class="hero__background" width="100%" height="50" viewBox="0 0 100 50" preserveAspectRatio="none">
+    <path d="M0 0L100 50L0 50z" fill-rule="evenodd" fill="#FFF"/>
+  </svg>
+  <div class="hero__content">
+    <article class="hero__welcome prose">
+      <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" class="hero__blip">
+        <path d="M9.333 11.92l5.253-5.253-5.253-5.253-5.252 5.253 5.252 5.252zM2.667 6.666L9.333 0 16 6.667l-6.667 6.666-6.666-6.666zm-1.253 6l1.92 1.919 1.918-1.92-1.919-1.918-1.919 1.919zm-1.414 0l3.333-3.334 3.334 3.334L3.333 16 0 12.667z" fill="{{ header_text_colour }}" fill-rule="nonzero"/>
+      </svg>
+      {{ content }}
+    </article>
+    <aside class="hero__image">
+      <img src="{{ hero_image }}"/>
+    </aside>
+  </div>
+</section>

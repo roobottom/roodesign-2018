@@ -7,6 +7,8 @@
     text-decoration: none;
   }
 
+  &--white a { color: white; }
+
 
   .active {
     font-weight: 900;
@@ -14,6 +16,10 @@
 
   &__logo {
     stroke: black;
+  }
+
+  &--white &__logo {
+    stroke: white;
   }
 
   &__items {
@@ -29,6 +35,7 @@
   //main navigation
 
   &--main {
+    .gutter();
     .grid();
     margin-bottom: unit(@v-space/@base,rem);
     text-align: right;

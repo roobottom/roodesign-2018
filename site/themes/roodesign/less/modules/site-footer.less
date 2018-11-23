@@ -1,19 +1,22 @@
 .site-footer {
-  .v-space(@top: 2; @bottom: 0);
+  .v-space(@top: 2;);
+  .gutter();
   #type > #size > .sm;
-
-  &__content {
-    background-color: #353B46;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
   &, a {
-    color: white;
+    color: black;
   }
+
+  p, &__social {
+    margin: 0 unit(@grid-gap/2/@base,rem);
+    line-height: 1.8;
+  }
+
+
 
   li {
     list-style: none;
@@ -22,7 +25,7 @@
   &__social {
     display: flex;
     align-items: center;
-    margin-left: unit(@grid-gap/@base,rem);
+    justify-content: center;
     li {
       margin-right: unit(@grid-gap/@base,rem);
       &:last-child { margin: 0; }

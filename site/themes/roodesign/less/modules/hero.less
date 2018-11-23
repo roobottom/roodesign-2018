@@ -1,0 +1,59 @@
+.hero {
+  .gutter();
+  .v-space();
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 50px; //clear svg
+
+  &__content {
+    .grid();
+  }
+
+  &__welcome {
+    grid-column: 1 / span 2;
+    .break-min({ grid-column: 1 / span 6; });
+    .break-mid({ grid-column: 2 / span 4; });
+    .break-max({ grid-column: 2 / span 4; });
+    position: relative;
+    #type > #size > .lg;
+    margin-bottom: unit(@v-space/@base,rem);
+  }
+
+  &__blip {
+    position: absolute;
+    left: unit(-20/@base, rem);
+    .break-min({
+      left: unit(-1 * (16 + @grid-gap)/@base, rem);
+    });
+
+    top: unit(4/@base,rem);
+  }
+
+  &__image {
+    grid-column: 1 / span 2;
+    margin-top: unit(@v-space/@base,rem);
+    position: relative;
+    >img {
+       max-width: 100%;
+       display: block;
+       box-shadow: 0 0 40px fade(black,20%);
+    }
+
+    .break-min({
+      grid-column: 7 / span 6;
+      margin-top: 0;
+      >img {
+        max-width: none;
+      }
+    });
+
+  }
+
+  &__background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+}
