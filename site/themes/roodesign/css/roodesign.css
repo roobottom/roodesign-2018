@@ -223,6 +223,10 @@ h2 {
 figcaption {
   font-size: 0.875rem;
   line-height: 1.42857143;
+  text-align: center;
+}
+figcaption,
+figcaption a {
   color: #555555;
 }
 i,
@@ -860,6 +864,7 @@ sub {
   padding-right: 1.875rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  overflow: hidden;
 }
 @media screen and (min-width: 42.5rem) {
   .side-by-side {
@@ -909,8 +914,15 @@ sub {
 @media screen and (min-width: 63.75rem) {
   .side-by-side__article {
     -ms-grid-column-span: 6;
-    -ms-grid-column: 2;
-    grid-column: 2 / span 6;
+    -ms-grid-column: 1;
+    grid-column: 1 / span 6;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .side-by-side__article {
+    -ms-grid-column-span: 5;
+    -ms-grid-column: 1;
+    grid-column: 1 / span 5;
   }
 }
 .side-by-side__aside {
@@ -924,6 +936,10 @@ sub {
     -ms-grid-column: 8;
     grid-column: 8 / span 5;
   }
+}
+.figure--grid img {
+  max-width: 100%;
+  display: block;
 }
 .template-home .intro {
   padding-top: 0;

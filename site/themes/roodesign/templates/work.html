@@ -46,7 +46,7 @@
           {{ aside }}
             {{ text | markdown }}
             {{ if type == 'figure' }}
-              <figure>
+              <figure class="figure figure--{{ width }}">
                 <img src="{{ image }}"/>
                 {{ if figcaption }}<figcaption>{{ figcaption | markdown }}</figcaption>{{ /if }}
               </figure>

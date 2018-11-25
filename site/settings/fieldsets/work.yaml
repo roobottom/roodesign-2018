@@ -32,31 +32,6 @@ sections:
         type: replicator
         instructions: 'Add one or more pieces of meta info to this work item'
         display: Meta
-  sidebar:
-    display: Sidebar
-    fields:
-      header_colour:
-        type: text
-        instructions: 'Enter the header background colour in HEX format. EG. `#FF0022`'
-        display: 'Header Colour'
-        default: '#'
-      header_triangle_colour:
-        type: text
-        instructions: 'Enter the header triangle colour in HEX format, eg `#FF0022`'
-        display: 'Header triangle colour'
-        default: '#'
-      header_text_colour:
-        options:
-          black: Black
-          white: White
-        inline: true
-        type: radio
-        instructions: 'Select the colour of text in header and hero areas'
-        display: 'Header text colour'
-        default: black
-  modules:
-    display: Modules
-    fields:
       modules:
         sets:
           side_by_side:
@@ -131,6 +106,14 @@ sections:
                         type: markdown
                         instructions: 'An optional figcaption'
                         display: Figcaption
+                      width:
+                        options:
+                          default: 'Original image width'
+                          grid: 'Align with grid'
+                        inline: false
+                        type: radio
+                        display: Width
+                        default: default
                   background:
                     display: background
                     fields:
@@ -194,6 +177,28 @@ sections:
                 display: Article
         type: replicator
         display: Modules
+  sidebar:
+    display: Sidebar
+    fields:
+      header_colour:
+        type: text
+        instructions: 'Enter the header background colour in HEX format. EG. `#FF0022`'
+        display: 'Header Colour'
+        default: '#'
+      header_triangle_colour:
+        type: text
+        instructions: 'Enter the header triangle colour in HEX format, eg `#FF0022`'
+        display: 'Header triangle colour'
+        default: '#'
+      header_text_colour:
+        options:
+          black: Black
+          white: White
+        inline: true
+        type: radio
+        instructions: 'Select the colour of text in header and hero areas'
+        display: 'Header text colour'
+        default: black
 taxonomies: true
 title: Work
 create_title: 'New work item'

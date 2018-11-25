@@ -1,6 +1,7 @@
 .side-by-side {
   .gutter();
   .v-space();
+  overflow: hidden;
 
   &__content {
     .grid();
@@ -9,7 +10,8 @@
   &__article {
     grid-column: 1 / span 2;
     .break-min({ grid-column: 1 / span 7;});
-    .break-mid({ grid-column: 2 / span 6; });
+    .break-mid({ grid-column: 1 / span 6; });
+    .break-max({ grid-column: 1 / span 5; });
   }
 
   &__aside {
@@ -18,4 +20,14 @@
     //
   }
 
+}
+
+//move this stuff later
+.figure {
+  &--grid {
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
 }
