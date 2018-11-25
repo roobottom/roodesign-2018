@@ -14,3 +14,46 @@
     </aside>
   </div>
 </section>
+
+<section class="meta">
+  <div class="meta__container">
+    {{ meta }}
+    <dl class="meta-list">
+        <dt class="meta-list__title">{{ title }}</dt>
+        <dd class="meta-list__value">{{ value | markdown }}</dd>
+    </dl>
+    {{ /meta }}
+  </div>
+</section>
+
+{{ modules }}
+  {{ if type == 'side_by_side' }}
+    <section class="side-by-side side-by-side--{{ text_colour }}"{{ if background_colour }} style="background-color: {{ background_colour }};"{{ /if }} >
+      <div class="side-by-side__content">
+        <article class="prose side-by-side__article">
+          {{ if title}}<h2>{{ title }}</h2>{{ /if }}
+          {{ article }}
+            {{ text | markdown }}
+            {{ if type == 'figure' }}
+              <figure>
+                <img src="{{ image }}"/>
+                {{ if figcaption }}<figcaption>{{ figcaption }}</figcaption>{{ /if }}
+              </figure>
+            {{ /if }}
+          {{ /article }}
+        </article>
+        <aside class="side-by-side__aside">
+          {{ aside }}
+            {{ text | markdown }}
+            {{ if type == 'figure' }}
+              <figure>
+                <img src="{{ image }}"/>
+                {{ if figcaption }}<figcaption>{{ figcaption | markdown }}</figcaption>{{ /if }}
+              </figure>
+            {{ /if }}
+          {{ /aside }}
+        </aside>
+      </div>
+    </section>
+  {{ /if }}
+{{ /modules }}

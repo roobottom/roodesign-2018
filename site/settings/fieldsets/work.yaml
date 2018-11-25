@@ -54,6 +54,146 @@ sections:
         instructions: 'Select the colour of text in header and hero areas'
         display: 'Header text colour'
         default: black
+  modules:
+    display: Modules
+    fields:
+      modules:
+        sets:
+          side_by_side:
+            display: 'side by side'
+            instructions: 'text and images side-by-side (stacked on smaller screens)'
+            fields:
+              title:
+                type: text
+                display: Title
+              background_colour:
+                type: text
+                display: 'Background colour'
+              text_colour:
+                options:
+                  black: Black
+                  white: White
+                inline: true
+                type: radio
+                display: 'Text colour'
+                default: black
+              article:
+                sets:
+                  copy:
+                    display: copy
+                    fields:
+                      text:
+                        cheatsheet: false
+                        restrict_assets: false
+                        type: markdown
+                        display: content
+                  figure:
+                    display: Figure
+                    fields:
+                      image:
+                        container: main
+                        folder: /
+                        restrict: false
+                        max_files: 1
+                        type: assets
+                        display: Image
+                      figcaption:
+                        cheatsheet: false
+                        restrict_assets: false
+                        type: markdown
+                        instructions: 'Optional figcaption'
+                        display: Figcaption
+                type: replicator
+                display: Article
+              aside:
+                sets:
+                  copy:
+                    display: Copy
+                    fields:
+                      text:
+                        cheatsheet: false
+                        restrict_assets: false
+                        type: markdown
+                        display: content
+                  figure:
+                    display: Figure
+                    fields:
+                      image:
+                        container: main
+                        folder: /
+                        restrict: false
+                        max_files: 1
+                        type: assets
+                        display: image
+                      figcaption:
+                        cheatsheet: false
+                        restrict_assets: false
+                        type: markdown
+                        instructions: 'An optional figcaption'
+                        display: Figcaption
+                  background:
+                    display: background
+                    fields:
+                      image:
+                        container: main
+                        folder: /
+                        restrict: false
+                        max_files: 1
+                        type: assets
+                        display: Image
+                type: replicator
+                display: Aside
+          blog:
+            display: blog
+            instructions: 'text and images mixed together in one block, like a blog post'
+            fields:
+              title:
+                type: text
+                display: Title
+              background_colour:
+                type: text
+                display: 'Background colour'
+              text_colour:
+                options:
+                  black: Black
+                  white: White
+                inline: true
+                type: radio
+                display: 'Text colour'
+                default: black
+              article:
+                sets:
+                  text:
+                    display: Copy
+                    fields:
+                      content:
+                        cheatsheet: false
+                        restrict_assets: false
+                        type: markdown
+                        display: Content
+                  figure:
+                    display: Figure
+                    fields:
+                      file:
+                        container: main
+                        folder: /
+                        restrict: false
+                        type: assets
+                        display: File(s)
+                      figcaption:
+                        type: text
+                        instructions: 'an optional figcaption'
+                        display: Figcaption
+                      roo@roodesign.co.uk:
+                        options:
+                          default: 'Default (wide)'
+                          narrow: 'No wider than the text'
+                        type: select
+                        display: Style
+                type: replicator
+                display: Article
+        type: replicator
+        display: Modules
 taxonomies: true
 title: Work
 create_title: 'New work item'
