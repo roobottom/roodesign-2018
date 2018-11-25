@@ -220,15 +220,6 @@ h2 {
     margin-bottom: 1.1875rem;
   }
 }
-figcaption {
-  font-size: 0.875rem;
-  line-height: 1.42857143;
-  text-align: center;
-}
-figcaption,
-figcaption a {
-  color: #555555;
-}
 i,
 em {
   font-style: italic;
@@ -416,6 +407,8 @@ sub {
   -ms-grid-column: 1;
   grid-column: 1 / span 2;
   font-size: 11vw;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 @media screen and (min-width: 42.5rem) {
   .site-header__title > h1 {
@@ -862,8 +855,8 @@ sub {
 .side-by-side {
   padding-left: 1.875rem;
   padding-right: 1.875rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   overflow: hidden;
 }
 @media screen and (min-width: 42.5rem) {
@@ -921,8 +914,8 @@ sub {
 @media screen and (min-width: 90rem) {
   .side-by-side__article {
     -ms-grid-column-span: 5;
-    -ms-grid-column: 1;
-    grid-column: 1 / span 5;
+    -ms-grid-column: 2;
+    grid-column: 2 / span 5;
   }
 }
 .side-by-side__aside {
@@ -940,6 +933,17 @@ sub {
 .figure--grid img {
   max-width: 100%;
   display: block;
+}
+.figure figcaption {
+  padding-top: 2rem;
+  padding-bottom: 0rem;
+  font-size: 0.875rem;
+  line-height: 1.42857143;
+  font-style: italic;
+}
+.figure figcaption,
+.figure figcaption a {
+  color: #555555;
 }
 .template-home .intro {
   padding-top: 0;

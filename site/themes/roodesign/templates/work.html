@@ -56,4 +56,11 @@
       </div>
     </section>
   {{ /if }}
+  {{ if type == 'blog' }}
+    <section class="blog blog--{{ text colour }}"{{ if background_colour }} style="background-color: {{ background_colour }};"{{ /if }} >
+      <div class="blog__content">
+
+      </div>
+    </section>
+  {{ /if }}
 {{ /modules }}

@@ -1,6 +1,6 @@
 .side-by-side {
   .gutter();
-  .v-space();
+  .v-space(2,2);
   overflow: hidden;
 
   &__content {
@@ -11,7 +11,7 @@
     grid-column: 1 / span 2;
     .break-min({ grid-column: 1 / span 7;});
     .break-mid({ grid-column: 1 / span 6; });
-    .break-max({ grid-column: 1 / span 5; });
+    .break-max({ grid-column: 2 / span 5; });
   }
 
   &__aside {
@@ -30,4 +30,12 @@
       display: block;
     }
   }
+
+  figcaption {
+    .v-space(1,0);
+    #type > #size > .sm;
+    &, a { color: #555555; }
+    font-style: italic;
+  }
+
 }
