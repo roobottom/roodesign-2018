@@ -1,11 +1,18 @@
 .side-by-side {
   .gutter();
-  .v-space(2,2);
+  .v-space(1,1);
+  .break-min({ .v-space(2,2); });
   overflow: hidden;
 
   &__content {
     .grid();
   }
+
+   &__title--span {
+     grid-column: 1 / span 2;
+     .break-min({ grid-column: 1 / span 12;});
+     .break-max({ grid-column: 2 / span 10; });
+   }
 
   &__article {
     grid-column: 1 / span 2;
@@ -17,13 +24,19 @@
   &__aside {
     grid-column: 1 / span 2;
     .break-min({ grid-column: 8 / span 5;});
-    //
   }
 
 }
 
 //move this stuff later
 .figure {
+  margin-top: unit(@v-space/@base,rem);
+  .break-min({ margin-top: 0; });
+
+  &--inline {
+    .break-min({ margin-top: unit(@v-space/@base,rem); });
+  }
+
   &--grid {
     img {
       max-width: 100%;

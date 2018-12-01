@@ -30,9 +30,10 @@
   {{ if type == 'side_by_side' }}
     <section class="side-by-side side-by-side--{{ text_colour }}"{{ if background_colour }} style="background-color: {{ background_colour }};"{{ /if }} >
       <div class="side-by-side__content">
+        {{ if title_display == 'span' }}<h2 class="side-by-side__title side-by-side__title--span">{{ title | widont }}</h2>{{ /if }}
         <article class="prose side-by-side__article">
-          {{ if title}}<h2>{{ title }}</h2>{{ /if }}
           {{ article }}
+          {{ if title_display != 'span' }}<h2 class="side-by-side__title side-by-side__title--span">{{ title | widont }}</h2>{{ /if }}
             {{ text | markdown }}
             {{ if type == 'figure' }}
               <figure>
@@ -46,8 +47,10 @@
           {{ aside }}
             {{ text | markdown }}
             {{ if type == 'figure' }}
-              <figure class="figure figure--{{ width }}">
-                <img src="{{ image }}"/>
+              <figure class="figure figure--{{ style }}">
+                {{ image }}
+                <img src="{{ value }}"/>
+                {{ /image }}
                 {{ if figcaption }}<figcaption>{{ figcaption | markdown }}</figcaption>{{ /if }}
               </figure>
             {{ /if }}
@@ -58,9 +61,24 @@
   {{ /if }}
   {{ if type == 'blog' }}
     <section class="blog blog--{{ text colour }}"{{ if background_colour }} style="background-color: {{ background_colour }};"{{ /if }} >
-      <div class="blog__content">
-
-      </div>
+      <article class="blog__content">
+        {{ if title}}<h2 class="blog__title">{{ title | widont }}</h2>{{ /if }}
+        {{ article }}
+          {{ if type == 'copy' }}
+          <div class="prose blog__text">
+            {{ text | markdown }}
+          </div>
+          {{ /if }}
+          {{ if type == 'figure' }}
+            <figure class="blog__figure figure figure--{{ style }} figure--inline">
+              {{ image }}
+              <img src="{{ value }}"/>
+              {{ /image }}
+              {{ if figcaption }}<figcaption>{{ figcaption | markdown }}</figcaption>{{ /if }}
+            </figure>
+          {{ /if }}
+        {{ /article }}
+      </article>
     </section>
   {{ /if }}
 {{ /modules }}

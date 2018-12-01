@@ -1,0 +1,34 @@
+fields:
+  aside:
+    sets:
+      figure:
+        display: Figure
+        fields:
+          image:
+            container: main
+            folder: /
+            restrict: false
+            type: assets
+            display: File(s)
+          figcaption:
+            type: text
+            instructions: 'an optional figcaption'
+            display: Figcaption
+          style:
+            options:
+              default: 'Original image width'
+              grid: 'Align with grid'
+            type: select
+            display: Style
+        background:
+          display: Background
+          fields:
+            image:
+              container: main
+              folder: /
+              restrict: false
+              max_files: 1
+              type: assets
+              display: Image
+    type: replicator
+    display: 'Aside'

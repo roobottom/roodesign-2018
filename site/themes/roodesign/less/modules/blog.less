@@ -1,0 +1,33 @@
+.blog {
+  .gutter();
+  .v-space(1,1);
+  .break-min({ .v-space(2,2); });
+  overflow: hidden;
+
+  &__content {
+    .grid();
+  }
+
+  &__title {
+    grid-column: 1 / span 2;
+    .break-min({
+      grid-column: 1 / span 12;
+      text-align: center;
+    });
+    .break-mid({ grid-column: 2 / span 10; });
+  }
+
+  &__text, .figure--grid {
+    grid-column: 1 / span 2;
+    .break-min({ grid-column: 3 / span 8; });
+    .break-mid({ grid-column: 4 / span 6; });
+  }
+
+  &__figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+}

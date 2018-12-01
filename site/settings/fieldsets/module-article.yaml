@@ -1,0 +1,32 @@
+fields:
+  article:
+    sets:
+      copy:
+        display: Copy
+        fields:
+          text:
+            cheatsheet: false
+            restrict_assets: false
+            type: markdown
+            display: Text
+      figure:
+        display: Figure
+        fields:
+          image:
+            container: main
+            folder: /
+            restrict: false
+            type: assets
+            display: File(s)
+          figcaption:
+            type: text
+            instructions: 'an optional figcaption'
+            display: Figcaption
+          style:
+            options:
+              default: 'Original image width'
+              grid: 'Align with grid'
+            type: select
+            display: Style
+    type: replicator
+    display: 'Content'

@@ -1,0 +1,23 @@
+fields:
+  title:
+    type: text
+    display: Title
+  title_display:
+    type: radio
+    inline: true
+    options:
+      default: 'Inline with copy'
+      span: 'Spanning both columns (side-by-side only)'
+    default: default
+    display: 'Show title...'
+  background_colour:
+    type: text
+    display: 'Background colour'
+  text_colour:
+    options:
+      black: Black
+      white: White
+    inline: true
+    type: radio
+    display: 'Text colour'
+    default: black

@@ -1,8 +1,6 @@
 .site-header {
-  .v-space();
-  .break-min({
-    .v-space(@bottom:0.1);
-  });
+  .v-space(@bottom:0.1);
+
 
 
   &, >* {
@@ -23,10 +21,9 @@
     >h1 {
       grid-column: 1 / span 2;
       font-size: 11vw;
-      .break-min({ grid-column: 1 / span 12; font-size: 8vw; text-align: center; });
+      .break-min({ grid-column: 1 / span 12; font-size: 8vw; text-align: center; .v-space(); });
       .break-mid({ font-size: 7vw; });
       .break-max({ font-size: 6vw; });
-      .v-space();
     }
 
 
