@@ -31,21 +31,24 @@
 
   &__image {
     grid-column: 1 / span 2;
-    margin-top: unit(@v-space/@base,rem);
+    margin: unit(@v-space/@base,rem) 0;
     position: relative;
-    >img {
+
+    img {
        max-width: 100%;
        display: block;
-       box-shadow: 0 0 40px fade(black,20%);
     }
 
     .break-min({
       grid-column: 7 / span 6;
       margin-top: 0;
-      >img {
-        max-width: none;
-      }
+      img { max-width: 160%; }
     });
+
+    .break-mid({
+      img { max-width: 140%; }
+    });
+
 
   }
 

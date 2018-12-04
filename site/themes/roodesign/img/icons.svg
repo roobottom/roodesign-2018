@@ -14,4 +14,10 @@
   <symbol id="icon-blip" viewBox="0 0 16 16" width="16" height="16">
     <path d="M9.333 11.92l5.253-5.253-5.253-5.253-5.252 5.253 5.252 5.252zM2.667 6.666L9.333 0 16 6.667l-6.667 6.666-6.666-6.666zm-1.253 6l1.92 1.919 1.918-1.92-1.919-1.918-1.919 1.919zm-1.414 0l3.333-3.334 3.334 3.334L3.333 16 0 12.667z" fill="#000" fill-rule="nonzero"/>
   </symbol>
+  <symbol id="icon-next" viewBox="0 0 10 14" width="10" height="14">
+    <path d="M0 4.005L3.337 1 10 7l-6.663 6L0 9.995 3.326 7z" stroke="#000" fill="none" fill-rule="evenodd"/>
+  </symbol>
+  <symbol id="icon-prev" viewBox="0 0 10 14" width="10" height="14">
+    <path d="M10 9.995L6.663 13 0 7l6.663-6L10 4.005 6.674 7z" stroke="#000" fill="none" fill-rule="evenodd"/>
+  </symbol>
 </svg>

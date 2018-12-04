@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1800px" height="900px" viewBox="0 0 1800 900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>team-roles-shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="team-roles-shape" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(445.000000, 145.000000)">
+            <rect id="Rectangle" fill="#ECECEC" x="4" y="5" width="2" height="600"></rect>
+            <path d="M5,298.585786 L11.4142136,305 L5,311.414214 L-1.41421356,305 L5,298.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,398.585786 L11.4142136,405 L5,411.414214 L-1.41421356,405 L5,398.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,498.585786 L11.4142136,505 L5,511.414214 L-1.41421356,505 L5,498.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,598.585786 L11.4142136,605 L5,611.414214 L-1.41421356,605 L5,598.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,98.5857864 L11.4142136,105 L5,111.414214 L-1.41421356,105 L5,98.5857864 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,-1.41421356 L11.4142136,5 L5,11.4142136 L-1.41421356,5 L5,-1.41421356 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,198.585786 L11.4142136,205 L5,211.414214 L-1.41421356,205 L5,198.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+        </g>
+        <text id="User-research" transform="translate(450.000000, 92.500000) rotate(-90.000000) translate(-450.000000, -92.500000) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="405.5" y="97.5">User research</tspan>
+        </text>
+        <text id="Wireframing" transform="translate(450.000000, 802.500000) rotate(270.000000) translate(-450.000000, -802.500000) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="410.5" y="807.5">Wireframing</tspan>
+        </text>
+        <g id="Group" transform="translate(450.000000, 450.000000) rotate(30.000000) translate(-450.000000, -450.000000) translate(445.000000, 145.000000)">
+            <rect id="Rectangle" fill="#ECECEC" x="4" y="5" width="2" height="600"></rect>
+            <path d="M5,298.585786 L11.4142136,305 L5,311.414214 L-1.41421356,305 L5,298.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,398.585786 L11.4142136,405 L5,411.414214 L-1.41421356,405 L5,398.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,498.585786 L11.4142136,505 L5,511.414214 L-1.41421356,505 L5,498.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,598.585786 L11.4142136,605 L5,611.414214 L-1.41421356,605 L5,598.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,98.5857864 L11.4142136,105 L5,111.414214 L-1.41421356,105 L5,98.5857864 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,-1.41421356 L11.4142136,5 L5,11.4142136 L-1.41421356,5 L5,-1.41421356 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,198.585786 L11.4142136,205 L5,211.414214 L-1.41421356,205 L5,198.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+        </g>
+        <text id="User-modeling" transform="translate(629.750000, 138.663867) rotate(-60.000000) translate(-629.750000, -138.663867) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="583.25" y="143.663867">User modeling</tspan>
+        </text>
+        <text id="Prototyping" transform="translate(274.250000, 754.407929) rotate(-60.000000) translate(-274.250000, -754.407929) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="235.75" y="759.407929">Prototyping</tspan>
+        </text>
+        <g id="Group" transform="translate(450.000000, 450.000000) rotate(60.000000) translate(-450.000000, -450.000000) translate(445.000000, 145.000000)">
+            <rect id="Rectangle" fill="#ECECEC" x="4" y="5" width="2" height="600"></rect>
+            <path d="M5,298.585786 L11.4142136,305 L5,311.414214 L-1.41421356,305 L5,298.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,398.585786 L11.4142136,405 L5,411.414214 L-1.41421356,405 L5,398.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,498.585786 L11.4142136,505 L5,511.414214 L-1.41421356,505 L5,498.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,598.585786 L11.4142136,605 L5,611.414214 L-1.41421356,605 L5,598.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,98.5857864 L11.4142136,105 L5,111.414214 L-1.41421356,105 L5,98.5857864 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,-1.41421356 L11.4142136,5 L5,11.4142136 L-1.41421356,5 L5,-1.41421356 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,198.585786 L11.4142136,205 L5,211.414214 L-1.41421356,205 L5,198.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+        </g>
+        <text id="User-testing" transform="translate(754.840942, 274.000000) rotate(-30.000000) translate(-754.840942, -274.000000) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="715.840942" y="279">User testing</tspan>
+        </text>
+        <text id="UI-Design" transform="translate(152.953287, 621.500000) rotate(330.000000) translate(-152.953287, -621.500000) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="122.953287" y="626.5">UI Design</tspan>
+        </text>
+        <g id="Group" transform="translate(450.000000, 450.000000) rotate(120.000000) translate(-450.000000, -450.000000) translate(445.000000, 145.000000)">
+            <rect id="Rectangle" fill="#ECECEC" x="4" y="5" width="2" height="600"></rect>
+            <path d="M5,298.585786 L11.4142136,305 L5,311.414214 L-1.41421356,305 L5,298.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,398.585786 L11.4142136,405 L5,411.414214 L-1.41421356,405 L5,398.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,498.585786 L11.4142136,505 L5,511.414214 L-1.41421356,505 L5,498.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,598.585786 L11.4142136,605 L5,611.414214 L-1.41421356,605 L5,598.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,98.5857864 L11.4142136,105 L5,111.414214 L-1.41421356,105 L5,98.5857864 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,-1.41421356 L11.4142136,5 L5,11.4142136 L-1.41421356,5 L5,-1.41421356 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,198.585786 L11.4142136,205 L5,211.414214 L-1.41421356,205 L5,198.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+        </g>
+        <text id="Test-analysis/presen" transform="translate(795.544136, 649.500000) rotate(30.000000) translate(-795.544136, -649.500000) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="709.544136" y="654.5">Test analysis/presentation</tspan>
+        </text>
+        <text id="Graphic-design" transform="translate(137.797842, 269.750000) rotate(30.000000) translate(-137.797842, -269.750000) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="90.2978419" y="274.75">Graphic design</tspan>
+        </text>
+        <g id="Group" transform="translate(450.000000, 450.000000) rotate(150.000000) translate(-450.000000, -450.000000) translate(445.000000, 145.000000)">
+            <rect id="Rectangle" fill="#ECECEC" x="4" y="5" width="2" height="600"></rect>
+            <path d="M5,298.585786 L11.4142136,305 L5,311.414214 L-1.41421356,305 L5,298.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,398.585786 L11.4142136,405 L5,411.414214 L-1.41421356,405 L5,398.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,498.585786 L11.4142136,505 L5,511.414214 L-1.41421356,505 L5,498.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,598.585786 L11.4142136,605 L5,611.414214 L-1.41421356,605 L5,598.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,98.5857864 L11.4142136,105 L5,111.414214 L-1.41421356,105 L5,98.5857864 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,-1.41421356 L11.4142136,5 L5,11.4142136 L-1.41421356,5 L5,-1.41421356 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,198.585786 L11.4142136,205 L5,211.414214 L-1.41421356,205 L5,198.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+        </g>
+        <text id="Workshop-design" transform="translate(634.250000, 769.130361) rotate(60.000000) translate(-634.250000, -769.130361) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="578.75" y="774.130361">Workshop design</tspan>
+        </text>
+        <text id="HTML/CSS" transform="translate(277.000000, 150.355210) rotate(60.000000) translate(-277.000000, -150.355210) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="244" y="155.35521">HTML/CSS</tspan>
+        </text>
+        <g id="Group" transform="translate(450.000000, 450.000000) rotate(90.000000) translate(-450.000000, -450.000000) translate(445.000000, 145.000000)">
+            <rect id="Rectangle" fill="#ECECEC" x="4" y="5" width="2" height="600"></rect>
+            <path d="M5,298.585786 L11.4142136,305 L5,311.414214 L-1.41421356,305 L5,298.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,398.585786 L11.4142136,405 L5,411.414214 L-1.41421356,405 L5,398.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,498.585786 L11.4142136,505 L5,511.414214 L-1.41421356,505 L5,498.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,598.585786 L11.4142136,605 L5,611.414214 L-1.41421356,605 L5,598.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,98.5857864 L11.4142136,105 L5,111.414214 L-1.41421356,105 L5,98.5857864 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,-1.41421356 L11.4142136,5 L5,11.4142136 L-1.41421356,5 L5,-1.41421356 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,198.585786 L11.4142136,205 L5,211.414214 L-1.41421356,205 L5,198.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+        </g>
+        <text id="Data-analytics" font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="763" y="455">Data analytics</tspan>
+        </text>
+        <text id="Motion-design" font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="46" y="455">Motion design</tspan>
+        </text>
+        <polygon id="Path-2" stroke="#78116E" stroke-width="2" fill-opacity="0.1" fill="#78116E" points="450 150.923722 599.449219 191.194196 709.84375 300.746292 650.398438 450 709.84375 599.386719 550.382812 624.101563 450 649.894531 349.289062 624.101563 362.859375 500.670935 450 450.435897"></polygon>
+        <g id="Group" transform="translate(1323.000000, 145.000000)">
+            <rect id="Rectangle" fill="#ECECEC" x="4" y="5" width="2" height="600"></rect>
+            <path d="M5,298.585786 L11.4142136,305 L5,311.414214 L-1.41421356,305 L5,298.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,398.585786 L11.4142136,405 L5,411.414214 L-1.41421356,405 L5,398.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,498.585786 L11.4142136,505 L5,511.414214 L-1.41421356,505 L5,498.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,598.585786 L11.4142136,605 L5,611.414214 L-1.41421356,605 L5,598.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,98.5857864 L11.4142136,105 L5,111.414214 L-1.41421356,105 L5,98.5857864 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,-1.41421356 L11.4142136,5 L5,11.4142136 L-1.41421356,5 L5,-1.41421356 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,198.585786 L11.4142136,205 L5,211.414214 L-1.41421356,205 L5,198.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+        </g>
+        <text id="User-research" transform="translate(1328.000000, 92.500000) rotate(-90.000000) translate(-1328.000000, -92.500000) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="1283.5" y="97.5">User research</tspan>
+        </text>
+        <text id="Wireframing" transform="translate(1328.000000, 802.500000) rotate(270.000000) translate(-1328.000000, -802.500000) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="1288.5" y="807.5">Wireframing</tspan>
+        </text>
+        <g id="Group" transform="translate(1328.000000, 450.000000) rotate(30.000000) translate(-1328.000000, -450.000000) translate(1323.000000, 145.000000)">
+            <rect id="Rectangle" fill="#ECECEC" x="4" y="5" width="2" height="600"></rect>
+            <path d="M5,298.585786 L11.4142136,305 L5,311.414214 L-1.41421356,305 L5,298.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,398.585786 L11.4142136,405 L5,411.414214 L-1.41421356,405 L5,398.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,498.585786 L11.4142136,505 L5,511.414214 L-1.41421356,505 L5,498.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,598.585786 L11.4142136,605 L5,611.414214 L-1.41421356,605 L5,598.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,98.5857864 L11.4142136,105 L5,111.414214 L-1.41421356,105 L5,98.5857864 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,-1.41421356 L11.4142136,5 L5,11.4142136 L-1.41421356,5 L5,-1.41421356 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,198.585786 L11.4142136,205 L5,211.414214 L-1.41421356,205 L5,198.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+        </g>
+        <text id="User-modeling" transform="translate(1507.750000, 138.663867) rotate(-60.000000) translate(-1507.750000, -138.663867) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="1461.25" y="143.663867">User modeling</tspan>
+        </text>
+        <text id="Prototyping" transform="translate(1152.250000, 754.407929) rotate(-60.000000) translate(-1152.250000, -754.407929) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="1113.75" y="759.407929">Prototyping</tspan>
+        </text>
+        <g id="Group" transform="translate(1328.000000, 450.000000) rotate(60.000000) translate(-1328.000000, -450.000000) translate(1323.000000, 145.000000)">
+            <rect id="Rectangle" fill="#ECECEC" x="4" y="5" width="2" height="600"></rect>
+            <path d="M5,298.585786 L11.4142136,305 L5,311.414214 L-1.41421356,305 L5,298.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,398.585786 L11.4142136,405 L5,411.414214 L-1.41421356,405 L5,398.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,498.585786 L11.4142136,505 L5,511.414214 L-1.41421356,505 L5,498.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,598.585786 L11.4142136,605 L5,611.414214 L-1.41421356,605 L5,598.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,98.5857864 L11.4142136,105 L5,111.414214 L-1.41421356,105 L5,98.5857864 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,-1.41421356 L11.4142136,5 L5,11.4142136 L-1.41421356,5 L5,-1.41421356 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,198.585786 L11.4142136,205 L5,211.414214 L-1.41421356,205 L5,198.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+        </g>
+        <text id="User-testing" transform="translate(1632.840942, 274.000000) rotate(-30.000000) translate(-1632.840942, -274.000000) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="1593.84094" y="279">User testing</tspan>
+        </text>
+        <text id="UI-Design" transform="translate(1030.953287, 621.500000) rotate(330.000000) translate(-1030.953287, -621.500000) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="1000.95329" y="626.5">UI Design</tspan>
+        </text>
+        <g id="Group" transform="translate(1328.000000, 450.000000) rotate(120.000000) translate(-1328.000000, -450.000000) translate(1323.000000, 145.000000)">
+            <rect id="Rectangle" fill="#ECECEC" x="4" y="5" width="2" height="600"></rect>
+            <path d="M5,298.585786 L11.4142136,305 L5,311.414214 L-1.41421356,305 L5,298.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,398.585786 L11.4142136,405 L5,411.414214 L-1.41421356,405 L5,398.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,498.585786 L11.4142136,505 L5,511.414214 L-1.41421356,505 L5,498.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,598.585786 L11.4142136,605 L5,611.414214 L-1.41421356,605 L5,598.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,98.5857864 L11.4142136,105 L5,111.414214 L-1.41421356,105 L5,98.5857864 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,-1.41421356 L11.4142136,5 L5,11.4142136 L-1.41421356,5 L5,-1.41421356 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,198.585786 L11.4142136,205 L5,211.414214 L-1.41421356,205 L5,198.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+        </g>
+        <text id="Test-analysis/presen" transform="translate(1673.544136, 649.500000) rotate(30.000000) translate(-1673.544136, -649.500000) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="1587.54414" y="654.5">Test analysis/presentation</tspan>
+        </text>
+        <text id="Graphic-design" transform="translate(1015.797842, 269.750000) rotate(30.000000) translate(-1015.797842, -269.750000) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="968.297842" y="274.75">Graphic design</tspan>
+        </text>
+        <g id="Group" transform="translate(1328.000000, 450.000000) rotate(150.000000) translate(-1328.000000, -450.000000) translate(1323.000000, 145.000000)">
+            <rect id="Rectangle" fill="#ECECEC" x="4" y="5" width="2" height="600"></rect>
+            <path d="M5,298.585786 L11.4142136,305 L5,311.414214 L-1.41421356,305 L5,298.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,398.585786 L11.4142136,405 L5,411.414214 L-1.41421356,405 L5,398.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,498.585786 L11.4142136,505 L5,511.414214 L-1.41421356,505 L5,498.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,598.585786 L11.4142136,605 L5,611.414214 L-1.41421356,605 L5,598.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,98.5857864 L11.4142136,105 L5,111.414214 L-1.41421356,105 L5,98.5857864 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,-1.41421356 L11.4142136,5 L5,11.4142136 L-1.41421356,5 L5,-1.41421356 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,198.585786 L11.4142136,205 L5,211.414214 L-1.41421356,205 L5,198.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+        </g>
+        <text id="Workshop-design" transform="translate(1512.250000, 769.130361) rotate(60.000000) translate(-1512.250000, -769.130361) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="1456.75" y="774.130361">Workshop design</tspan>
+        </text>
+        <text id="HTML/CSS" transform="translate(1155.000000, 150.355210) rotate(60.000000) translate(-1155.000000, -150.355210) " font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="1122" y="155.35521">HTML/CSS</tspan>
+        </text>
+        <g id="Group" transform="translate(1328.000000, 450.000000) rotate(90.000000) translate(-1328.000000, -450.000000) translate(1323.000000, 145.000000)">
+            <rect id="Rectangle" fill="#ECECEC" x="4" y="5" width="2" height="600"></rect>
+            <path d="M5,298.585786 L11.4142136,305 L5,311.414214 L-1.41421356,305 L5,298.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,398.585786 L11.4142136,405 L5,411.414214 L-1.41421356,405 L5,398.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,498.585786 L11.4142136,505 L5,511.414214 L-1.41421356,505 L5,498.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,598.585786 L11.4142136,605 L5,611.414214 L-1.41421356,605 L5,598.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,98.5857864 L11.4142136,105 L5,111.414214 L-1.41421356,105 L5,98.5857864 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,-1.41421356 L11.4142136,5 L5,11.4142136 L-1.41421356,5 L5,-1.41421356 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+            <path d="M5,198.585786 L11.4142136,205 L5,211.414214 L-1.41421356,205 L5,198.585786 Z" id="Rectangle" stroke="#164B7A" stroke-width="2" fill="#FFFFFF"></path>
+        </g>
+        <text id="Data-analytics" font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="1641" y="455">Data analytics</tspan>
+        </text>
+        <text id="Motion-design" font-family="FiraSans-Bold, Fira Sans" font-size="14" font-weight="bold" line-spacing="20" fill="#164B7A">
+            <tspan x="924" y="455">Motion design</tspan>
+        </text>
+        <path d="" id="Path-3" stroke="#979797"></path>
+        <polygon id="Path-4" stroke="#78116E" stroke-width="2" fill-opacity="0.1" fill="#78116E" points="1327.39844 350.407278 1332.58594 443.437955 1414 401.039429 1335.82031 450 1428.32813 624.523438 1327.39844 749.787433 1179.22674 710.680468 1069.23828 600.773438 1128.85156 450.073607 1069.23828 300.119484 1227.51953 277.593091"></polygon>
+    </g>
+</svg>

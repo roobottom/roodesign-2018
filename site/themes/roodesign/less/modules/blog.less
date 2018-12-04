@@ -11,13 +11,13 @@
   &__title {
     grid-column: 1 / span 2;
     .break-min({
-      grid-column: 1 / span 12;
+      grid-column: 3 / span 8;
       text-align: center;
     });
-    .break-mid({ grid-column: 2 / span 10; });
+    .break-mid({ grid-column: 4 / span 6; });
   }
 
-  &__text, .figure--grid {
+  &__text {
     grid-column: 1 / span 2;
     .break-min({ grid-column: 3 / span 8; });
     .break-mid({ grid-column: 4 / span 6; });
@@ -27,6 +27,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    .figure();
+
+    margin: unit(@v-space/@base,rem) 0;
+
+    &--default {
+      grid-column: 1 / span 2;
+      .break-min({ grid-column: 2 / span 10; });
+      .break-max({ grid-column: 3 / span 8; });
+      //.break-max({ grid-column: 4 / span 6; });
+    }
+
+    &--grid {
+      grid-column: 1 / span 2;
+      .break-min({ grid-column: 3 / span 8; });
+      .break-mid({ grid-column: 4 / span 6; });
+    }
+
+
   }
 
 

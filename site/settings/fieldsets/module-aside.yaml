@@ -20,15 +20,29 @@ fields:
               grid: 'Align with grid'
             type: select
             display: Style
-        background:
-          display: Background
-          fields:
-            image:
-              container: main
-              folder: /
-              restrict: false
-              max_files: 1
-              type: assets
-              display: Image
+      background:
+        display: Background
+        fields:
+          image:
+            container: main
+            folder: /
+            restrict: false
+            max_files: 1
+            type: assets
+            display: Image
+      copy:
+        display: Copy
+        fields:
+          text:
+            cheatsheet: false
+            restrict_assets: false
+            type: markdown
+            display: Text
+          style:
+            type: select
+            options:
+              default: Default
+              framed: Framed
+            default: default
     type: replicator
     display: 'Aside'

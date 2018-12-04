@@ -35,8 +35,8 @@ sections:
       modules:
         sets:
           side_by_side:
-            display: 'side by side'
-            instructions: 'text and images side-by-side (stacked on smaller screens)'
+            display: 'Side by side'
+            instructions: 'Text and images side-by-side (stacked on smaller screens)'
             fields:
               meta:
                 type: partial
@@ -48,8 +48,8 @@ sections:
                 type: partial
                 fieldset: module-aside
           blog:
-            display: blog
-            instructions: 'text and images mixed together in one block, like a blog post'
+            display: Blog
+            instructions: 'Text and images mixed together in one block, like a blog post'
             fields:
               meta:
                 type: partial
@@ -57,6 +57,29 @@ sections:
               article:
                 type: partial
                 fieldset: module-article
+          quote:
+            display: Quote
+            instructions: 'A quote and source'
+            fields:
+              background_colour:
+                type: text
+                display: 'Background colour'
+                default: '#'
+              text_colour:
+                options:
+                  black: Black
+                  white: White
+                inline: true
+                type: radio
+                display: 'Text colour'
+                default: black
+              text:
+                type: textarea
+                display: 'Quote text'
+              cite:
+                type: text
+                display: 'Citation'
+
         type: replicator
         display: Modules
   sidebar:

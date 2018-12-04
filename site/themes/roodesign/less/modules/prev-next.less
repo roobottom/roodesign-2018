@@ -1,0 +1,40 @@
+.prev-next {
+  border-top: 1px solid black;
+  position: relative;
+
+  li { list-style: none; }
+
+  &__badge {
+    position: absolute;
+    left: 50%;
+    top: -19px;
+    margin-left: -18px;
+  }
+
+  &__items {
+    .grid();
+    .gutter();
+    .v-space();
+  }
+
+  &__item--prev {
+    grid-column: 1 / span 1;
+    .break-min({ grid-column: 1 / span 6; });
+    .break-max({ grid-column: 2 / span 5; });
+  }
+  &__item--next {
+    grid-column: 2 / span 1;
+    .break-min({ grid-column: 7 / span 6; });
+    .break-max({ grid-column: 7 / span 5; });
+    justify-self: end;
+    text-align: right;
+  }
+
+  &__link {
+    #type > #size > .p;
+    color: black;
+  }
+
+  &__item--prev &__arrow { margin-right: unit(8/@base,rem); }
+  &__item--next &__arrow { margin-left: unit(8/@base,rem); }
+}

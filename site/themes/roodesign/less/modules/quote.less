@@ -1,0 +1,39 @@
+.quote {
+
+  &--white {
+    color: white;
+  }
+
+  blockquote {
+    .grid();
+    .gutter();
+    .v-space();
+
+
+
+    >p {
+      #type > #size > .x-lg;
+      font-weight: 900;
+      grid-column: 1 / span 2;
+      font-style: italic;
+      .break-min({
+        grid-column: 1 / span 12;
+      });
+      .break-mid({
+        grid-column: 2 / span 10;
+      });
+    }
+
+    >cite {
+      grid-column: 1 / span 2;
+      justify-self: end;
+      .break-min({
+        grid-column: 1 / span 12;
+      });
+      .break-mid({
+        grid-column: 2 / span 10;
+      });
+    }
+
+  }
+}

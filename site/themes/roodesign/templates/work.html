@@ -10,7 +10,9 @@
       {{ content }}
     </article>
     <aside class="hero__image">
-      <img src="{{ hero_image }}"/>
+      {{ assets:hero_image }}
+      <img src="{{ url }}" />
+      {{ /assets:hero_image }}
     </aside>
   </div>
 </section>
@@ -30,11 +32,11 @@
   {{ if type == 'side_by_side' }}
     <section class="side-by-side side-by-side--{{ text_colour }}"{{ if background_colour }} style="background-color: {{ background_colour }};"{{ /if }} >
       <div class="side-by-side__content">
-        {{ if title_display == 'span' }}<h2 class="side-by-side__title side-by-side__title--span">{{ title | widont }}</h2>{{ /if }}
+        {{ if title_display == 'span' }}<h2 class="side-by-side__title side-by-side__title--span">{{ title }}</h2>{{ /if }}
         <article class="prose side-by-side__article">
           {{ article }}
-          {{ if title_display != 'span' }}<h2 class="side-by-side__title side-by-side__title--span">{{ title | widont }}</h2>{{ /if }}
-            {{ text | markdown }}
+          {{ if title_display != 'span' }}<h2 class="side-by-side__title side-by-side__title--span">{{ title }}</h2>{{ /if }}
+            {{ text | markdown | smartypants }}
             {{ if type == 'figure' }}
               <figure>
                 <img src="{{ image }}"/>
@@ -45,9 +47,13 @@
         </article>
         <aside class="side-by-side__aside">
           {{ aside }}
-            {{ text | markdown }}
+            {{ if text }}
+              <article class="side-by-side__aside-article prose side-by-side__aside-article--{{style}}">
+                {{ text | markdown | smartypants }}
+              </article>
+            {{ /if }}
             {{ if type == 'figure' }}
-              <figure class="figure figure--{{ style }}">
+              <figure class="side-by-side__figure side-by-side__figure--{{ style }}">
                 {{ image }}
                 <img src="{{ value }}"/>
                 {{ /image }}
@@ -60,9 +66,9 @@
     </section>
   {{ /if }}
   {{ if type == 'blog' }}
-    <section class="blog blog--{{ text colour }}"{{ if background_colour }} style="background-color: {{ background_colour }};"{{ /if }} >
+    <section class="blog blog--{{ text_colour }}"{{ if background_colour }} style="background-color: {{ background_colour }};"{{ /if }} >
       <article class="blog__content">
-        {{ if title}}<h2 class="blog__title">{{ title | widont }}</h2>{{ /if }}
+        {{ if title}}<h2 class="blog__title">{{ title }}</h2>{{ /if }}
         {{ article }}
           {{ if type == 'copy' }}
           <div class="prose blog__text">
@@ -70,10 +76,10 @@
           </div>
           {{ /if }}
           {{ if type == 'figure' }}
-            <figure class="blog__figure figure figure--{{ style }} figure--inline">
-              {{ image }}
-              <img src="{{ value }}"/>
-              {{ /image }}
+            <figure class="blog__figure blog__figure--{{ style }}">
+              {{ assets:image }}
+                <img src="{{ if extension == "jpg|jpeg|png" }}{{ glide:url width="1800" }}{{ else }}{{ url }}{{ /if }}"/>
+              {{ /assets:image }}
               {{ if figcaption }}<figcaption>{{ figcaption | markdown }}</figcaption>{{ /if }}
             </figure>
           {{ /if }}
@@ -81,4 +87,45 @@
       </article>
     </section>
   {{ /if }}
+  {{ if type == 'quote' }}
+    <section class="quote quote--{{ text_colour }}"{{ if background_colour }} style="background-color: {{ background_colour }};"{{ /if }} >
+      <blockquote>
+        <p>{{ text | smartypants }}</p>
+        <cite>{{ cite }}</cite>
+      </blockquote>
+    </section>
+  {{ /if }}
 {{ /modules }}
+
+<nav class="prev-next">
+
+  <svg width="32" height="38" xmlns="http://www.w3.org/2000/svg" class="prev-next__badge">
+    <g fill="none" fill-rule="evenodd">
+      <path d="M15.735 8.851L27.993 21.2 15.735 33.549 3.477 21.2 15.735 8.851z" stroke="#FFF" stroke-width="5" fill="#FFF"/>
+      <path d="M15.735 8.842l4.36-4.39 7.9 7.953-12.26 12.343L3.476 12.405l7.9-7.953 4.36 4.39z" stroke="#FFF" stroke-width="5" fill="#FFF"/>
+      <path stroke="#3F3F3F" d="M15.735 12.4l8.736 8.8-8.736 8.8L7 21.2z"/>
+      <path stroke="#3F3F3F" d="M20.095 8l4.376 4.405-8.736 8.795L7 12.405 11.375 8l4.36 4.39z"/>
+    </g>
+  </svg>
+
+  <ul class="prev-next__items">
+
+    {{ collection:previous in="work" as="items" limit="1" sort="date:asc" }}
+      {{ items }}
+        <li class="prev-next__item prev-next__item--prev">
+          <h3 class="prev-next__heading"><svg viewBox="0 0 10 14" width="10" height="14" aria-hidden="true" class="prev-next__arrow"><use xlink:href="/site/themes/roodesign/img/icons.svg#icon-prev"/></svg>Previous project</h3>
+          <a href="{{ url }}" rel="prev" class="prev-next__link">{{ title }}</a>
+        </li>
+      {{ /items }}
+    {{ /collection:previous }}
+
+    {{ collection:next in="work" as="items" limit="1" sort="date:asc" }}
+    {{ items }}
+      <li class="prev-next__item prev-next__item--next">
+        <h3 class="prev-next__heading">Next project<svg viewBox="0 0 10 14" width="10" height="14" aria-hidden="true" class="prev-next__arrow"><use xlink:href="/site/themes/roodesign/img/icons.svg#icon-next"/></svg></h3>
+        <a href="{{ url }}" rel="prev" class="prev-next__link">{{ title }}</a>
+      </li>
+    {{ /items }}
+    {{ /collection:next }}
+  </ul>
+</nav>

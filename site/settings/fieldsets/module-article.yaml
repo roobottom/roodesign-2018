@@ -9,6 +9,12 @@ fields:
             restrict_assets: false
             type: markdown
             display: Text
+          style:
+            type: select
+            options:
+              default: Default
+              framed: Framed
+            default: default
       figure:
         display: Figure
         fields:
@@ -28,5 +34,6 @@ fields:
               grid: 'Align with grid'
             type: select
             display: Style
+            default: default
     type: replicator
     display: 'Content'

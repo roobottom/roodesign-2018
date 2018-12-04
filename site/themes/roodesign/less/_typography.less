@@ -16,15 +16,23 @@
     .lg() {
       font-size: unit(19/@base,rem);
       line-height: 24/19;
-      .break-min({
+      .break-mid({
         font-size: unit(23/@base,rem);
         line-height: 32/23;
+      });
+    }
+    .x-lg() {
+      font-size: unit(21/@base,rem);
+      line-height: 24/21;
+      .break-mid({
+        font-size: unit(29/@base,rem);
+        line-height: 32/29;
       });
     }
     .h2() {
       font-size: unit(36/@base,rem);
       line-height: 40/36;
-      .break-max({
+      .break-mid({
         font-size: unit(51/@base,rem);
         line-height: 56/51;
       });
@@ -54,13 +62,6 @@ body {
   }
 }
 
-p {
-  margin-top: 1em;
-  &:first-of-type {
-    margin-top: auto;
-  }
-}
-
 
 
 
@@ -77,12 +78,18 @@ h1 {
 }
 
 h2 {
-  font-weight: 300;
+  font-weight: 900;
   #type > #size > .h2;
   margin-bottom: unit(32/@base,rem);
   .break-max({
     margin-bottom: unit(32/@base,rem);
   });
+}
+
+h3 {
+  font-weight: 900;
+  #type > #size > .p;
+  margin: 1em 0 0 0;
 }
 
 
@@ -121,17 +128,30 @@ sub {
 
 .prose {
 
-  li ul, li ol {
-    margin-left: 2em;
+  p {
+    margin-top: 1em;
+  }
+
+  &:first-of-type p:first-of-type,
+  h3 + p,
+  h3 + ul {
+    margin-top: 0;
+  }
+
+  >ul,>ol {
+    margin-top: 1em;
+  }
+
+  li {
+    margin-left: 1em;
+    padding-left: .2em;
   }
   ol li {
     list-style-position: outside;
   }
   ul li {
-    list-style-position: inside;
-    .break-min({
-      list-style-position: outside;
-    });
+    list-style-position: outside;
+    list-style-image: url('/site/themes/roodesign/img/bullet.svg');
   }
   li {
     margin-top: 0.2em;
