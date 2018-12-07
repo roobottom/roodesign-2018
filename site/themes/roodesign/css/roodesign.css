@@ -161,7 +161,10 @@ a img {
   font-weight: normal;
   font-style: normal;
 }
-body {
+body,
+input,
+textarea,
+button {
   font-family: 'Fira Sans', sans-serif;
   color: black;
   -webkit-font-feature-settings: "liga" 1;
@@ -173,7 +176,10 @@ body {
   line-height: 1.41176471;
 }
 @media screen and (min-width: 63.75rem) {
-  body {
+  body,
+  input,
+  textarea,
+  button {
     font-size: 1.1875rem;
     line-height: 1.47368421;
   }
@@ -385,6 +391,8 @@ sub {
   max-width: 82.5rem;
   padding-left: 1.875rem;
   padding-right: 1.875rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 @media screen and (min-width: 42.5rem) {
   .site-header__title {
@@ -423,8 +431,6 @@ sub {
     grid-column: 1 / span 12;
     font-size: 8vw;
     text-align: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
   }
 }
 @media screen and (min-width: 63.75rem) {
@@ -649,13 +655,6 @@ sub {
     grid-column: 4 / span 6;
   }
 }
-@media screen and (min-width: 90rem) {
-  .intro__welcome {
-    -ms-grid-column-span: 4;
-    -ms-grid-column: 5;
-    grid-column: 5 / span 4;
-  }
-}
 .intro .icon--blip {
   position: absolute;
   left: -1.25rem;
@@ -778,7 +777,12 @@ sub {
 }
 @media screen and (min-width: 63.75rem) {
   .hero__image img {
-    max-width: 140%;
+    max-width: 130%;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .hero__image img {
+    max-width: 115%;
   }
 }
 .hero__background {
@@ -926,7 +930,7 @@ sub {
     grid-column: 1 / span 12;
   }
 }
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 63.75rem) {
   .side-by-side__title--span {
     -ms-grid-column-span: 10;
     -ms-grid-column: 2;
@@ -971,6 +975,12 @@ sub {
     grid-column: 8 / span 5;
   }
 }
+.side-by-side__figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
 .side-by-side__figure img {
   display: block;
   max-width: 100%;
@@ -986,6 +996,12 @@ sub {
 .side-by-side__figure figcaption,
 .side-by-side__figure figcaption a {
   color: #555555;
+}
+@media screen and (min-width: 42.5rem) {
+  .side-by-side__figure {
+    display: block;
+    margin-top: 0;
+  }
 }
 @media screen and (min-width: 42.5rem) {
   .side-by-side__figure--default img {
@@ -1354,6 +1370,123 @@ sub {
 }
 .prev-next__item--next .prev-next__arrow {
   margin-left: 0.5rem;
+}
+.form {
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 42.5rem) {
+  .form {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+@media screen and (min-width: 63.75rem) {
+  .form {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .form {
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+  }
+}
+.form--contact {
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 20px;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  max-width: 82.5rem;
+}
+@media screen and (min-width: 42.5rem) {
+  .form--contact {
+    -ms-grid-columns: (1fr)[12];
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+.form--contact .form__group,
+.form--contact .alert {
+  -ms-grid-column-span: 2;
+  -ms-grid-column: 1;
+  grid-column: 1 / span 2;
+}
+@media screen and (min-width: 42.5rem) {
+  .form--contact .form__group,
+  .form--contact .alert {
+    -ms-grid-column-span: 8;
+    -ms-grid-column: 3;
+    grid-column: 3 / span 8;
+  }
+}
+@media screen and (min-width: 63.75rem) {
+  .form--contact .form__group,
+  .form--contact .alert {
+    -ms-grid-column-span: 6;
+    -ms-grid-column: 4;
+    grid-column: 4 / span 6;
+  }
+}
+.form__group {
+  margin-bottom: 2rem;
+}
+.form__label {
+  display: block;
+  font-size: 1.0625rem;
+  line-height: 1.41176471;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 63.75rem) {
+  .form__label {
+    font-size: 1.1875rem;
+    line-height: 1.47368421;
+  }
+}
+.form__label--danger {
+  color: #CC444A;
+}
+.form__input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 1rem;
+}
+.form__input--trap {
+  display: none;
+}
+.button {
+  display: inline-block;
+  font-size: 1.0625rem;
+  line-height: 1.41176471;
+  border: none;
+  padding: 0.66666667rem 1rem;
+}
+@media screen and (min-width: 63.75rem) {
+  .button {
+    font-size: 1.1875rem;
+    line-height: 1.47368421;
+  }
+}
+.button--primary {
+  background-color: black;
+  color: white;
+}
+.button--secondary {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #F5DD7C;
+  color: black;
 }
 .template-home .intro {
   padding-top: 0;

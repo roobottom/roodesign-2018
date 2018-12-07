@@ -1,9 +1,6 @@
-<div class="container">
-  {{ collection:work as="posts" }}
-<ul>
-{{ posts }}
-  <li><a href="{{ url }}">{{ title }}</a></li>
-{{ /posts }}
-</ul>
-{{ /collection:work }}
-</div>
+<section class="intro">
+    <div class="intro__welcome prose">
+      {{ partial:icon name="blip" }}
+      {{ content }}
+    </div>
+</section>

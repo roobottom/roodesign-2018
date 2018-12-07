@@ -1,0 +1,25 @@
+title: Contact
+honeypot: data
+fields:
+  name:
+    display: Name
+    validate: required
+  email:
+    display: Email
+    validate: required|email
+  message:
+    display: Message
+    validate: required
+metrics:
+  -
+    type: total
+    label: 'Total submissions'
+email:
+  -
+    to: roo@roodesign.co.uk
+    from: website@roodesign.co.uk
+    subject: 'New website contact'
+  -
+    to: '{{ email }}'
+    from: roo@roodesign.co.uk
+    subject: 'Thanks for your message!'

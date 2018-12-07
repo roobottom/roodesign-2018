@@ -15,7 +15,7 @@
    &__title--span {
      grid-column: 1 / span 2;
      .break-min({ grid-column: 1 / span 12;});
-     .break-max({ grid-column: 2 / span 10; });
+     .break-mid({ grid-column: 2 / span 10; });
    }
 
   &__article {
@@ -32,6 +32,17 @@
 
   &__figure {
     .figure();
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: unit(@v-space/@base,rem);
+
+    .break-min({
+      display: block;
+      margin-top: 0;
+    });
+
     &--default {
       .break-min({
         img {

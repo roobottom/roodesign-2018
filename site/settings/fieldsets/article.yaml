@@ -1,0 +1,6 @@
+fields:
+  type: bard
+  sets:
+    copy:
+      display: 'Copy'
+      type: markdown

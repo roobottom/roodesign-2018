@@ -54,9 +54,9 @@
             {{ /if }}
             {{ if type == 'figure' }}
               <figure class="side-by-side__figure side-by-side__figure--{{ style }}">
-                {{ image }}
-                <img src="{{ value }}"/>
-                {{ /image }}
+                {{ assets:image }}
+                  <img src="{{ if extension | contains:png or extension | contains:jpg }}{{ glide:url width="1800" }}{{ else }}{{ url }}{{ /if }}"/>
+                {{ /assets:image }}
                 {{ if figcaption }}<figcaption>{{ figcaption | markdown }}</figcaption>{{ /if }}
               </figure>
             {{ /if }}
@@ -78,7 +78,7 @@
           {{ if type == 'figure' }}
             <figure class="blog__figure blog__figure--{{ style }}">
               {{ assets:image }}
-                <img src="{{ if extension == "jpg|jpeg|png" }}{{ glide:url width="1800" }}{{ else }}{{ url }}{{ /if }}"/>
+                <img src="{{ if extension | contains:png or extension | contains:jpg }}{{ glide:url width="1800" }}{{ else }}{{ url }}{{ /if }}"/>
               {{ /assets:image }}
               {{ if figcaption }}<figcaption>{{ figcaption | markdown }}</figcaption>{{ /if }}
             </figure>

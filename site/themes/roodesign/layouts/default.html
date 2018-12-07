@@ -24,11 +24,11 @@
           <a href="/" class="navigation__logo"><svg width="28" height="35" xmlns="http://www.w3.org/2000/svg"><g class="navigation__logo" fill="none" fill-rule="evenodd"><path d="M13.6 8.507L.707 21.4 13.6 34.293 26.493 21.4 13.6 8.507z"/><path d="M20.388 1L27.2 7.808 13.6 21.4 0 7.808 6.812 1 13.6 7.784z"/></g></svg></a>
           <ul class="navigation__items">
             <li><a href="/"{{ if current_uri == '/' }} class="active"{{ /if }}>Home</a></li>
-            <li><a href="/work"{{ if segment_1 == 'work' }} class="active"{{ /if }}>My work</a></li>
+            <!-- <li><a href="/work"{{ if segment_1 == 'work' }} class="active"{{ /if }}>My work</a></li> -->
             <!--<li><a href="#">Services</a></li>
             <li><a href="#">Articles</a></li>
             <li><a href="#">About me</a></li> -->
-            <li><a href="#">Contact me</a></li>
+            <li><a href="/contact"{{ if segment_1 == 'contact' }} class="active"{{ /if }}>Contact me</a></li>
           </ul>
         </nav>
 

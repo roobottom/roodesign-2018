@@ -1,0 +1,45 @@
+@c_danger: #CC444A;
+@c_success: #53A351;
+
+.form {
+  .gutter();
+  .v-space();
+
+
+  //layouts
+  &--contact {
+    .grid();
+  }
+  &--contact &__group,
+  &--contact .alert {
+    grid-column: 1 / span 2;
+    .break-min({ grid-column: 3 / span 8; });
+    .break-mid({ grid-column: 4 / span 6; });
+  }
+
+  &__group {
+    margin-bottom: unit(@v-space/@base,rem);
+  }
+
+  &__label {
+    display: block;
+    #type > #size > .p;
+    margin-bottom: unit(@v-space/4/@base,rem);
+    &--danger { color: @c_danger; }
+  }
+
+  &__input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: unit(@v-space/2/@base,rem);
+
+    &--trap {display: none;}
+
+  }
+
+
+
+}
