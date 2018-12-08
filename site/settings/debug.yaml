@@ -2,4 +2,4 @@ debug: false
 loggers:
   file:
     daily: true
-    path: /logs
+    path: /home/forge/roodesign.co.uk/logs
