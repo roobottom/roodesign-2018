@@ -1,5 +1,5 @@
-debug: false
+debug: true
 loggers:
+  browser: true
   file:
     daily: true
-    path: /home/forge/roodesign.co.uk/logs
