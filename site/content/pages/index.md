@@ -6,4 +6,4 @@ id: 1d785450-e1a0-42cb-8b80-95658dfb299a
 ---
 Hi, I’m **Jon Roobottom** — a digital product designer. For the past 20 years, I've worked hands-on and led teams in creating **apps** and **websites** that people love. 
 
-I work with organisiations to help them fix problems with their websites, design processes and culture; as-well as providing practical, hands-on UX design skills..
+I work with organisiations to help them fix problems with their websites, design processes and culture; as-well as providing practical, hands-on UX design skills.
