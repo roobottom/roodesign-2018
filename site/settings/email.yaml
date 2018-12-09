@@ -1,7 +1,3 @@
 driver: mail
 from_email: roo@roodesign.co.uk
-<<<<<<< HEAD
 from_name: 'Jon Roobottom'
-=======
-from_name: Jon Roobottom
->>>>>>> 6e83c9057293dc52f854ef66631bca09f0ee92ce
