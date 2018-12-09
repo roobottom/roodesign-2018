@@ -1,3 +1,7 @@
-driver: mail
+driver: smtp
+host: smtp.gmail.com
+port: 587
+encryption: tls
+username: roo@roodesign.co.uk
 from_email: roo@roodesign.co.uk
-from_name: 'Jon Roobottom'
+from_name: Jon Roobottom
