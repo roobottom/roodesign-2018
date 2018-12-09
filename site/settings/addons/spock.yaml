@@ -1,3 +1,5 @@
 environments:
   - production
 git_push: true
+commands_before:
+  - git pull
