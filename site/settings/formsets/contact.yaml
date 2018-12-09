@@ -21,9 +21,8 @@ metrics:
 email:
   -
     to: roo@roodesign.co.uk
-    from: website@roodesign.co.uk
+    from: '{{ email }}'
     subject: 'New website contact'
   -
     to: '{{ email }}'
-    from: roo@roodesign.co.uk
     subject: 'Thanks for your message!'
