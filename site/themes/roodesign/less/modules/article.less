@@ -1,0 +1,21 @@
+.article {
+  .gutter();
+  .v-space(0,1);
+  .grid();
+
+  &__content {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    .break-min({
+      grid-column: 2 / span 8;
+      grid-row: 1;
+    });
+  }
+  &__meta {
+    grid-row: 1;
+    .break-min({
+      grid-column: 10 / span 2;
+    });
+  }
+
+}
