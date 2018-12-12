@@ -9,7 +9,7 @@ Hi, I’m **Jon Roobottom** — a digital product designer. For the past 20 year
 I help organisations succeed through design with tools and techniques that supercharge creativity. I...
 
 * **guide product teams** in fixing problems with their processes and culture;
-* **facilite workshops** and design sprints that unleash creativity and empower organisations to solve problems quickly;
+* **facilitate workshops** and design sprints that unleash creativity and empower organisations to solve problems quickly;
 * **develop pattern libraries** that maximise productivity and quality;
 * **design websites** that sit at the heart of your marketing strategy.
 
