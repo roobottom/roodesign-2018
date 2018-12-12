@@ -6,13 +6,11 @@ id: 1d785450-e1a0-42cb-8b80-95658dfb299a
 ---
 Hi, I’m **Jon Roobottom** — a digital product designer. For the past 20 years, I've worked hands-on and led teams in creating **apps** and **websites** that people love. 
 
-I help organisations succeed through design — empowering you with tools and techniques that supercharge creativity.
+I help organisations succeed through design with tools and techniques that supercharge creativity. I...
 
-### I help by...
+* **guide product teams** in fixing problems with their processes and culture;
+* **facilite workshops** and design sprints that unleash creativity and empower organisations to solve problems quickly;
+* **develop pattern libraries** that maximise productivity and quality;
+* **design websites** that sit at the heart of your marketing strategy.
 
-* guiding product design teams in fixing problems with their processes and culture;
-* running workshops that unleash creativity and empower you to solve problems quickly;
-* building pattern libraries that maximise productivity and quality;
-* leading the design and development of websites that sit at the heart of your marketing strategy.
-
-If you'd like to know more about how I could help, please **[contact me](/contact)** and I'll get back to you as soon as I can (usually the same day).
+If you'd like to know more about how I could help, **[contact me](/contact)** and I'll get back to you as soon as I can.
