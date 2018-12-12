@@ -1,6 +1,6 @@
 .article {
   .gutter();
-  .v-space(0,1);
+  .v-space();
   .grid();
 
   &__content {
@@ -9,6 +9,21 @@
     .break-min({
       grid-column: 2 / span 8;
       grid-row: 1;
+    });
+    .break-mid({
+      display: grid;
+      grid-template-columns:
+      ~"[full-start] minmax(1em,1fr)
+        [prose-start] minmax(0, 10fr)
+        [prose-end] minmax(1em,1fr) [full-end]";
+
+        > * {
+          grid-column: prose;
+        }
+        .figure--w-wide {
+          grid-column: full;
+        }
+
     });
   }
   &__meta {

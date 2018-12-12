@@ -78,12 +78,8 @@ h1 {
 }
 
 h2 {
-  font-weight: 900;
+  font-weight: 300;
   #type > #size > .h2;
-  margin-bottom: unit(32/@base,rem);
-  .break-max({
-    margin-bottom: unit(32/@base,rem);
-  });
 }
 
 h3 {
@@ -131,10 +127,17 @@ sub {
   p {
     margin-top: 1em;
   }
+  p:first-of-type {
+    #type > #size > .lg;
+  }
 
   &:first-of-type p:first-of-type,
   h3 + p {
     margin-top: 0;
+  }
+
+  p + h2 {
+    margin-top: 1em;
   }
 
   >ul,>ol {

@@ -31,12 +31,12 @@ class FigureTags extends Tags
           }
           if($set['caption'])
           {
-            $tag .= "<figcaption>".$set['caption']."</figcaption>";
+            $tag .= "<figcaption class='figure__caption'>".$set['caption']."</figcaption>";
           }
           $tag .= "</figure>";
         }
       }
-      
+
       return $tag;
     }
 
