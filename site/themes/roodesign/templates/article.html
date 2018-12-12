@@ -1,0 +1,15 @@
+<section class="article">
+<article class="prose article__content">
+  {{ content }}
+</article>
+<aside class="article__meta">
+  <dl class="meta-list">
+      <dt class="meta-list__title">I wrote this on</dt>
+      <dd class="meta-list__value">{{ date }}</dd>
+  </dl>
+  <dl class="meta-list">
+      <dt class="meta-list__title">Tags</dt>
+      <dd class="meta-list__value">{{ tags }}#<a href="{{ url }}">{{ title }}</a>{{ if not last }}, {{ /if }}{{ /tags }}</dd>
+  </dl>
+</aside>
+</section>

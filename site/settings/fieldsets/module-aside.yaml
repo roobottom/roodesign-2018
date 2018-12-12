@@ -46,3 +46,4 @@ fields:
             default: default
     type: replicator
     display: 'Aside'
+hide: true

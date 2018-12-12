@@ -1,4 +1,6 @@
 collections:
   work: '/work/{slug}'
-taxonomies: {  }
+  articles: '/articles/{year}/{month}/{slug}'
+taxonomies:
+  tags: '/tagged/{slug}'
 routes: {  }

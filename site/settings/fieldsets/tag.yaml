@@ -1,0 +1,14 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: 'Tag Name'
+        type: text
+      slug:
+        display: Slug
+        type: text
+        default: '{{ title }}'
+taxonomies: true
+title: Tag
+create_title: 'Create a new tag'

@@ -1,6 +1,59 @@
-fields:
-  type: bard
-  sets:
-    copy:
-      display: 'Copy'
-      type: markdown
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: Title
+        type: text
+        localizable: true
+      content:
+        cheatsheet: true
+        restrict_assets: false
+        type: markdown
+        display: Content
+  assets:
+    display: Assets
+    fields:
+      asset_sets:
+        sets:
+          set:
+            display: Set
+            fields:
+              name:
+                type: text
+                display: Name
+              assets:
+                type: assets
+                display: Assets
+                container: main
+                folder: articles
+              caption:
+                cheatsheet: false
+                restrict_assets: false
+                type: markdown
+                display: Caption
+              width:
+                options:
+                  default: Default
+                  wide: Wide
+                  x_wide: 'Extra Wide'
+                inline: false
+                type: radio
+                display: Width
+                default: default
+        type: replicator
+        instructions: 'A grouping of assets you can refer to with a `{{ figure set="name" }}` tag.'
+        display: 'Asset Sets'
+  sidebar:
+    display: Sidebar
+    fields:
+      date:
+        display: Date
+        type: date
+        allow_blank: false
+        allow_time: true
+        require_time: false
+        earliest_date: 'January 1, 2000'
+taxonomies: true
+title: Article
+create_title: 'Create a new article'

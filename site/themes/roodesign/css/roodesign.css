@@ -268,8 +268,7 @@ sub {
   margin-top: 1em;
 }
 .prose:first-of-type p:first-of-type,
-.prose h3 + p,
-.prose h3 + ul {
+.prose h3 + p {
   margin-top: 0;
 }
 .prose > ul,
@@ -277,7 +276,7 @@ sub {
   margin-top: 1em;
 }
 .prose li {
-  margin-left: 1em;
+  margin-left: 2em;
   padding-left: .2em;
 }
 .prose ol li {
@@ -440,7 +439,7 @@ sub {
 }
 @media screen and (min-width: 90rem) {
   .site-header__title > h1 {
-    font-size: 6vw;
+    font-size: 5vw;
   }
 }
 .site-footer {
@@ -631,12 +630,12 @@ sub {
   grid-column: 1 / span 2;
   position: relative;
 }
-.intro__welcome > p {
+.intro__welcome p:first-of-type {
   font-size: 1.1875rem;
   line-height: 1.26315789;
 }
 @media screen and (min-width: 63.75rem) {
-  .intro__welcome > p {
+  .intro__welcome p:first-of-type {
     font-size: 1.4375rem;
     line-height: 1.39130435;
   }
@@ -855,11 +854,13 @@ sub {
     grid-column: 2 / span 10;
   }
 }
+.meta__items {
+  margin: 1rem;
+  flex: 1 1 auto;
+}
 .meta-list {
   font-size: 0.875rem;
   line-height: 1.42857143;
-  margin: 1rem;
-  flex: 1 1 auto;
 }
 .meta-list,
 .meta-list a {
@@ -1495,6 +1496,9 @@ sub {
   .template-home .intro {
     padding-top: 2rem;
   }
+}
+body {
+  background-color: white;
 }
 
 /*# sourceMappingURL=roodesign.css.map */

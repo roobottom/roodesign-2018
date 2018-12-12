@@ -3,7 +3,7 @@
   .gutter();
 
   &__welcome {
-    >p {#type > #size > .lg;}
+    p:first-of-type {#type > #size > .lg;}
     grid-column: 1 / span 2;
     .break-min({ grid-column: 3 / span 8; });
     .break-mid({ grid-column: 4 / span 6; });

@@ -21,3 +21,4 @@ fields:
     type: radio
     display: 'Text colour'
     default: black
+hide: true

@@ -37,3 +37,4 @@ fields:
             default: default
     type: replicator
     display: 'Content'
+hide: true
