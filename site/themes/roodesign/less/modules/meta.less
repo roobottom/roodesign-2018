@@ -1,25 +1,25 @@
 .meta {
   .gutter();
-  .grid();
   .v-space(@top: 0);
-  margin-top: unit(-1 * @v-space/@base,rem);
   position: relative;
+  display: flex;
+  justify-content: center;
 
   &__container {
     box-shadow: 0 0 40px fade(black,20%);
     background-color: white;
-    grid-column: 1 / span 2;
-    .break-min({ grid-column: 1 / span 12; });
-    .break-mid({ grid-column: 2 / span 10; });
-    display: flex;
+    display: inline-flex;
+    margin: 0 auto;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: unit(@v-space/2/@base,rem);
+    justify-content: space-around;
+    > * {
+      margin: unit(@v-space/@base,rem);
+      flex: 1 1 auto;
+    }
   }
 
   &__items {
-    margin: unit(@v-space/2/@base,rem);
-    flex: 1 1 auto;
+
   }
 
 }

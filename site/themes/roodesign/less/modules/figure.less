@@ -1,11 +1,39 @@
 .figure {
+
+
+
   &__image {
     display: block;
     max-width: 100%;
   }
   &__caption {
-    
+    #type > #size > .sm;
+    margin-top: 1em;
+    color: @c_grey;
+    font-style: italic;
+    text-align: center;
   }
+
+  &--gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-column-gap: 20px;
+  }
+
+  &--gallery &__caption {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+  }
+  &--gallery-2 &__caption {
+    grid-column: 1 / span 2;
+  }
+  &--gallery-3 &__caption {
+    grid-column: 1 / span 3;
+  }
+  &--gallery-4 &__caption {
+    grid-column: 1 / span 4;
+  }
+
 
 
 }
