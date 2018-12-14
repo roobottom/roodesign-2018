@@ -1,31 +1,7 @@
-.meta {
-  .gutter();
-  .v-space(@top: 0);
-  position: relative;
-  display: flex;
-  justify-content: center;
-
-  &__container {
-    box-shadow: 0 0 40px fade(black,20%);
-    background-color: white;
-    display: inline-flex;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    > * {
-      margin: unit(@v-space/@base,rem);
-      flex: 1 1 auto;
-    }
-  }
-
-  &__items {
-
-  }
-
-}
-
 .meta-list {
   #type > #size > .sm;
+  .v-space(0,.5);
+  &:last-of-type { .v-space(0,0); }
 
   &, a {
     color: @c_grey;
@@ -35,9 +11,5 @@
     font-weight: bold;
   }
 
-  &--inline {
-    .v-space(0,.5);
-    &:last-of-type { .v-space(0,0); }
-  }
 
 }

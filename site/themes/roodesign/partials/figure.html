@@ -1,0 +1,14 @@
+{{ asset_sets }}
+{{ if name == set }}
+<figure class="figure figure--w-{{ width}}{{ if assets | count > 1 }} figure--gallery figure--gallery-{{ assets | count }}{{ /if }}">
+  {{ assets:assets }}
+  {{ if assets | count == 1 }}
+  <img src="{{ glide:url width="1200" }}" class="figure__image" alt="{{ alt or caption }}"/>
+  {{ else }}
+  <img src="{{ glide:url width="800" height="600" fit="crop_focal" }}" class="figure__image" alt="{{ alt or caption }}"/>
+  {{ /if }}
+  {{ /assets:assets }}
+  {{ if caption }}<figcaption class="figure__caption">{{ caption | markdown | smartypants }}</figcaption>{{ /if }}
+</figure>
+{{ /if }}
+{{ /asset_sets }}

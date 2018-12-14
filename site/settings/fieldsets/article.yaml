@@ -6,6 +6,15 @@ sections:
         display: Title
         type: text
         localizable: true
+      cover:
+        container: main
+        folder: articles
+        restrict: false
+        max_files: 1
+        mode: grid
+        type: assets
+        instructions: 'The article cover image to be used on listing pages and social media links'
+        display: Cover
       content:
         cheatsheet: true
         restrict_assets: false
@@ -42,7 +51,7 @@ sections:
                 display: Width
                 default: default
         type: replicator
-        instructions: 'A grouping of assets you can refer to with a `{{ figure set="name" }}` tag.'
+        instructions: 'A grouping of assets you can refer to with a `{{ partial:figure set="name" }}` tag.'
         display: 'Asset Sets'
   sidebar:
     display: Sidebar

@@ -33,8 +33,8 @@
       font-size: unit(36/@base,rem);
       line-height: 40/36;
       .break-mid({
-        font-size: unit(51/@base,rem);
-        line-height: 56/51;
+        font-size: unit(44/@base,rem);
+        line-height: 48/44;
       });
     }
   }
@@ -78,13 +78,13 @@ h1 {
 }
 
 h2 {
-  font-weight: 300;
+  font-weight: 900;
   #type > #size > .h2;
 }
 
 h3 {
   font-weight: 900;
-  #type > #size > .p;
+  #type > #size > .x-lg;
   margin: 1em 0 0 0;
 }
 
@@ -124,26 +124,19 @@ sub {
 
 .prose {
 
-  p {
+  p  {
     margin-top: 1em;
   }
-  figure {
-    margin: 2em 0;
-  }
+
   p:first-of-type {
     #type > #size > .lg;
   }
 
-  &:first-of-type p:first-of-type,
-  h3 + p {
+  &:first-of-type p:first-of-type {
     margin-top: 0;
   }
 
-  p + h2 {
-    margin-top: 1em;
-  }
-
-  h3 {
+  h2, h3, figure {
     margin-top: 2em;
   }
 

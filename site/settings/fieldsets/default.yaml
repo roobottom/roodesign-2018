@@ -1,0 +1,23 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: Title
+        type: text
+        localizable: true
+      content:
+        cheatsheet: false
+        restrict_assets: false
+        type: markdown
+        display: Content
+  sidebar:
+    display: Sidebar
+    fields:
+      template:
+        type: template
+        display: Template
+        default: default
+taxonomies: true
+title: Default
+create_title: 'Create a new page'
