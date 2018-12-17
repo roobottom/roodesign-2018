@@ -1,5 +1,5 @@
 @base: 16; //base text size
-@gutter: 30; //site gutter
+@prose-width: 649; //max witdth of prose
 
 //gloabl breakpoints
 @break-min: 680;
@@ -8,11 +8,14 @@
 
 //vertical space
 @v-space: 32;
+//horizontal space
+@h-space: 20;
 
 //grid settings
-@grid-gap: 20;
+@grid-gap: @h-space;
 
 //responsive gutters
+@gutter: 30; //site gutter
 @gutter-min: 40;
 @gutter-mid: 40;
 @gutter-max: 60;

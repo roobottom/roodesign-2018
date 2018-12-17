@@ -1,13 +1,5 @@
 <section class="listing listing--articles">
   {{ collection:articles }}
-    <article>
-      {{ if cover }}
-      {{ asset:cover }}
-      <img src="{{ glide:url width="600" height="600" fit="crop_focal" filter="greyscale"  }}" alt="{{ alt or title }}"/>
-      {{ /asset:cover}}
-      {{ /if }}
-      <h2><a href="{{ url }}">{{ title }}</a></h2>
-      {{ content | markdown | smartypants | safe_truncate:90:... }}
-    </article>
+    {{ partial:card :cover="cover" :title="title" :content="content"  }}
   {{ /collection:articles }}
 </section>

@@ -1,53 +1,17 @@
 .article {
   .gutter();
-  .v-space();
-  .grid();
+  .v-space(1,3);
 
-  &__aside {
-    grid-column: 1 / span 2;
-    .v-space(0,1);
-    .break-min({
-      grid-column: 1 / span 2;
-      grid-row: span 10; //ensure that this grid item doesn't push-down items in __content
-    });
-    .break-mid({
-      grid-column: 2 / span 2;
-    });
-    .break-max({
-      //grid-column: 2 / span 2;
-    });
-  }
+  .break-min({
+    .grid();
+    .grid--article();
+  });
 
   &__content {
-    grid-column: 1 / span 2;
-    .break-min({
-      display:contents;
-      &, > * { grid-column: 3 / span 8; }
-      .figure--w-wide {
-        grid-column: 2 / span 10;
-      }
-      .figure--w-x-wide {
-        grid-column: 1 / span 12;
-      }
-    });
-    .break-mid({
-      &, > * { grid-column: 4 / span 6; }
-      .figure--w-wide {
-        grid-column: 3 / span 8;
-      }
-
-    });
-    .break-max({
-
-    });
-
-
-
-
-
-
-
-
+    > * {
+      max-width: unit(@prose-width/@base,rem);
+    }
 
   }
+
 }

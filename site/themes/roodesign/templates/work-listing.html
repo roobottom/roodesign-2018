@@ -1,0 +1,5 @@
+<section class="listing listing--work">
+  {{ collection:work }}
+    {{ partial:card :cover="cover" :title="title" :content="content" :date="date | year"  }}
+  {{ /collection:work }}
+</section>

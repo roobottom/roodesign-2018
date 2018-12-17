@@ -46,6 +46,7 @@ sections:
                   default: Default
                   wide: Wide
                   x-wide: 'Extra Wide'
+                  aside: 'Aside (float right)'
                 inline: false
                 type: radio
                 display: Width

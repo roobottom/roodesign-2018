@@ -1,0 +1,20 @@
+<article class="card">
+  <div class="card__cover">
+    <svg viewBox="0 0 100 100" width="100%" height="100%" aria-hidden="true" class="card__background" preserveAspectRatio="none">
+      <use xlink:href="#triangle" class="card__triangle"></use>
+    </svg>
+    {{ if cover }}
+    {{ asset:cover }}
+      <img src="{{ glide:url width="600" height="420" fit="crop_focal" filter="greyscale"  }}" alt="{{ alt or title }}" class="card__cover-image" />
+    {{ /asset:cover}}
+    {{ /if }}
+  </div>
+  <h2 class="card__title"><a href="{{ url }}" class="card__link">{{ title | widont }}</a></h2>
+  <div class="card__content prose">
+    {{ content | markdown | smartypants | paragraph | striptags:a }}
+  </div>
+  <ul class="card__meta">
+    <li>{{ date }}</li>
+    <li><strong>{{ content | read_time }} min read</strong></li>
+  </ul>
+</article>

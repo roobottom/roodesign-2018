@@ -1,0 +1,10 @@
+Select first p plugin:
+
+/**
+   * Maps to {{ var | first_paragraph }} or {{ var first_paragraph="..." }}
+   *
+   */
+  public function firstParagraph($value, $params, $context)
+  {
+      return preg_replace( "~(^.+)[\r\n]{2,}~s", "$1", $value."\n\n" );
+  }

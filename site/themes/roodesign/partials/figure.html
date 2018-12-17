@@ -1,6 +1,6 @@
 {{ asset_sets }}
 {{ if name == set }}
-<figure class="figure figure--w-{{ width}}{{ if assets | count > 1 }} figure--gallery figure--gallery-{{ assets | count }}{{ /if }}">
+<figure class="figure figure--{{ width}}{{ if assets | count > 1 }} figure--gallery figure--gallery-{{ assets | count }}{{ /if }}">
   {{ assets:assets }}
   {{ if assets | count == 1 }}
   <img src="{{ glide:url width="1200" }}" class="figure__image" alt="{{ alt or caption }}"/>

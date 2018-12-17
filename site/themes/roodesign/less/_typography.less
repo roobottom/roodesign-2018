@@ -73,19 +73,6 @@ h1 {
   });
   font-size: unit(39/@base,rem);
   line-height: 1;
-
-
-}
-
-h2 {
-  font-weight: 900;
-  #type > #size > .h2;
-}
-
-h3 {
-  font-weight: 900;
-  #type > #size > .x-lg;
-  margin: 1em 0 0 0;
 }
 
 
@@ -124,20 +111,33 @@ sub {
 
 .prose {
 
-  p  {
-    margin-top: 1em;
+  h2 {
+    font-weight: 900;
+    #type > #size > .h2;
   }
 
-  p:first-of-type {
-    #type > #size > .lg;
+  h3, h4, h5, h6 {
+    font-weight: 900;
+    #type > #size > .x-lg;
+    margin: 1em 0 0 0;
+  }
+
+  p, h2  {
+    margin-top: 1em;
   }
 
   &:first-of-type p:first-of-type {
     margin-top: 0;
   }
 
-  h2, h3, figure {
+
+
+  h3, figure {
     margin-top: 2em;
+  }
+
+  figure.figure--aside {
+    margin-top: 1em;
   }
 
   >ul,>ol {
