@@ -23,13 +23,12 @@
 
   &__cover {
     position: relative;
-    padding: unit(@h-space * 2 / @base, rem);
-    min-height: unit(100 / @base, rem);
   }
 
   &__cover-image {
     height: auto;
     max-width: 100%;
+    display: block;
   }
 
   &__background {
@@ -58,16 +57,18 @@
 
   &__title {
     grid-template: title;
-    padding: 0 unit(@h-space * 2 / @base, rem);
+    margin: unit(@v-space / @base, rem) unit(@h-space / @base, rem);
+    margin-bottom: 0;
     #type > #size > .x-lg;
   }
 
   &__content {
-     padding: 0 unit(@h-space * 2 / @base, rem);
+     margin: unit(@v-space / @base, rem) unit(@h-space / @base, rem);
+     margin-bottom: 0;
   }
 
   &__meta {
-    padding: unit(@h-space * 2 / @base, rem);
+    margin: unit(@v-space / @base, rem) unit(@h-space / @base, rem);
     display: block;
     #type > #size > .sm;
     color: @c_grey;

@@ -1,5 +1,6 @@
+
 <section class="listing listing--work">
   {{ collection:work }}
-    {{ partial:card :cover="cover" :title="title" :content="content" :date="date | year"  }}
+    {{ partial:card :cover="cover" :title="title" :content="tagline" :date="date" date_format="F Y" triangle_colour="rgba(0,0,0,.2)" }}
   {{ /collection:work }}
 </section>

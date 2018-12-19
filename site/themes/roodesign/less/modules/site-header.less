@@ -1,5 +1,6 @@
 .site-header {
-  .v-space();
+  .v-space(1,0);
+
 
   &, >* {
     position: relative;
@@ -11,20 +12,22 @@
     position: absolute;
     top: 0;
     left: 0;
+    height: 100%;
   }
 
-  &__triangle {
+
+  &__background-triangle {
     fill: white;
   }
+
 
   &__title {
 
     .gutter();
-    .v-space(1,0);
-
+    .v-space();
   }
 
 }
- .page-home .site-header__triangle {
+ .page-home .site-header__background-triangle {
    fill: #F5DD7C;
  }

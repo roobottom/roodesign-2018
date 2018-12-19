@@ -1,13 +1,19 @@
 {{ asset_sets }}
 {{ if name == set }}
-<figure class="figure figure--{{ width}}{{ if assets | count > 1 }} figure--gallery figure--gallery-{{ assets | count }}{{ /if }}">
-  {{ assets:assets }}
+<figure class="figure figure--{{ width}}{{ style }} figure--{{ value }}{{ /style }}">
+
   {{ if assets | count == 1 }}
-  <img src="{{ glide:url width="1200" }}" class="figure__image" alt="{{ alt or caption }}"/>
+    {{ assets:assets }}
+      <img src="{{ if extension | contains:png or extension | contains:jpg }}{{ glide:url width="1200" }}{{ else }}{{ url }}{{ /if }}" class="figure__image" alt="{{ alt or caption }}"/>
+    {{ /assets:assets }}
   {{ else }}
-  <img src="{{ glide:url width="800" height="600" fit="crop_focal" }}" class="figure__image" alt="{{ alt or caption }}"/>
+    <div class="figure__gallery {{ if stage }} figure__gallery--stage{{ /if }}">
+    {{ assets:assets }}
+      <img src="{{ if extension | contains:png or extension | contains:jpg }}{{ if brickwall }}{{ glide:url width="800" height="600" fit="crop_focal"  }}{{ else }}{{ glide:url width="800"  }}{{ /if }}{{ else }}{{ url }}{{ /if }}" class="figure__image" alt="{{ alt or caption }}"/>
+    {{ /assets:assets }}
+    </div>
   {{ /if }}
-  {{ /assets:assets }}
+
   {{ if caption }}<figcaption class="figure__caption">{{ caption | markdown | smartypants }}</figcaption>{{ /if }}
 </figure>
 {{ /if }}

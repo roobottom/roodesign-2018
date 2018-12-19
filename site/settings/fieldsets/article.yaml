@@ -23,37 +23,9 @@ sections:
   assets:
     display: Assets
     fields:
-      asset_sets:
-        sets:
-          set:
-            display: Set
-            fields:
-              name:
-                type: text
-                display: Name
-              assets:
-                type: assets
-                display: Assets
-                container: main
-                folder: articles
-              caption:
-                cheatsheet: false
-                restrict_assets: false
-                type: markdown
-                display: Caption
-              width:
-                options:
-                  default: Default
-                  wide: Wide
-                  x-wide: 'Extra Wide'
-                  aside: 'Aside (float right)'
-                inline: false
-                type: radio
-                display: Width
-                default: default
-        type: replicator
-        instructions: 'A grouping of assets you can refer to with a `{{ partial:figure set="name" }}` tag.'
-        display: 'Asset Sets'
+      asset_sets:    
+        type: partial
+        fieldset: _assets
   sidebar:
     display: Sidebar
     fields:

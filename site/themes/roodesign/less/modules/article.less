@@ -1,17 +1,34 @@
 .article {
   .gutter();
-  .v-space(1,3);
+
+
+  &--main {
+    .v-space();
+  }
+
+  .grid();
 
   .break-min({
-    .grid();
-    .grid--article();
-  });
 
-  &__content {
-    > * {
-      max-width: unit(@prose-width/@base,rem);
+    @aside-width-min: unit( ( 1 / 12) * 100, % );
+    @aside-width-max: unit( ( 2 / 12) * 100, % );
+    @main-width: unit(@prose-width/@base,rem);
+    grid-template-columns: ~"minmax(@{aside-width-min}, @{aside-width-max}) auto minmax(@{aside-width-min}, @{aside-width-max})";
+    grid-template-areas: "before main main";
+
+    &__aside {
+      grid-column: before;
+      .v-space(0,1);
     }
 
-  }
+    &__content {
+      grid-column: main;
+      > * {
+        max-width: unit(@prose-width/@base,rem);
+      }
+    }
+  });
+
+
 
 }

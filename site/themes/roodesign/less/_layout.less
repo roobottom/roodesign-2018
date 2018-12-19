@@ -33,8 +33,7 @@
   grid-gap: unit(@v-space/@base,rem) unit(@h-space/@base,rem);
 }
 .grid--article() {
-  @aside-width: unit( ( 1 / 6) * 100, % );
-  grid-template-columns: ~"[aside] minmax(135px,@{aside-width}) [main] auto";
+  
 }
 .grid--listing() {
   grid-template-columns: repeat(auto-fit,minmax(360px,1fr));

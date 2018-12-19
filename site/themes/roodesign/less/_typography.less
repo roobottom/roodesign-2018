@@ -66,13 +66,15 @@ body, input, textarea, button {
 
 
 h1 {
-  font-family: 'carlson', serif;
-  font-weight: normal;
+  //font-family: 'carlson', serif;
+  font-weight: 900;
   .break-min({
     font-size: 5.5vw;
   });
   font-size: unit(39/@base,rem);
   line-height: 1;
+  width: 100%;
+  display: block;
 }
 
 
@@ -122,12 +124,16 @@ sub {
     margin: 1em 0 0 0;
   }
 
-  p, h2  {
+  p, h2, pre  {
     margin-top: 1em;
   }
 
-  &:first-of-type p:first-of-type {
+  p:first-of-type {
     margin-top: 0;
+  }
+
+  p:first-of-type {
+    //#type > #size > .lg;
   }
 
 

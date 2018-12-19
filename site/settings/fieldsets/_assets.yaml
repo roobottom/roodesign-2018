@@ -1,0 +1,49 @@
+fields:
+  asset_sets:
+    sets:
+      set:
+        display: Set
+        fields:
+          name:
+            type: text
+            display: Name
+          assets:
+            type: assets
+            display: Assets
+            container: main
+          brickwall:
+            type: toggle
+            display: Brickwall effect?
+            instructions: "When selecting more than one image, create a `brickwall` effect by resizing the images?"
+            width: 50
+          stage:
+            type: toggle
+            display: Put this figure on a stage?
+            instructions: "Give this figure a nice background effect?"
+            width: 50
+          caption:
+            cheatsheet: false
+            restrict_assets: false
+            type: markdown
+            display: Caption
+          width:
+            options:
+              default: Default
+              wide: Wide
+              x-wide: 'Extra Wide'
+              aside: 'Aside (float right)'
+            inline: false
+            type: radio
+            display: Width
+            default: default
+          style:
+            type: checkboxes
+            dislay: Style options
+            options:
+              shadow: Drop Shadow
+              frame-browser: Browser Frame
+              frame-phone: Phone Frame
+    type: replicator
+    instructions: 'A grouping of assets you can refer to with a `{{ partial:figure set="name" }}` tag.'
+    display: 'Asset Sets'
+hide: true

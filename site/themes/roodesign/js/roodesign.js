@@ -59,4 +59,4 @@
   };
 })();
 
-//window.fitText( document.getElementById("headline") );
+window.fitText( document.getElementById("headline"), 1.3 );
