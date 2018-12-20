@@ -2,8 +2,8 @@
 #type {
   #size() {
     .sm() {
-      font-size: unit(14/@base,rem);
-      line-height: 20/14;
+      font-size: unit(16/@base,rem);
+      line-height: 20/16;
     }
     .p() {
       font-size: unit(17/@base,rem);
@@ -40,12 +40,6 @@
   }
 }
 
-@font-face {
-    font-family: 'carlson';
-    src: url('/site/themes/roodesign/fonts/carlson.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
 
 body, input, textarea, button {
   font-family: 'Fira Sans', sans-serif;
@@ -111,29 +105,36 @@ sub {
   }
 }
 
+
 .prose {
 
   h2 {
     font-weight: 900;
     #type > #size > .h2;
+    clear: right;
   }
 
   h3, h4, h5, h6 {
     font-weight: 900;
     #type > #size > .x-lg;
-    margin: 1em 0 0 0;
+    margin-top: 1em;
   }
 
   p, h2, pre  {
     margin-top: 1em;
   }
 
-  p:first-of-type {
+  >*:first-child {
     margin-top: 0;
   }
 
   p:first-of-type {
-    //#type > #size > .lg;
+    #type > #size > .lg;
+    font-weight: 700;
+  }
+
+  figure + p:first-of-type {
+    margin-top: 2em;
   }
 
 
@@ -206,19 +207,38 @@ sub {
     color: inherit;
   }
 
+  abbr {
+    font-variant: small-caps;
+    text-transform: uppercase;
+  }
+
   //code
   code {
     font-family: 'Fira Mono', monospace;
-    font-size: 81%;
+    font-size: 87%;
   }
 
 
   p>code,
   li>code {
-    padding: unit(3/@base,rem);
+    padding: 0 unit(3/@base,rem);
     margin: 0 unit(-3/@base,rem);
     background-color: fade(black,5%);
     border-radius: unit(6/@base,rem);
+    border: 1px solid fade(black,7%);
+  }
+
+  blockquote {
+    #type > #size > .x-lg;
+    max-width: 100%;
+    margin-top: 2em;
+    font-weight: 700;
+  }
+
+  blockquote + p {
+    #type > #size > .sm;
+    color: @c_grey;
+    margin-bottom: 1em;
   }
 
   //code blocks

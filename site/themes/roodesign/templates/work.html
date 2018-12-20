@@ -1,28 +1,26 @@
 {{ section:site_header }}
 <section class="article article--hero">
-  <aside class="article__aside">
-    {{ meta }}
-    <dl class="meta-list">
-        <dt class="meta-list__title">{{ title }}</dt>
-        <dd class="meta-list__value">{{ value | markdown | smartypants }}</dd>
-    </dl>
-    {{ /meta }}
-    <dl class="meta-list meta-list--reverse">
-        <dt class="meta-list__title">Tags</dt>
-        <dd class="meta-list__value">{{ tags }}#<a href="{{ url }}">{{ title }}</a>{{ if not last }}, {{ /if }}{{ /tags }}</dd>
-    </dl>
-  </aside>
   <article class="article__content">
-    {{ assets:hero_image }}
-    <figure class="figure figure--x-wide figure--shadow figure--frame-browser">
-      <img src="{{ url }}" alt="{{ alt or title}}" class="figure__image" />
-    </figure>
-    {{ /assets:hero_image }}
+      {{ markdown:indent }}
+      {{ hero | strip_tags:p | smartypants }}
+    {{ /markdown:indent }}
   </article>
 </section>
 {{ /section:site_header }}
 
 <section class="article article--main">
+  <aside class="article__aside">
+      {{ meta }}
+      <dl class="meta-list">
+          <dt class="meta-list__title">{{ title }}</dt>
+          <dd class="meta-list__value">{{ value | markdown | smartypants }}</dd>
+      </dl>
+      {{ /meta }}
+      <dl class="meta-list">
+          <dt class="meta-list__title">Tags</dt>
+          <dd class="meta-list__value">{{ tags }}#<a href="{{ url }}">{{ title }}</a>{{ if not last }}, {{ /if }}{{ /tags }}</dd>
+      </dl>
+    </aside>
   <article class="article__content prose">
     {{ markdown:indent }}
       {{ content | strip_tags:p | smartypants }}

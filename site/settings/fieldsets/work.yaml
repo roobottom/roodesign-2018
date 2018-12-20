@@ -9,15 +9,10 @@ sections:
       tagline:
         type: markdown
         display: Tagline
-      hero_image:
-        container: main
-        folder: /
-        restrict: false
-        max_files: 1
-        type: assets
-        instructions: 'Choose a hero image to be displayed alongside the welcome text in the header.'
-        display: 'Hero image'
-        width: 50
+      hero:
+        type: markdown
+        display: Hero content
+        instructions: 'Displayed at the very top of the page'
       cover:
         container: main
         folder: /
@@ -27,6 +22,18 @@ sections:
         instructions: 'Choose and image for the card and social media'
         display: 'Cover'
         width: 50
+      content:
+        cheatsheet: false
+        restrict_assets: false
+        type: markdown
+        instructions: 'The main contents of the page'
+        display: Main content
+      asset_sets:
+        type: partial
+        fieldset: _assets
+  sidebar:
+    display: Sidebar
+    fields:
       meta:
         sets:
           meta_data:
@@ -43,40 +50,6 @@ sections:
         type: replicator
         instructions: 'Add one or more pieces of meta info to this work item'
         display: Meta
-  main-content:
-    display: 'Main Content'
-    fields:
-      content:
-        cheatsheet: false
-        restrict_assets: false
-        type: markdown
-        instructions: 'Welcome text to be shown in the header'
-        display: Content
-      asset_sets:
-        type: partial
-        fieldset: _assets
-  sidebar:
-    display: Sidebar
-    fields:
-      header_colour:
-        type: text
-        instructions: 'Enter the header background colour in HEX format. EG. `#FF0022`'
-        display: 'Header Colour'
-        default: '#'
-      header_triangle_colour:
-        type: text
-        instructions: 'Enter the header triangle colour in HEX format, eg `#FF0022`'
-        display: 'Header triangle colour'
-        default: '#'
-      header_text_colour:
-        options:
-          black: Black
-          white: White
-        inline: true
-        type: radio
-        instructions: 'Select the colour of text in header and hero areas'
-        display: 'Header text colour'
-        default: black
 taxonomies: true
 title: Work
 create_title: 'New work item'
