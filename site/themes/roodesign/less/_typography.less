@@ -106,11 +106,18 @@ sub {
 }
 
 
+// article.prose:first-of-type p:first-of-type {
+//   #type > #size > .lg;
+// }
+
 .prose {
 
   h2 {
     font-weight: 900;
     #type > #size > .h2;
+  }
+
+  figure ~ h2 {
     clear: right;
   }
 
@@ -120,20 +127,16 @@ sub {
     margin-top: 1em;
   }
 
-  p, h2, pre  {
+  p, pre  {
     margin-top: 1em;
   }
+
 
   >*:first-child {
     margin-top: 0;
   }
 
-  p:first-of-type {
-    #type > #size > .lg;
-    font-weight: 700;
-  }
-
-  figure + p:first-of-type {
+  h2 {
     margin-top: 2em;
   }
 
@@ -141,10 +144,6 @@ sub {
 
   h3, figure {
     margin-top: 2em;
-  }
-
-  figure.figure--aside {
-    margin-top: 1em;
   }
 
   >ul,>ol {
@@ -160,7 +159,7 @@ sub {
   }
   ul li {
     list-style-position: outside;
-    list-style-image: url('/site/themes/roodesign/img/bullet.svg');
+    list-style-image: url('../img/bullet.svg');
   }
   li {
     margin-top: 0.2em;
@@ -231,14 +230,29 @@ sub {
   blockquote {
     #type > #size > .x-lg;
     max-width: 100%;
-    margin-top: 2em;
-    font-weight: 700;
+    margin: 2em;
+    font-style: italic;
+    position: relative;
+    color: @c_grey;
+    
+    &:before {
+      content: "\201C";
+      font-size: 800%;
+      position: absolute;
+      left: unit(-30/@base,rem);
+      top: -50%;
+      color: #EEF1F5;
+      z-index: -1;
+      font-weight: 900;
+      font-style: normal;
+    }
   }
 
   blockquote + p {
     #type > #size > .sm;
     color: @c_grey;
-    margin-bottom: 1em;
+    margin: 2em;
+    margin-top: -2em;
   }
 
   //code blocks

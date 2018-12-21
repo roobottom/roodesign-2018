@@ -2,10 +2,15 @@
   .gutter();
 
   &--hero {
-
+    margin-bottom: unit(@v-space/@base,rem);
   }
   &--main {
     .v-space(1,3);
+    clear: right;
+  }
+
+  &__aside {
+    .v-space(0,1);
   }
 
   .break-min({

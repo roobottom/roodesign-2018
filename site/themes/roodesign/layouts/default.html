@@ -39,6 +39,10 @@
       <stop offset="0%" stop-color="MediumSpringGreen" />
       <stop offset="100%" stop-color="Magenta" />
     </linearGradient>
+    <linearGradient id="triangle-grad" x2="0" y2="1">
+        <stop offset="0%" stop-color="var(--triangle-grad-top)" />
+        <stop offset="100%" stop-color="var(--triangle-grad-bottom)" />
+      </linearGradient>
   </svg>
 
 
@@ -64,7 +68,6 @@
           <h1 id="headline">{{ title | widont | smartypants }}</h1>
         </div>
 
-
         {{ yield:site_header }}
 
   </header>
@@ -87,8 +90,7 @@
   </footer>
 
 
-  <script src="{{ theme:js }}"></script>
-  {{ theme:js src="roodesign" tag="true" }}
+  {{# {{ theme:js src="roodesign" tag="true" }} #}}
 </body>
 
 </html>

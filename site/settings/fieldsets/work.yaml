@@ -11,7 +11,7 @@ sections:
         display: Tagline
       hero:
         type: markdown
-        display: Hero content
+        display: 'Hero content'
         instructions: 'Displayed at the very top of the page'
       cover:
         container: main
@@ -20,20 +20,30 @@ sections:
         max_files: 1
         type: assets
         instructions: 'Choose and image for the card and social media'
-        display: 'Cover'
+        display: Cover
         width: 50
       content:
         cheatsheet: false
         restrict_assets: false
         type: markdown
         instructions: 'The main contents of the page'
-        display: Main content
+        display: 'Main content'
       asset_sets:
         type: partial
         fieldset: _assets
   sidebar:
     display: Sidebar
     fields:
+      key-color:
+        type: text
+        display: 'Key Colour'
+        default: '#'
+        instructions: 'Hex value or CSS color name'
+      second-color:
+        type: text
+        display: 'Second Colour'
+        default: '#'
+        instructions: 'Hex value or CSS color name'
       meta:
         sets:
           meta_data:

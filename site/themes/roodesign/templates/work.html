@@ -1,11 +1,21 @@
+{{ section:css }}
+#triangle-grad {
+  --triangle-grad-top: {{ key-color }};
+  --triangle-grad-bottom: {{ second-color }};
+}
+.site-header__background-triangle { 
+  fill: {{ key-color }};
+}
+{{ /section:css }}
+
 {{ section:site_header }}
+{{ if hero }}
 <section class="article article--hero">
-  <article class="article__content">
-      {{ markdown:indent }}
-      {{ hero | strip_tags:p | smartypants }}
-    {{ /markdown:indent }}
+  <article class="article__content prose">
+      {{ hero | markdown | empty_paragraph | smartypants }}
   </article>
 </section>
+{{ /if }}
 {{ /section:site_header }}
 
 <section class="article article--main">
@@ -22,9 +32,7 @@
       </dl>
     </aside>
   <article class="article__content prose">
-    {{ markdown:indent }}
-      {{ content | strip_tags:p | smartypants }}
-    {{ /markdown:indent }}
+      {{ content | empty_paragraph | smartypants }}
   </article>
 </section>
 
