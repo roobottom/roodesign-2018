@@ -8,13 +8,6 @@
 
   svg path { fill: inherit; }
 
-  &__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-  }
-
 
   &__background-triangle {
     fill: white;
@@ -31,3 +24,27 @@
  .page-home .site-header__background-triangle {
    fill: #F5DD7C;
  }
+
+
+ //move this:
+ .site-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -1;
+  display: none;
+  &__triangle {
+    fill: transparent;
+  }
+}
+
+.page-home .site-background {
+  display: block;
+  &__triangle {
+  fill: #F5DD7C;
+  }
+}
+.page-work .site-background {
+  display: block;
+}

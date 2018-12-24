@@ -1,3 +1,9 @@
+{{ section:css }}
+{{ if width-individual }}
+  .figure .figure__image { max-width: {{ width-individual }} }
+{{ /if }}
+{{ /section:css }}
+
 {{ asset_sets }}
 {{ if name == set }}
 <figure class="figure figure--{{ width}}{{ style }} figure--{{ value }}{{ /style }}">
@@ -9,7 +15,7 @@
       {{ if stage }}</div>{{ /if }}
       {{ /assets:assets }}
   {{ else }}
-    <div class="figure__gallery {{ if stage }} figure__gallery--stage{{ /if }}">
+    <div class="figure__gallery {{ if stage }} figure__gallery--stage{{ /if }}"{{ if width_individual }} style="grid-template-columns: repeat(auto-fit, minmax({{ width_individual}}px, 1fr)); grid-gap: {{ gap }}px;"{{ /if }}>
     {{ assets:assets }}
       <img src="{{ if extension | contains:png or extension | contains:jpg or extension | contains:jpeg }}{{ if brickwall }}{{ glide:url width="800" height="600" fit="crop_focal"  }}{{ else }}{{ glide:url width="800"  }}{{ /if }}{{ else }}{{ url }}{{ /if }}" class="figure__image" alt="{{ alt or caption }}"/>
     {{ /assets:assets }}

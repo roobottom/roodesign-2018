@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1808px" height="220px" viewBox="0 0 1808 220" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>add-on-roles</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="427" height="180"></rect>
+        <filter x="-7.0%" y="-16.7%" width="114.1%" height="133.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="0" y="0" width="427" height="180"></rect>
+        <filter x="-7.0%" y="-16.7%" width="114.1%" height="133.3%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-5" x="0" y="0" width="427" height="180"></rect>
+        <filter x="-7.0%" y="-16.7%" width="114.1%" height="133.3%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-7" x="0" y="0" width="427" height="180"></rect>
+        <filter x="-7.0%" y="-16.7%" width="114.1%" height="133.3%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="add-on-roles" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-12" transform="translate(467.000000, 20.000000)">
+            <g id="Rectangle">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <text id="Themes-lead-To-ensur" font-family="FiraSans-Ultra, Fira Sans" font-size="19" font-weight="600" line-spacing="28" fill="#404040">
+                <tspan x="20" y="43">Themes lead</tspan>
+                <tspan x="130.086" y="43" font-family="FiraSans-Regular, Fira Sans" font-weight="normal"></tspan>
+                <tspan x="20" y="71" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">To ensure our four themes are delightful to </tspan>
+                <tspan x="20" y="99" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">use and offer a consistent, high-quality user </tspan>
+                <tspan x="20" y="127" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">experience while maintaining their </tspan>
+                <tspan x="20" y="155" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">distinctive character.</tspan>
+            </text>
+        </g>
+        <g id="Group-13" transform="translate(914.000000, 20.000000)">
+            <g id="Rectangle">
+                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+            </g>
+            <text id="Product-Copy-Lead-To" font-family="FiraSans-Ultra, Fira Sans" font-size="19" font-weight="600" line-spacing="28" fill="#404040">
+                <tspan x="20" y="43">Product Copy Lead</tspan>
+                <tspan x="182.127" y="43" font-family="FiraSans-Regular, Fira Sans" font-weight="normal"></tspan>
+                <tspan x="20" y="71" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">To ensure labelling and instructions within </tspan>
+                <tspan x="20" y="99" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">Firefly is as clear as possible so users know </tspan>
+                <tspan x="20" y="127" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">what choices are available.</tspan>
+            </text>
+        </g>
+        <g id="Group-10" opacity="0.5" transform="translate(20.000000, 20.000000)">
+            <g id="Rectangle">
+                <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+            </g>
+            <text id="Web-Design-System-Ow" font-family="FiraSans-Ultra, Fira Sans" font-size="19" font-weight="600" line-spacing="28" fill="#404040">
+                <tspan x="20" y="43">Web Design System Owner</tspan>
+                <tspan x="252.009" y="43" font-family="FiraSans-Regular, Fira Sans" font-weight="normal"></tspan>
+                <tspan x="20" y="71" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">To be responsible for the development of a </tspan>
+                <tspan x="20" y="99" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">pattern library and style guide that are </tspan>
+                <tspan x="20" y="127" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">practical tools for designing and </tspan>
+                <tspan x="20" y="155" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">documenting web UI within Firefly. </tspan>
+            </text>
+        </g>
+        <g id="Group-11" opacity="0.5" transform="translate(1361.000000, 20.000000)">
+            <g id="Rectangle">
+                <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
+            </g>
+            <text id="Mobile-Design-System" font-family="FiraSans-Ultra, Fira Sans" font-size="19" font-weight="600" line-spacing="28" fill="#404040">
+                <tspan x="20" y="43">Mobile Design Systems Owner</tspan>
+                <tspan x="282.409" y="43" font-family="FiraSans-Regular, Fira Sans" font-weight="normal"></tspan>
+                <tspan x="20" y="71" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">To be responsible for the development of  </tspan>
+                <tspan x="20" y="99" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">pattern libraries and style guides for iOS and </tspan>
+                <tspan x="20" y="127" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">Android that are practical tools for designing </tspan>
+                <tspan x="20" y="155" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">and documenting mobile UI for Firefly.</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

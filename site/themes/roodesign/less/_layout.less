@@ -36,7 +36,9 @@
   
 }
 .grid--listing() {
-  grid-template-columns: repeat(auto-fit,minmax(360px,1fr));
+  @cols: 3;
+  @m: unit( ((@break-max - (2 * @gutter-max) - ((@cols - 1) * @h-space)) / @cols)/@base,rem);
+  grid-template-columns: repeat(auto-fit,minmax(@m,1fr));
 }
 
 .grid-column(@start: 1; @end: 13; @base-start: 1; @base-end: 3;) {

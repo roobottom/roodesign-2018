@@ -1,8 +1,8 @@
 <article class="card">
   <div class="card__cover">
-    <svg viewBox="0 0 100 100" width="100%" height="100%" aria-hidden="true" class="card__background" preserveAspectRatio="none">
+    <!--svg viewBox="0 0 100 100" width="100%" height="100%" aria-hidden="true" class="card__background" preserveAspectRatio="none">
       <use xlink:href="#triangle" class="card__triangle"{{ if triangle_colour }} style="fill:{{ triangle_colour }}{{ /if }}"></use>
-    </svg>
+    </svg-->
     {{ if cover }}
     {{ asset:cover }}
       <img src="{{ if extension | contains:png or extension | contains:jpg }}{{ glide:url width="600" height="420" fit="crop_focal" filter="{filter}"  }}{{ else }}{{ url }}{{ /if }}" alt="{{ alt or title }}" class="card__cover-image" />

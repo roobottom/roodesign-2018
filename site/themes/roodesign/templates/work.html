@@ -3,16 +3,22 @@
   --triangle-grad-top: {{ key-color }};
   --triangle-grad-bottom: {{ second-color }};
 }
-.site-header__background-triangle { 
+{{ if second-color or second-color != '#' }}
+.site-background__triangle { 
+  fill: url(#triangle-grad) {{ key-color }};
+}
+{{ else }}
+.site-background__triangle { 
   fill: {{ key-color }};
 }
+{{ /if }}
 {{ /section:css }}
 
 {{ section:site_header }}
 {{ if hero }}
 <section class="article article--hero">
   <article class="article__content prose">
-      {{ hero | markdown | empty_paragraph | smartypants }}
+      {{ hero | markdown | collapse_whitespace | no_paragraph_antlers }}
   </article>
 </section>
 {{ /if }}
@@ -32,7 +38,7 @@
       </dl>
     </aside>
   <article class="article__content prose">
-      {{ content | empty_paragraph | smartypants }}
+      {{ content | collapse_whitespace | no_paragraph_figure }}
   </article>
 </section>
 

@@ -32,8 +32,18 @@ fields:
               aside: 'Aside (float right)'
             inline: false
             type: radio
-            display: Width
+            display: Overall width
             default: default
+          width_individual:
+            display: Individual Width
+            type: text
+            width: 50
+            instructions: 'Set a manual `px` max-width for each image in this set (ignored by single images)'
+          gap:
+            display: Invidiual Gap
+            type: text
+            width: 50
+            instructions: 'Set a manial `px` gap between each image in this set (ignored by single images)'
           style:
             type: checkboxes
             dislay: Style options

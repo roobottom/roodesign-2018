@@ -7,6 +7,11 @@
   &--main {
     .v-space(1,3);
     clear: right;
+
+    article>p:first-child {
+      #type > #size > .lg;
+    }
+
   }
 
   &__aside {
@@ -20,6 +25,8 @@
     &__aside {
       float: right;
       width: 20%;
+      min-width: unit(150/@base,rem);
+      margin-left: unit(@h-space/@base,rem);
     }
 
     &__content {

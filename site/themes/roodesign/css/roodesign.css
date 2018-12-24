@@ -188,15 +188,10 @@ button {
 }
 h1 {
   font-weight: 900;
-  font-size: 2.4375rem;
+  font-size: 6vw;
   line-height: 1;
   width: 100%;
   display: block;
-}
-@media screen and (min-width: 30rem) {
-  h1 {
-    font-size: 5.5vw;
-  }
 }
 i,
 em {
@@ -269,7 +264,8 @@ sub {
 .prose > *:first-child {
   margin-top: 0;
 }
-.prose h2 {
+.prose h2,
+.prose figure + p {
   margin-top: 2em;
 }
 .prose h3,
@@ -281,7 +277,7 @@ sub {
   margin-top: 1em;
 }
 .prose li {
-  margin-left: 2em;
+  margin-left: 1em;
   padding-left: .2em;
 }
 .prose ol li {
@@ -421,12 +417,6 @@ sub {
 .site-header svg path {
   fill: inherit;
 }
-.site-header__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-}
 .site-header__background-triangle {
   fill: white;
 }
@@ -458,6 +448,26 @@ sub {
 }
 .page-home .site-header__background-triangle {
   fill: #F5DD7C;
+}
+.site-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -1;
+  display: none;
+}
+.site-background__triangle {
+  fill: transparent;
+}
+.page-home .site-background {
+  display: block;
+}
+.page-home .site-background__triangle {
+  fill: #F5DD7C;
+}
+.page-work .site-background {
+  display: block;
 }
 .site-footer {
   clear: right;
@@ -806,6 +816,16 @@ sub {
   padding-bottom: 6rem;
   clear: right;
 }
+.article--main article > p:first-child {
+  font-size: 1.1875rem;
+  line-height: 1.26315789;
+}
+@media screen and (min-width: 63.75rem) {
+  .article--main article > p:first-child {
+    font-size: 1.3125rem;
+    line-height: 1.52380952;
+  }
+}
 .article__aside {
   padding-top: 0rem;
   padding-bottom: 2rem;
@@ -814,6 +834,8 @@ sub {
   .article__aside {
     float: right;
     width: 20%;
+    min-width: 9.375rem;
+    margin-left: 1.875rem;
   }
   .article__content > * {
     max-width: 43.125rem;
@@ -846,9 +868,11 @@ sub {
 }
 .figure--wide {
   max-width: 80%;
+  clear: right;
 }
 .figure--x-wide {
   max-width: 100%;
+  clear: right;
 }
 @media screen and (min-width: 30rem) {
   .figure--aside {
@@ -906,8 +930,8 @@ sub {
   display: -ms-grid;
   display: grid;
   grid-gap: 2rem 1.875rem;
-  -ms-grid-columns: (minmax(360px, 1fr))[auto-fit];
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  -ms-grid-columns: (minmax(21.66666667rem, 1fr))[auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(21.66666667rem, 1fr));
 }
 @media screen and (min-width: 30rem) {
   .listing {

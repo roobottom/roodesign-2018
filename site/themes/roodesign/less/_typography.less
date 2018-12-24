@@ -17,8 +17,8 @@
       font-size: unit(19/@base,rem);
       line-height: 24/19;
       .break-mid({
-        font-size: unit(23/@base,rem);
-        line-height: 32/23;
+        font-size: unit(21/@base,rem);
+        line-height: 32/21;
       });
     }
     .x-lg() {
@@ -62,10 +62,7 @@ body, input, textarea, button {
 h1 {
   //font-family: 'carlson', serif;
   font-weight: 900;
-  .break-min({
-    font-size: 5.5vw;
-  });
-  font-size: unit(39/@base,rem);
+  font-size: 6vw;
   line-height: 1;
   width: 100%;
   display: block;
@@ -136,7 +133,8 @@ sub {
     margin-top: 0;
   }
 
-  h2 {
+  h2,
+  figure + p {
     margin-top: 2em;
   }
 
@@ -151,7 +149,7 @@ sub {
   }
 
   li {
-    margin-left: 2em;
+    margin-left: 1em;
     padding-left: .2em;
   }
   ol li {
