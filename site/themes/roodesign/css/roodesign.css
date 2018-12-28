@@ -353,37 +353,74 @@ sub {
   border: 1px solid rgba(0, 0, 0, 0.07);
 }
 .prose blockquote {
-  font-size: 1.3125rem;
-  line-height: 1.14285714;
-  max-width: 100%;
-  margin: 2em;
+  font-size: 1.1875rem;
+  line-height: 1.26315789;
+  margin: 2em 0;
   font-style: italic;
   position: relative;
-  color: #555555;
+  border: 2px solid black;
 }
 @media screen and (min-width: 63.75rem) {
   .prose blockquote {
-    font-size: 1.8125rem;
-    line-height: 1.10344828;
+    font-size: 1.3125rem;
+    line-height: 1.52380952;
   }
 }
-.prose blockquote:before {
-  content: "\201C";
-  font-size: 800%;
+.prose blockquote > p {
+  margin: 0;
+  padding: 2rem 1.875rem;
+  position: relative;
+  color: #000000;
+}
+.prose blockquote > p:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 2rem 1.875rem 0;
+  border-color: transparent black transparent transparent;
   position: absolute;
-  left: -1.875rem;
-  top: -50%;
-  color: #EEF1F5;
+  left: 1.875rem;
+  bottom: -2rem;
+}
+.prose blockquote > p:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 1.875rem 1.75rem 0;
+  border-color: transparent cyan transparent transparent;
+  position: absolute;
+  left: 1.875rem;
+  bottom: -1.75rem;
+}
+.prose blockquote:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 2.5rem 2.34375rem 0;
+  border-color: transparent cyan transparent transparent;
+  position: absolute;
+  left: 1.875rem;
+  bottom: -2.5rem;
+}
+.prose blockquote:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.46875rem;
+  background-color: cyan;
   z-index: -1;
-  font-weight: 900;
-  font-style: normal;
 }
 .prose blockquote + p {
   font-size: 1rem;
   line-height: 1.25;
   color: #555555;
-  margin: 2em;
-  margin-top: -2em;
+  margin: -1.5em 0 2em 5.625rem;
 }
 .prose pre {
   background-color: rgba(0, 0, 0, 0.05);
