@@ -100,6 +100,7 @@ class ComposerStaticInit0e2a1c61d40ac6c0e79762b6c7388d79
         'I' => 
         array (
             'Intervention\\Image\\' => 19,
+            'InlineSvg\\' => 10,
             'Illuminate\\' => 11,
         ),
         'G' => 
@@ -312,6 +313,10 @@ class ComposerStaticInit0e2a1c61d40ac6c0e79762b6c7388d79
         'Intervention\\Image\\' => 
         array (
             0 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
+        ),
+        'InlineSvg\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/oscarotero/inline-svg/src',
         ),
         'Illuminate\\' => 
         array (
@@ -1490,6 +1495,12 @@ class ComposerStaticInit0e2a1c61d40ac6c0e79762b6c7388d79
         'Illuminate\\View\\View' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/View.php',
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+        'InlineSvg\\Collection' => __DIR__ . '/..' . '/oscarotero/inline-svg/src/Collection.php',
+        'InlineSvg\\NotFoundException' => __DIR__ . '/..' . '/oscarotero/inline-svg/src/NotFoundException.php',
+        'InlineSvg\\Sources\\FileSystem' => __DIR__ . '/..' . '/oscarotero/inline-svg/src/Sources/FileSystem.php',
+        'InlineSvg\\Sources\\SourceInterface' => __DIR__ . '/..' . '/oscarotero/inline-svg/src/Sources/SourceInterface.php',
+        'InlineSvg\\Svg' => __DIR__ . '/..' . '/oscarotero/inline-svg/src/Svg.php',
+        'InlineSvg\\Transformers\\Cleaner' => __DIR__ . '/..' . '/oscarotero/inline-svg/src/Transformers/Cleaner.php',
         'Intervention\\Image\\AbstractColor' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/AbstractColor.php',
         'Intervention\\Image\\AbstractDecoder' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/AbstractDecoder.php',
         'Intervention\\Image\\AbstractDriver' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/AbstractDriver.php',
@@ -2597,11 +2608,14 @@ class ComposerStaticInit0e2a1c61d40ac6c0e79762b6c7388d79
         'Statamic\\Addons\\Nav\\NavTags' => __DIR__ . '/../..' . '/bundles/Nav/NavTags.php',
         'Statamic\\Addons\\Nav\\Tree' => __DIR__ . '/../..' . '/bundles/Nav/Tree.php',
         'Statamic\\Addons\\Nav\\TreeFactory' => __DIR__ . '/../..' . '/bundles/Nav/TreeFactory.php',
+        'Statamic\\Addons\\NoParagraphAntlers\\NoParagraphAntlersModifier' => __DIR__ . '/../..' . '/../site/addons/NoParagraphAntlers/NoParagraphAntlersModifier.php',
+        'Statamic\\Addons\\NoParagraphFigure\\NoParagraphFigureModifier' => __DIR__ . '/../..' . '/../site/addons/NoParagraphFigure/NoParagraphFigureModifier.php',
         'Statamic\\Addons\\NotFound\\NotFoundTags' => __DIR__ . '/../..' . '/bundles/NotFound/NotFoundTags.php',
         'Statamic\\Addons\\OAuth\\OAuthTags' => __DIR__ . '/../..' . '/bundles/OAuth/OAuthTags.php',
         'Statamic\\Addons\\Obfuscate\\ObfuscateTags' => __DIR__ . '/../..' . '/bundles/Obfuscate/ObfuscateTags.php',
         'Statamic\\Addons\\Pages\\PagesFieldtype' => __DIR__ . '/../..' . '/bundles/Pages/PagesFieldtype.php',
         'Statamic\\Addons\\Pages\\PagesTags' => __DIR__ . '/../..' . '/bundles/Pages/PagesTags.php',
+        'Statamic\\Addons\\Paragraph\\ParagraphModifier' => __DIR__ . '/../..' . '/../site/addons/Paragraph/ParagraphModifier.php',
         'Statamic\\Addons\\Parent\\ParentTags' => __DIR__ . '/../..' . '/bundles/Parent/ParentTags.php',
         'Statamic\\Addons\\Partial\\PartialFieldtype' => __DIR__ . '/../..' . '/bundles/Partial/PartialFieldtype.php',
         'Statamic\\Addons\\Partial\\PartialTags' => __DIR__ . '/../..' . '/bundles/Partial/PartialTags.php',
@@ -2664,6 +2678,7 @@ class ComposerStaticInit0e2a1c61d40ac6c0e79762b6c7388d79
         'Statamic\\Addons\\Suggest\\SuggestController' => __DIR__ . '/../..' . '/bundles/Suggest/SuggestController.php',
         'Statamic\\Addons\\Suggest\\SuggestFieldtype' => __DIR__ . '/../..' . '/bundles/Suggest/SuggestFieldtype.php',
         'Statamic\\Addons\\Suggest\\TypeMode' => __DIR__ . '/../..' . '/bundles/Suggest/TypeMode.php',
+        'Statamic\\Addons\\Svg\\SvgTags' => __DIR__ . '/../..' . '/../site/addons/svg/SvgTags.php',
         'Statamic\\Addons\\Table\\TableFieldtype' => __DIR__ . '/../..' . '/bundles/Table/TableFieldtype.php',
         'Statamic\\Addons\\Tags\\TagsFieldtype' => __DIR__ . '/../..' . '/bundles/Tags/TagsFieldtype.php',
         'Statamic\\Addons\\Taxonomy\\TaxonomyFieldtype' => __DIR__ . '/../..' . '/bundles/Taxonomy/TaxonomyFieldtype.php',

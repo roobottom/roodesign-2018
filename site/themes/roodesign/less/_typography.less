@@ -1,6 +1,10 @@
 //global type settings
 #type {
   #size() {
+    .x-sm() {
+      font-size: unit(14/@base,rem);
+      line-height: 20/14;
+    }
     .sm() {
       font-size: unit(16/@base,rem);
       line-height: 20/16;
@@ -23,10 +27,10 @@
     }
     .x-lg() {
       font-size: unit(21/@base,rem);
-      line-height: 24/21;
+      line-height: 28/21;
       .break-mid({
-        font-size: unit(29/@base,rem);
-        line-height: 32/29;
+        font-size: unit(23/@base,rem);
+        line-height: 32/23;
       });
     }
     .h2() {
@@ -60,12 +64,14 @@ body, input, textarea, button {
 
 
 h1 {
-  //font-family: 'carlson', serif;
   font-weight: 900;
-  font-size: 6vw;
+  font-size: unit(52/@base,rem);
   line-height: 1;
   width: 100%;
   display: block;
+  .break-min({
+    font-size: 6vw;
+  });
 }
 
 
@@ -103,15 +109,23 @@ sub {
 }
 
 
-// article.prose:first-of-type p:first-of-type {
-//   #type > #size > .lg;
-// }
-
 .prose {
+
+  p, li {
+    #type > #size > .p;
+  }
+
+  &--hero {
+    p, li {
+      #type > #size > .x-lg;
+    }
+  }
 
   h2 {
     font-weight: 900;
     #type > #size > .h2;
+    margin-top: 1em;
+    transform: ~"translateX( calc( -1 * (var(--gutter) / 4) ) )";
   }
 
   figure ~ h2 {
@@ -122,6 +136,7 @@ sub {
     font-weight: 900;
     #type > #size > .x-lg;
     margin-top: 1em;
+    + p { margin-top: .3em; }
   }
 
   p, pre  {
@@ -133,14 +148,15 @@ sub {
     margin-top: 0;
   }
 
-  h2,
   figure + p {
     margin-top: 2em;
   }
 
+  figure {
+    margin-top: 1em;
+  }
 
-
-  h3, figure {
+  figure.figure--frame-phone {
     margin-top: 2em;
   }
 
@@ -173,6 +189,28 @@ sub {
 
   ol li li {list-style-type: lower-alpha;}
   ol li li li {list-style-type: lower-roman;}
+
+  //rules
+  hr {
+
+    border: none;
+    overflow: visible;
+    margin-top: 4em;
+    
+    &:before {
+      content: "";
+      display: block;
+      width: unit( 2 / 12 * 100, %);
+      height: ~"calc(var(--gutter) / 4)";
+      background-color: var(--c-primary);
+      //margin-left: ~"calc( -1 * (var(--gutter) / 4) )";
+    }
+
+  }
+
+  &--hero hr {
+    margin-top: 2em;
+  }
 
   //tables
   table {
@@ -226,76 +264,20 @@ sub {
   }
 
   blockquote {
-    @color: cyan;
-    #type > #size > .lg;
-    margin: 2em 0;
-    font-style: italic;
-    position: relative;
-    border: 2px solid black;
+    @color: var(--c-primary);
+    margin-top: var(--gutter);
+    font-weight: 900;
 
     > p {
-      margin: 0;
-      padding: unit(@v-space/@base,rem) unit(@h-space/@base,rem);
-      position: relative;
-      color: contrast(@color);
-
-      //triangle border
-      &:before {
-        content: '';
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 unit(@v-space/@base,rem) unit(@h-space/@base,rem) 0;
-        border-color: transparent black transparent transparent;
-        position: absolute;
-        left: unit(@h-space/@base,rem);
-        bottom: unit(-1 * @v-space/@base,rem)
-      }
-      //triangle fill
-      &:after {
-        content: '';
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 unit((@v-space - 2)/@base,rem) unit((@h-space - 2)/@base,rem) 0;
-        border-color: transparent @color transparent transparent;
-        position: absolute;
-        left: unit(@h-space/@base,rem);
-        bottom: unit(-1 * (@v-space - 4)/@base,rem);
-      }
-
+      color: var(--c-primary);
+      #type > #size > .x-lg;
     }
 
-    //triangle overflow
-    &:before {
-        content: '';
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 unit((@v-space + (@v-space/4))/@base,rem) unit((@h-space + (@h-space/4))/@base,rem) 0;
-        border-color: transparent @color transparent transparent;
-        position: absolute;
-        left: unit(@h-space/@base,rem);
-        bottom: unit(-1 * (@v-space + (@v-space/4))/@base,rem);
-    }
-    //background overflow
-    &:after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: unit(@v-space/4/@base,rem);
-      left: unit(@h-space/4/@base,rem);
-      background-color: @color;
-      z-index: -1;
-    }
   }
-
   blockquote + p {
     #type > #size > .sm;
     color: @c_grey;
-    margin: -1.5em 0 2em unit(@h-space*3/@base,rem);
+    margin-bottom: var(--gutter);
   }
 
   //code blocks

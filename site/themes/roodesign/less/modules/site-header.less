@@ -1,5 +1,9 @@
 .site-header {
-  .v-space(1,0);
+  .v-space();
+
+  //background-color: var(--c-primary);
+
+  //box-shadow: inset unit((@h-space/2)/@base,rem) unit((@h-space/2)/@base,rem) 0 white, inset unit(-1 * (@h-space/2)/@base,rem) 0 0 white;;
 
 
   &, >* {
@@ -8,6 +12,13 @@
 
   svg path { fill: inherit; }
 
+  &__background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: unit(@v-space*2/@base,rem);
+  }
 
   &__background-triangle {
     fill: white;
@@ -15,9 +26,10 @@
 
 
   &__title {
-
     .gutter();
     .v-space();
+    //color: var(--c-primary-contrast);
+    text-align: center;
   }
 
 }

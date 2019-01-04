@@ -16,7 +16,7 @@ class NoParagraphFigureModifier extends Modifier
      */
     public function index($value, $params, $context)
     {
-        $pattern = '/(<p><figure)(.+?)(<\/figure>\s*<\/p>)/i';
+        $pattern = '/(<p>\s*<figure)(.+?)(<\/figure>\s*<\/p>)/i';
         $replacement = '<figure$2</figure>';
         return preg_replace($pattern, $replacement, $value);
     }

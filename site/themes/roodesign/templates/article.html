@@ -10,9 +10,7 @@
     </dl>
   </aside>
   <article class="prose article__content">
-    {{ markdown:indent }}
-      {{ content | strip_tags:p | smartypants }}
-    {{ /markdown:indent }}
+      {{ content | collapse_whitespace | no_paragraph_antlers | smartypants }}
   </article>
 </section>
 <nav class="prev-next">

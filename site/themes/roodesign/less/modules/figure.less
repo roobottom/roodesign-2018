@@ -2,16 +2,19 @@
 
   @c_device: #EEF1F5;
 
-  &__image {
+  &__image, svg {
     height: auto;
     display: block;
     width: 100%;
+    box-sizing: border-box;
   }
   &__caption {
     margin-top: 1em;
     max-width: unit(@prose-width/@base,rem);
+    margin-left: auto;
+    margin-right: auto;
     &, p, a {
-      #type > #size > .sm;
+      #type > #size > .x-sm;
       color: @c_grey;
     } 
     li {
@@ -25,15 +28,21 @@
     }
   }
 
+  &--default {
+    @prose-width-rem: unit(@prose-width/@base,rem);
+    max-width: ~"calc( var(--gutter) + @{prose-width-rem})"
+  }
+
   //widths {
   &--wide {
-    max-width: 80%;
+    max-width: unit(@prose-width * 1.5 /@base,rem);
     clear: right;
   }
 
 
   &--x-wide {
-    max-width: 100%;
+    max-width: none;
+    width: 100%;
     clear: right;
   }
 
@@ -51,7 +60,7 @@
   }
 
   &--shadow img {
-    box-shadow: 0 0 20px fade(black,30%);
+    box-shadow: 0 0 20px fade(black,20%);
   }
 
   &--overlay {
@@ -60,23 +69,32 @@
 
   &--frame-browser &__image {
     overflow: hidden;
-    border-radius: 5px;
-    border: 1px solid lighten(@c_grey,50%);
-    padding: 3% 1px 1px 1px;
-    background-color: @c_device;
+    border: ~"calc( (var(--gutter) / 4)) solid white";
   }
 
   &--frame-phone &__image {
     box-sizing: border-box;
     background-color: @c_device;
-    padding: 27% 5%;
+    padding: 17% 5%;
+    border: 1px solid darken(@c_device,10%);
     overflow: hidden;
-    border-radius: 56px;
+    border-radius: 6px;
     display: block;
+    .break-mid({ border-radius: 16px; });
+    .break-max({ border-radius: 36px; });
   }
 
 
-
+  &--on-stage {
+    width: 100vw;
+    margin-left: ~"calc(-1 * var(--gutter) - (var(--gutter) / 4))";
+    .break-max({
+      margin-left: ~"calc(-50vw + (var(--break) / 2) - var(--gutter) )";
+    });
+    box-sizing: border-box;
+    background-color: var(--c-primary);
+    //background-color: blue;
+  }
 
   &__gallery {
     display: grid;
@@ -84,13 +102,20 @@
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
   }
 
+  &--frame-phone &__gallery {
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  }
+
   &__gallery--stage,
   &__stage {
-    padding: unit(@v-space/@base,rem) unit(@h-space/@base,rem);
-    .break-mid({
-      padding: unit(@v-space*1.5/@base,rem) unit(@h-space*1.5/@base,rem);
+    padding: var(--gutter);
+    box-sizing: border-box;
+    .break-max({
+      max-width: var(--break);
+      margin-left: auto;
+      margin-right: auto;
     });
-    background-color: darken(@c_device,80%);
+
   }
 
 

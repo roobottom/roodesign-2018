@@ -33,7 +33,8 @@
         "symfony/yaml": "^3.0",
         "symfony/lock": "^3.4",
         "nesbot/carbon": "^1.34.0",
-        "edalzell/powertools": "*@dev"
+        "edalzell/powertools": "*@dev",
+        "benfurfie/svgclasses": "*@dev"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

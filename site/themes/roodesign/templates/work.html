@@ -1,23 +1,14 @@
-{{ section:css }}
-#triangle-grad {
-  --triangle-grad-top: {{ key-color }};
-  --triangle-grad-bottom: {{ second-color }};
+{{ section:styles }}
+:root {
+  --c-primary: {{ key-color }};
+  --c-primary-contrast: {{ second-color }};
 }
-{{ if second-color or second-color != '#' }}
-.site-background__triangle { 
-  fill: url(#triangle-grad) {{ key-color }};
-}
-{{ else }}
-.site-background__triangle { 
-  fill: {{ key-color }};
-}
-{{ /if }}
-{{ /section:css }}
+{{ /section:styles }}
 
 {{ section:site_header }}
 {{ if hero }}
 <section class="article article--hero">
-  <article class="article__content prose">
+  <article class="article__content prose prose--hero">
       {{ hero | markdown | collapse_whitespace | no_paragraph_antlers }}
   </article>
 </section>
@@ -38,7 +29,7 @@
       </dl>
     </aside>
   <article class="article__content prose">
-      {{ content | collapse_whitespace | no_paragraph_figure }}
+      {{ content | collapse_whitespace | no_paragraph_figure | smartypants }}
   </article>
 </section>
 

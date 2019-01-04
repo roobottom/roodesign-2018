@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 872 413">
+  <style>
+    .team-process-label {
+      font-size: 14px;
+      font-family: 'Fira Sans';
+      font-weight: 700;
+    }
+    .team-process-heading {
+      font-size: 40px;
+      font-family: 'Fira Sans';
+      font-weight: 900;
+    }
+  </style>
+  <g fill="none" fill-rule="evenodd">
+    <text fill="#000" class="team-process-heading">
+      <tspan x="157" y="243">What?</tspan>
+    </text>
+    <text fill="var(--c-primary)" class="team-process-label" transform="rotate(-45 57.094 140.094)">
+      <tspan x="-9.406" y="145.094">Generative research </tspan>
+    </text>
+    <text fill="var(--c-primary)" class="team-process-label" transform="rotate(45 271.012 45.012)">
+      <tspan x="223.012" y="50.012">Idea validation</tspan>
+    </text>
+    <path stroke="#C7C7C7" d="M13.707 213L213 412.293 412.293 213 213 13.707 13.707 213zM459.707 212L659 411.293 858.293 212 659 12.707 459.707 212z"/>
+    <text fill="var(--c-primary)" class="team-process-label" transform="rotate(-45 382.295 263.295)">
+      <tspan x="343.795" y="268.295">User stories</tspan>
+    </text>
+    <path fill="#FFF" stroke="var(--c-primary)" stroke-width="2" d="M1.414 213.5L13.5 225.586 25.586 213.5 13.5 201.414 1.414 213.5zM400.414 212.5l12.086 12.086 12.086-12.086-12.086-12.086-12.086 12.086zM201.414 14.5L213.5 26.586 225.586 14.5 213.5 2.414 201.414 14.5z"/>
+    <path fill="#FFF" stroke="#000" d="M200.066 28l-4.218.368-.46-5.229 9.448-.824.829 9.447-5.229.456-.37-4.218zM398.86 199.86v-4.235l5.25-.001-.004 9.482-9.482.003.001-5.249h4.234z"/>
+    <text fill="#000" class="team-process-heading">
+      <tspan x="611.5" y="240">How?</tspan>
+    </text>
+    <text fill="var(--c-primary)" class="team-process-label" transform="rotate(-45 495.315 147.315)">
+      <tspan x="439.815" y="152.315">Solution ideation</tspan>
+    </text>
+    <text fill="var(--c-primary)" class="team-process-label" transform="rotate(45 725.205 53.205)">
+      <tspan x="664.205" y="58.205">Solution validation</tspan>
+    </text>
+    <text fill="var(--c-primary)" class="team-process-label" transform="rotate(-45 810.326 280.326)">
+      <tspan x="746.326" y="285.326">Build-ready designs</tspan>
+    </text>
+    <path fill="#FFF" stroke="var(--c-primary)" stroke-width="2" d="M447.414 212.5l12.086 12.086 12.086-12.086-12.086-12.086-12.086 12.086zM846.414 211.5l12.086 12.086 12.086-12.086-12.086-12.086-12.086 12.086zM647.414 13.5L659.5 25.586 671.586 13.5 659.5 1.414 647.414 13.5z"/>
+    <path fill="#FFF" stroke="#000" d="M646.066 26l-4.218.368-.46-5.229 9.448-.824.829 9.447-5.229.456-.37-4.218zM844.86 198.86v-4.235l5.25-.001-.004 9.482-9.482.003.001-5.249h4.234z"/>
+    <path stroke="#C7C7C7" stroke-linecap="square" d="M425 213l23-.5"/>
+  </g>
+</svg>

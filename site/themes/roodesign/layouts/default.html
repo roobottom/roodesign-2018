@@ -9,7 +9,7 @@
     <title>{{ title or site_title }}</title>
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700,700i,900,900i|Fira+Mono|Fira+Sans+Extra+Condensed:900" rel="stylesheet"/>
     <link rel="stylesheet" href="{{ theme:css }}">
-    <style>{{ yield:css }}</style>
+    <style>{{ yield:styles }}</style>
     <link rel="shortcut icon" type="image/x-icon" href="/site/themes/roodesign/img/favicon.ico" />
 </head>
 
@@ -20,8 +20,8 @@
     <symbol id="triangle" viewBox="0 0 100 100">
       <path d="M0 0h100L0 100z" fill-rule="evenodd"/>
     </symbol>
-    <symbol id="triangle-reverse" viewBox="0 0 100 50">
-      <path d="M0 0L100 50L0 50z" fill-rule="evenodd"/>
+    <symbol id="triangle-reverse">
+      <path d="M0 50L100 50L100 0z" fill-rule="evenodd"/>
     </symbol>
     <linearGradient id="grad-A" x2="0" y2="1">
       <stop offset="0%" stop-color="aqua" />
@@ -48,23 +48,23 @@
 
     <header class="site-header">
 
-        <nav class="navigation navigation--main">
-          <a href="/" class="navigation__logo"><svg width="28" height="35" xmlns="http://www.w3.org/2000/svg"><g class="navigation__logo" fill="none" fill-rule="evenodd"><path d="M13.6 8.507L.707 21.4 13.6 34.293 26.493 21.4 13.6 8.507z"/><path d="M20.388 1L27.2 7.808 13.6 21.4 0 7.808 6.812 1 13.6 7.784z"/></g></svg></a>
-          <ul class="navigation__items">
-            <li><a href="/"{{ if current_uri == '/' }} class="active"{{ /if }}>Home</a></li>
-            <li><a href="/work"{{ if segment_1 == 'work' }} class="active"{{ /if }}>My work</a></li>
-            <li><a href="/articles"{{ if segment_1 == 'articles' }} class="active"{{ /if }}>Articles</a></li>
-            <!--<li><a href="#">Services</a></li>
-            <li><a href="#">About me</a></li> -->
-            <li><a href="/contact"{{ if segment_1 == 'contact' }} class="active"{{ /if }}>Contact me</a></li>
-          </ul>
-        </nav>
+      <nav class="navigation navigation--main">
+        <a href="/" class="navigation__logo"><svg width="28" height="35" xmlns="http://www.w3.org/2000/svg"><g class="navigation__logo" fill="none" fill-rule="evenodd"><path d="M13.6 8.507L.707 21.4 13.6 34.293 26.493 21.4 13.6 8.507z"/><path d="M20.388 1L27.2 7.808 13.6 21.4 0 7.808 6.812 1 13.6 7.784z"/></g></svg></a>
+        <ul class="navigation__items">
+          <li><a href="/"{{ if current_uri == '/' }} class="active"{{ /if }}>Home</a></li>
+          <li><a href="/work"{{ if segment_1 == 'work' }} class="active"{{ /if }}>My work</a></li>
+          <li><a href="/articles"{{ if segment_1 == 'articles' }} class="active"{{ /if }}>Articles</a></li>
+          <!--<li><a href="#">Services</a></li>
+          <li><a href="#">About me</a></li> -->
+          <li><a href="/contact"{{ if segment_1 == 'contact' }} class="active"{{ /if }}>Contact me</a></li>
+        </ul>
+      </nav>
 
-        <div class="site-header__title">
-          <h1 id="headline">{{ title | widont | smartypants }}</h1>
-        </div>
+      <div class="site-header__title">
+        <h1 id="headline">{{ title | smartypants }}</h1>
+      </div>
 
-        {{ yield:site_header }}
+      {{ yield:site_header }}
 
   </header>
 
