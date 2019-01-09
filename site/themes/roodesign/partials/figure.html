@@ -1,39 +1,28 @@
-{{ section:css }}
-{{ if width-individual }}
-  .figure .figure__image { max-width: {{ width-individual }} }
-{{ /if }}
-{{ /section:css }}
-
 {{ asset_sets }}
 {{ if name == set }}
-<figure class="figure figure--{{ width}}{{ style }} figure--{{ value }}{{ /style }}{{ if stage }} figure--on-stage{{ /if }}">
+  <figure class="figure figure--style-{{ overall_style }} figure--width-{{ width }}">
+    <div class="figure__items">
+      {{ assets:assets }}
+      <div class="figure__item {{ style }}figure__item--{{ value }} {{ /style }}">
 
-  {{ if assets | count == 1 }}
-    {{ assets:assets }}
-    {{ if stage }}<div class="figure__stage">{{ /if }}
-      {{ if extension | contains:svg }}
-        {{ url | output }}
-      {{ else }}
-        <img src="{{ if extension | contains:png  or extension | contains:jpeg }}{{ glide:url width="1200" }}{{ else }}{{ url }}{{ /if }}" class="figure__image" alt="{{ alt or caption }}"/>
-      {{ /if }}
-    {{ if stage }}</div>{{ /if }}
-    {{ /assets:assets }}
-  {{ else }}
-    <div class="figure__gallery {{ if stage }} figure__gallery--stage{{ /if }}"{{ if width_individual }} style="grid-template-columns: repeat(auto-fit, minmax({{ width_individual}}px, 1fr)); grid-gap: {{ gap }}px;"{{ /if }}>
-    {{ assets:assets }}
-    {{ if extension | contains:svg }}
-        {{ url | output }}
-      {{ else }}
-        <img src="{{ if extension | contains:png or extension | contains:jpg or extension | contains:jpeg }}{{ if brickwall }}{{ glide:url width="800" height="600" fit="crop_focal"  }}{{ else }}{{ glide:url width="800"  }}{{ /if }}{{ else }}{{ url }}{{ /if }}" class="figure__image" alt="{{ alt or caption }}"/>
-      {{ /if }}
-        {{ /assets:assets }}
+        {{ if extension | contains:png or extension | contains:jpeg and width > 800 }}
+          {{ if overall_style == 'sideBySide' or overall_style == 'sideBySideNarrow' }}
+            <img src="{{ glide:url width='800' }}" class="figure__image" />
+          {{ elseif overall_style == 'brickwall' }}
+            <img src="{{ glide:url width='800' height='600' fit='crop_focal' }}" class="figure__image" />
+          {{ else }}
+            <img src="{{ glide:url width='1280' }}" class="figure__image" />
+          {{ /if }}
+        {{ elseif extension | contains:svg }}
+          {{ url | output }}
+        {{ else }}
+          <img src="{{ url }}" class="figure__image" />
+        {{ /if }}
+      
+      </div>
+      {{ /assets:assets }}
     </div>
-  {{ /if }}
-
-  {{ if caption }}<figcaption class="figure__caption ">{{ caption | markdown | smartypants }}</figcaption>{{ /if }}
-</figure>
-
-  
-
+  {{ if caption }}<figcaption class="figure__caption">{{ caption | markdown | smartypants }}</figcaption>{{ /if }}
+  </figure>
 {{ /if }}
 {{ /asset_sets }}

@@ -41,9 +41,13 @@ sections:
         instructions: 'Hex value or CSS color name'
       second-color:
         type: text
-        display: 'Second Colour'
+        display: 'Key Contrast Colour'
         default: '#'
         instructions: 'Hex value or CSS color name'
+      third-color:
+        type: text
+        display: 'Tertiary Colour'
+        instructions: 'Hex value or CSS color name (top of the header gradient)'
       meta:
         sets:
           meta_data:

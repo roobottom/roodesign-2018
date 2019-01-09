@@ -34,11 +34,19 @@
       });
     }
     .h2() {
-      font-size: unit(36/@base,rem);
-      line-height: 40/36;
+      font-size: unit(31/@base,rem);
+      line-height: 36/31;
       .break-mid({
-        font-size: unit(44/@base,rem);
-        line-height: 48/44;
+        font-size: unit(36/@base,rem);
+        line-height: 40/36;
+      });
+    }
+    .h1() {
+      font-size: unit(52/@base,rem);
+      line-height: 56/52;
+      .break-mid({
+        font-size: unit(69/@base,rem);
+        line-height: 72/69;
       });
     }
   }
@@ -47,7 +55,7 @@
 
 body, input, textarea, button {
   font-family: 'Fira Sans', sans-serif;
-  color: black;
+  color: lighten(black,2%);
   font-feature-settings: "liga" 1;
   font-variant: normal;
   font-kerning: normal;
@@ -60,19 +68,6 @@ body, input, textarea, button {
   }
 }
 
-
-
-
-h1 {
-  font-weight: 900;
-  font-size: unit(52/@base,rem);
-  line-height: 1;
-  width: 100%;
-  display: block;
-  .break-min({
-    font-size: 6vw;
-  });
-}
 
 
 
@@ -119,13 +114,18 @@ sub {
     p, li {
       #type > #size > .x-lg;
     }
+    color: var(--c-primary-contrast);
   }
 
   h2 {
     font-weight: 900;
     #type > #size > .h2;
-    margin-top: 1em;
-    transform: ~"translateX( calc( -1 * (var(--gutter) / 4) ) )";
+    margin-top: 2em;
+    //transform: ~"translateX( calc( -1 * (var(--gutter) / 4) ) )";
+  }
+
+  hr + h2 {
+    margin-top: .5em;
   }
 
   figure ~ h2 {
@@ -153,12 +153,9 @@ sub {
   }
 
   figure {
-    margin-top: 1em;
+    margin-top: 1.5em;
   }
 
-  figure.figure--frame-phone {
-    margin-top: 2em;
-  }
 
   >ul,>ol {
     margin-top: 1em;

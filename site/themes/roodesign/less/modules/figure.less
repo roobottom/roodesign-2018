@@ -9,10 +9,13 @@
     box-sizing: border-box;
   }
   &__caption {
-    margin-top: 1em;
+    margin-top: .5em;
     max-width: unit(@prose-width/@base,rem);
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    justify-content: center;
+    grid-column: ~"1 / -1";
     &, p, a {
       #type > #size > .x-sm;
       color: @c_grey;
@@ -28,28 +31,23 @@
     }
   }
 
-  &--default {
+
+  //widths  
+  &--width-default {
     @prose-width-rem: unit(@prose-width/@base,rem);
     max-width: ~"calc( var(--gutter) + @{prose-width-rem})"
   }
-
-  //widths {
-  &--wide {
+  &--width-wide {
     max-width: unit(@prose-width * 1.5 /@base,rem);
     clear: right;
   }
 
-
-  &--x-wide {
+  &--width-x-wide {
     max-width: none;
     width: 100%;
     clear: right;
   }
-
-
-
-  &--aside {
-
+  &--width-aside {
     .break-min({
       float: right;
       max-width: 50%;
@@ -59,64 +57,72 @@
     });
   }
 
-  &--shadow img {
+  //overall styles
+  &--style-default {
+
+  }
+  &--style-brickwall &__items,
+  &--style-sideBySide &__items,
+  &--style-sideBySideNarrow &__items {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  }
+
+  &--style-sideBySideNarrow &__items {
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  }
+
+  &--style-stacked &__items {
+    position: relative;
+  }
+
+  &--style-stacked &__item {
+    position: absolute;
+    width: 40%;
+    bottom: -0.5em;
+    right: ~"calc( -1 * var(--gutter) / 2 )";
+    max-height: 90%;
+    &:first-child {
+      position: relative;
+      width: 100%;
+      max-height: none;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  //individual items
+  &__item {
+    box-sizing: border-box;
+  }
+  &--style-default &__item {
+    margin-top: 1.5em;
+  }
+
+  &__item--shadow {
     box-shadow: 0 0 20px fade(black,20%);
   }
 
-  &--overlay {
-    mix-blend-mode: multiply;
-  }
-
-  &--frame-browser &__image {
+  &__item--frame {
     overflow: hidden;
     border: ~"calc( (var(--gutter) / 4)) solid white";
   }
 
-  &--frame-phone &__image {
-    box-sizing: border-box;
-    background-color: @c_device;
+  &__item--frame-phone {
+    background-color: white;
     padding: 17% 5%;
     border: 1px solid darken(@c_device,10%);
     overflow: hidden;
     border-radius: 6px;
     display: block;
-    .break-mid({ border-radius: 16px; });
-    .break-max({ border-radius: 36px; });
+    .break-mid({ padding: 19% 5%; border-radius: 16px; });
+    .break-max({ padding: 21% 5%; border-radius: 36px; });
+    img {
+      border: 1px solid darken(@c_device,10%);
+    }
   }
 
-
-  &--on-stage {
-    width: 100vw;
-    margin-left: ~"calc(-1 * var(--gutter) - (var(--gutter) / 4))";
-    .break-max({
-      margin-left: ~"calc(-50vw + (var(--break) / 2) - var(--gutter) )";
-    });
-    box-sizing: border-box;
-    background-color: var(--c-primary);
-    //background-color: blue;
-  }
-
-  &__gallery {
-    display: grid;
-    grid-gap: unit(@h-space/@base,rem);
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-  }
-
-  &--frame-phone &__gallery {
-    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-  }
-
-  &__gallery--stage,
-  &__stage {
-    padding: var(--gutter);
-    box-sizing: border-box;
-    .break-max({
-      max-width: var(--break);
-      margin-left: auto;
-      margin-right: auto;
-    });
-
-  }
 
 
 

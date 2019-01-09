@@ -3,31 +3,35 @@
   --c-primary: {{ key-color }};
   --c-primary-contrast: {{ second-color }};
 }
+{{ if third-color }}
+  .site-header {
+    background-image: linear-gradient({{ third-color }}, var(--c-primary));
+  }
+{{ /if }}
 {{ /section:styles }}
 
 {{ section:site_header }}
 {{ if hero }}
 <section class="article article--hero">
   <article class="article__content prose prose--hero">
-      {{ hero | markdown | collapse_whitespace | no_paragraph_antlers }}
+      {{ hero | markdown | collapse_whitespace | no_paragraph_antlers | smartypants }}
   </article>
 </section>
+<svg viewBox="0 0 100 50" width="100%" aria-hidden="true" class="hero-background" preserveAspectRatio="none">
+  <use xlink:href="#triangle-reverse" class="hero-background__triangle"></use>
+</svg>
 {{ /if }}
 {{ /section:site_header }}
 
 <section class="article article--main">
   <aside class="article__aside">
-      {{ meta }}
-      <dl class="meta-list">
-          <dt class="meta-list__title">{{ title }}</dt>
-          <dd class="meta-list__value">{{ value | markdown | smartypants }}</dd>
-      </dl>
-      {{ /meta }}
-      <dl class="meta-list">
-          <dt class="meta-list__title">Tags</dt>
-          <dd class="meta-list__value">{{ tags }}#<a href="{{ url }}">{{ title }}</a>{{ if not last }}, {{ /if }}{{ /tags }}</dd>
-      </dl>
-    </aside>
+    {{ meta }}
+    <dl class="meta-list">
+      <dt class="meta-list__title">{{ title }}</dt>
+      <dd class="meta-list__value">{{ value | markdown | smartypants }}</dd>
+    </dl>
+    {{ /meta }}
+  </aside>
   <article class="article__content prose">
       {{ content | collapse_whitespace | no_paragraph_figure | smartypants }}
   </article>

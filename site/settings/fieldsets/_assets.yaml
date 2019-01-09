@@ -11,19 +11,21 @@ fields:
             type: assets
             display: Assets
             container: main
-          brickwall:
-            type: toggle
-            display: Brickwall effect (resize)?
-            width: 50
-          stage:
-            type: toggle
-            display: Put this figure on a stage?
-            width: 50
           caption:
             cheatsheet: false
             restrict_assets: false
             type: markdown
             display: Caption
+          overall_style:
+            type: radio
+            display: Overall Style
+            options:
+              default: Single image or stacked multiple images
+              brickwall: A brickwall effect gallery
+              sideBySide: A side-by-side gallery
+              sideBySideNarrow: A side-by-side gallery (allowing more items per row)
+              stacked: Stacked images, one on top of the other, Left to right
+            default: default
           width:
             options:
               default: Default
@@ -34,24 +36,13 @@ fields:
             type: radio
             display: Overall width
             default: default
-          width_individual:
-            display: Individual Width
-            type: text
-            width: 50
-            instructions: 'Set a manual `px` max-width for each image in this set (ignored by single images)'
-          gap:
-            display: Invidiual Gap
-            type: text
-            width: 50
-            instructions: 'Set a manial `px` gap between each image in this set (ignored by single images)'
           style:
             type: checkboxes
-            dislay: Style options
+            display: Individual image style
             options:
               shadow: Drop Shadow
-              frame-browser: Browser Frame
+              frame: Frame
               frame-phone: Phone Frame
-              overlay: Blend with background
     type: replicator
     instructions: 'A grouping of assets you can refer to with a `{{ partial:figure set="name" }}` tag.'
     display: 'Asset Sets'
