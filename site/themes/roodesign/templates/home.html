@@ -1,6 +1,20 @@
-<section class="intro">
-    <div class="intro__welcome prose">
-      {{ partial:icon name="blip" }}
-      {{ content | smartypants }}
-    </div>
+---
+fieldset: homepage
+---
+{{ section:site_header }}
+<section class="article article--teaser">
+  <article class="article__content prose">
+    {{ content | smartypants }}
+  </article>
+</section>
+<svg viewBox="0 0 100 50" width="100%" aria-hidden="true" class="hero-background" preserveAspectRatio="none">
+  <use xlink:href="#triangle-reverse" class="hero-background__triangle"></use>
+</svg>
+{{ /section:site_header }}
+<section class="article article--main">
+  <article class="article__content">
+    {{ card_set }}
+      {{ partial:card }}
+    {{ /card_set }}
+  </article>
 </section>

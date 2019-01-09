@@ -3,7 +3,7 @@
 
   background-color: var(--c-primary);
 
-  //box-shadow: inset unit((@h-space/2)/@base,rem) unit((@h-space/2)/@base,rem) 0 white, inset unit(-1 * (@h-space/2)/@base,rem) 0 0 white;;
+  box-shadow: inset unit((@h-space/2)/@base,rem) unit((@h-space/2)/@base,rem) 0 white, inset unit(-1 * (@h-space/2)/@base,rem) 0 0 white;;
 
 
   &, >* {
@@ -41,33 +41,20 @@
   }
 
 }
- .page-home .site-header__background-triangle {
-   fill: #F5DD7C;
+ .page-home .site-header {
+   background-color: #F6F6F6;
+   background-image: linear-gradient(white, #F6F6F6);
+ }
+
+ .page-home,
+ .page-work {
+   .site-header {
+     .v-space(1,2)
+   }
  }
 
 
- //move this:
- .site-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  z-index: -1;
-  display: none;
-  &__triangle {
-    fill: transparent;
-  }
-}
 
-.page-home .site-background {
-  display: block;
-  &__triangle {
-  fill: #F5DD7C;
-  }
-}
-.page-work .site-header {
-  .v-space(1,2);
-}
 
 .hero-background {
   position: absolute;

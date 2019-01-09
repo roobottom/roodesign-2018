@@ -1,23 +1,6 @@
-<article class="card">
-  <div class="card__cover">
-    <!--svg viewBox="0 0 100 100" width="100%" height="100%" aria-hidden="true" class="card__background" preserveAspectRatio="none">
-      <use xlink:href="#triangle" class="card__triangle"{{ if triangle_colour }} style="fill:{{ triangle_colour }}{{ /if }}"></use>
-    </svg-->
-    {{ if cover }}
-    {{ asset:cover }}
-      <img src="{{ if extension | contains:png or extension | contains:jpg }}{{ glide:url width="600" height="420" fit="crop_focal" filter="{filter}"  }}{{ else }}{{ url }}{{ /if }}" alt="{{ alt or title }}" class="card__cover-image" />
-    {{ /asset:cover}}
-    {{ /if }}
-  </div>
-  <h2 class="card__title"><a href="{{ url }}" class="card__link">{{ title | widont | smartypants }}</a></h2>
+<div class="card card--{{ card_style }}" style="background-image:url({{ glide:card_background_image width='800' filter='greyscale' }}); background-position: {{ asset:card_background_image }}{{ focus_css }}{{ /asset:card_background_image }};">
   <div class="card__content prose">
-    {{ content | markdown | smartypants | paragraph | striptags:a }}
+    <h2>{{ card_title }}</h2>
+    {{ card_content | markdown | smartypants }}
   </div>
-  {{ footer }}
-    key{{ key }} value{{ value }}
-  {{ /footer }}
-  <ul class="card__meta">
-    <li>{{ if date_format }}{{ date format={date_format} }}{{ else }}{{ date }}{{ /if }}{{ format }}</li>
-    {{ if read_time }}<li><strong>{{ content | read_time }} min read</strong></li>{{ /if }}
-  </ul>
-</article>
+</div>

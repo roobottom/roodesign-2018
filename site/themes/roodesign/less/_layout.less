@@ -32,20 +32,24 @@
   display: grid;
   grid-gap: unit(@v-space/@base,rem) unit(@h-space/@base,rem);
 }
-.grid--article() {
-  
-}
-.grid--listing() {
-  @cols: 3;
+
+.grid--listing(@cols: 3) {
   @m: unit( ((@break-max - (2 * @gutter-max) - ((@cols - 1) * @h-space)) / @cols)/@base,rem);
   grid-template-columns: repeat(auto-fit,minmax(@m,1fr));
 }
 
-.grid-column(@start: 1; @end: 13; @base-start: 1; @base-end: 3;) {
-  grid-column-start: @base-start;
-  grid-column-end: @base-end;
-  .break-min({
-    grid-column-start: @start;
-    grid-column-end: @end;
-  });
+.grid-0 {
+  .gutter();
+  .grid;
+}
+
+.grid-2 {
+  .grid();
+  .grid--listing(2);
+}
+
+.grid-3 {
+  .gutter();
+  .grid();
+  .grid--listing();
 }

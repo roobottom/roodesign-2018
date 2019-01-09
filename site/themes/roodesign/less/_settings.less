@@ -23,12 +23,22 @@
 //colours
 @c_grey: #555555;
 
+@c_red: #E97055;
+@c_yellow: #F9CD68;
+@c_green: #71CBAF;
+@c_blue: #004ADB;
+
 :root {
     --c-primary: white;
     --c-primary-contrast: black;
 
     --gutter: unit(@gutter / @base,rem);
     --break: auto;
+
+    --c-red: @c_red;
+    --c-yellow: @c_yellow;
+    --c-green: @c_green;
+    --c-blue: @c_blue;
 
     .break-min({
         --gutter: unit(@gutter-min / @base,rem);
