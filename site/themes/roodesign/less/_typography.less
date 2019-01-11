@@ -121,7 +121,7 @@ sub {
     font-weight: 900;
     #type > #size > .h2;
     margin-top: 2em;
-    //transform: ~"translateX( calc( -1 * (var(--gutter) / 4) ) )";
+    transform: ~"translateX( calc( -1 * (var(--gutter) / 4) ) )";
   }
 
   hr + h2 {
@@ -142,6 +142,13 @@ sub {
   p, pre  {
     margin-top: 1em;
   }
+  p.align-bottom {
+    //margin-top: auto;
+  }
+
+  form {
+    margin-top: 2em;
+  }
 
 
   >*:first-child {
@@ -159,6 +166,7 @@ sub {
 
   >ul,>ol {
     margin-top: 1em;
+    padding-left: .3em;
   }
 
   li {
@@ -207,6 +215,13 @@ sub {
 
   &--hero hr {
     margin-top: 2em;
+  }
+
+  //time
+  time {
+    #type > #size > .x-sm;
+    color: @c_grey;
+    margin-top: 1em;
   }
 
   //tables
@@ -263,11 +278,16 @@ sub {
   blockquote {
     @color: var(--c-primary);
     margin-top: var(--gutter);
-    font-weight: 900;
 
     > p {
       color: var(--c-primary);
-      #type > #size > .x-lg;
+      font-style: italic;
+      font-weight: 700;
+      position: relative;
+      &:before {
+        content: "“";
+
+      }
     }
 
   }

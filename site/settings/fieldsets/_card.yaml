@@ -20,4 +20,10 @@ fields:
       default: With Image
       plain: No image
     default: default
+  card_link:
+    type: text
+    display: URL to the linked page
+  card_link_title:
+    type: text
+    display: The text for this card's call-to-action
 hide: true

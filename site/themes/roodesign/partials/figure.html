@@ -5,7 +5,7 @@
       {{ assets:assets }}
       <div class="figure__item {{ style }}figure__item--{{ value }} {{ /style }}">
 
-        {{ if extension | contains:png or extension | contains:jpeg and width > 800 }}
+        {{ if extension | contains:png or extension | contains:jpeg or extension | contains:jpg and width > 800 }}
           {{ if overall_style == 'sideBySide' or overall_style == 'sideBySideNarrow' }}
             <img src="{{ glide:url width='800' }}" class="figure__image" />
           {{ elseif overall_style == 'brickwall' }}

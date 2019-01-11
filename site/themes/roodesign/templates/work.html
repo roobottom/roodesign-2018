@@ -3,11 +3,12 @@
   --c-primary: {{ key-color }};
   --c-primary-contrast: {{ second-color }};
 }
-{{ if third-color }}
+{{# {{ if cover }}
   .site-header {
-    background-image: linear-gradient({{ third-color }}, var(--c-primary));
+    /background-image:url({{ glide:cover format="jpg" quality="30" filter='greyscale'  }});
+    background-position: {{ asset:cover }}{{ focus_css }}{{ /asset:cover }};
   }
-{{ /if }}
+{{ /if }} #}}
 {{ /section:styles }}
 
 {{ section:site_header }}

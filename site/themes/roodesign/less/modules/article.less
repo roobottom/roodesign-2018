@@ -4,9 +4,9 @@
 
   &--hero {
     position: relative;
+    .v-space(1);
   }
   &--main {
-    .v-space(0,3);
     clear: right;
   }
 
@@ -32,7 +32,7 @@
         margin-left: auto;
         margin-right: auto;
       }
-      blockquote, .card {
+      .card {
         max-width: @prose-width-rem;
       }
     }
@@ -41,14 +41,19 @@
         max-width: @prose-width-rem;
       }
     }
+    &--listing &__content {
+      > * {
+        max-width: unit((@prose-width + (@prose-width / 4)) / @base, rem);
+      }
+    }
   });
 
 
 }
 
-.page-home .article--teaser {
+.page-home .article--hero {
   .v-space(1,4);
 }
-.page-home .article--main {
+.page-home .article--listing {
   margin-top: unit( -1 * (@v-space * 4) / @base, rem );
 }

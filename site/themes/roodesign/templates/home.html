@@ -1,9 +1,27 @@
 ---
 fieldset: homepage
 ---
+{{ section:styles }}
+  {{# {{ card_set }}
+    #card-{{ index }}:before {
+      background-image:url({{ glide:card_background_image width='800' filter='greyscale' }}); 
+      background-position: {{ asset:card_background_image }}{{ focus_css }}{{ /asset:card_background_image }};
+    }
+  {{ /card_set }} #}}
+  {{ collection:work }}
+  #card-{{ index }}:before {
+  background-image:url({{ glide:cover width='800' filter='greyscale' }});
+  background-position: {{ asset:cover }}{{ focus_css }}{{ /asset:cover }};
+  background-color: {{ key-color }};
+  }
+  {{ /collection:work }}
+{{ /section:styles }}
+  
+
+  
 {{ section:site_header }}
-<section class="article article--teaser">
-  <article class="article__content prose">
+<section class="article article--hero">
+  <article class="article__content prose prose--hero">
     {{ content | smartypants }}
   </article>
 </section>
@@ -11,10 +29,15 @@ fieldset: homepage
   <use xlink:href="#triangle-reverse" class="hero-background__triangle"></use>
 </svg>
 {{ /section:site_header }}
-<section class="article article--main">
-  <article class="article__content">
-    {{ card_set }}
-      {{ partial:card }}
-    {{ /card_set }}
+
+<section class="article article--listing">
+  <article class="article__content prose">
+    {{# {{ card_set }}
+      {{ partial:card id="{index}" }}
+    {{ /card_set }} #}}
+    {{ collection:work limit="3" }}
+      {{ partial:card id="{index}" card_link="{url}" card_link_text="View this project" card_title="{title}"
+    card_date="{date}" card_content="{tagline}" }}
+    {{ /collection:work }}
   </article>
 </section>

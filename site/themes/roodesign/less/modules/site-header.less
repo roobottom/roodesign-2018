@@ -2,8 +2,11 @@
   .v-space();
 
   background-color: var(--c-primary);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 
-  box-shadow: inset unit((@h-space/2)/@base,rem) unit((@h-space/2)/@base,rem) 0 white, inset unit(-1 * (@h-space/2)/@base,rem) 0 0 white;;
+  //box-shadow: inset unit((@h-space/2)/@base,rem) unit((@h-space/2)/@base,rem) 0 white, inset unit(-1 * (@h-space/2)/@base,rem) 0 0 white;;
 
 
   &, >* {
@@ -27,7 +30,7 @@
 
   &__title {
     .gutter();
-    .v-space();
+    .v-space(1,0);
     display: block;
     #type > #size > .h1;
     color: var(--c-primary-contrast);
@@ -41,19 +44,20 @@
   }
 
 }
- .page-home .site-header {
-   background-color: #F6F6F6;
-   background-image: linear-gradient(white, #F6F6F6);
+ .page-home .site-header,
+ .page-work-listing .site-header,
+ .page-default .site-header,
+ .page-contact .site-header  {
+   @c: #F6F6F6;
+   background-color: @c;
+   background-image: linear-gradient(white, @c);
  }
 
- .page-home,
- .page-work {
-   .site-header {
-     .v-space(1,2)
-   }
- }
+ 
 
-
+.page-work .site-header {
+  background-blend-mode: overlay;
+}
 
 
 .hero-background {

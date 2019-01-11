@@ -82,7 +82,6 @@
     width: 40%;
     bottom: -0.5em;
     right: ~"calc( -1 * var(--gutter) / 2 )";
-    max-height: 90%;
     &:first-child {
       position: relative;
       width: 100%;
@@ -106,7 +105,9 @@
 
   &__item--frame {
     overflow: hidden;
-    border: ~"calc( (var(--gutter) / 4)) solid white";
+    border: 1px solid @c_device;
+    padding: ~"calc( (var(--gutter) / 8))";
+    background-color: white;
   }
 
   &__item--frame-phone {

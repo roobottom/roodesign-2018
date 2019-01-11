@@ -1,6 +1,10 @@
-<section class="intro">
-    <div class="intro__welcome prose">
-      {{ partial:icon name="blip" }}
-      {{ content }}
-    </div>
+{{ section:site_header }}
+<section class="article article--hero">
+  <article class="article__content prose prose--hero">
+    {{ content | smartypants }}
+  </article>
 </section>
+<svg viewBox="0 0 100 50" width="100%" aria-hidden="true" class="hero-background" preserveAspectRatio="none">
+  <use xlink:href="#triangle-reverse" class="hero-background__triangle"></use>
+</svg>
+{{ /section:site_header }}
