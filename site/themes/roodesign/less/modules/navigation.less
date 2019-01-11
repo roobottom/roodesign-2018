@@ -4,6 +4,7 @@
 
   a {
     color: black;
+    color: var(--c-primary-contrast);
     text-decoration: none;
   }
 
@@ -16,11 +17,9 @@
 
   &__logo {
     stroke: black;
+    stroke: var(--c-primary-contrast);
   }
 
-  &--white &__logo {
-    stroke: white;
-  }
 
   &__items {
     .break-min({
@@ -36,23 +35,25 @@
 
   &--main {
     .gutter();
-    .grid();
-    .v-space(0,1);
-    text-align: right;
-    .break-min({
-      text-align: left;
-    });
-
-  }
-
-  &--main &__logo {
-    .grid-column(1,2,1,2);
-    justify-self: start;
+    display: flex;
+    justify-content: space-between;
   }
 
   &--main &__items {
-    .grid-column(2,13,2,3);
-    align-self: center;
+    text-align: right;
   }
+
+  .break-min({
+
+    align-items: center;
+
+    &--main &__items li {
+      margin-left: unit(@h-space/@base,rem);
+    }
+
+  });
+
+
+
 
 }

@@ -1,0 +1,10 @@
+<div class="card card--{{ card_style }}" id="card-{{ id }}">
+  <div class="card__content">
+    <div class="card__prose prose">
+      <h2>{{ card_title }}</h2>
+      {{ if card_date }}<time datetime="{{ card_date }}">{{ card_date format="F Y" }}</time>{{ /if }}
+      {{ card_content | markdown | smartypants }}
+    </div>
+    {{ if card_link }}<a href="{{ card_link }}" class="card__cta button button--secondary">{{ card_link_text }}</a>{{ /if }}
+  </div>
+</div>

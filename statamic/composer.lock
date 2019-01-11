@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c04f9da9a280a66ded30f1c0a4299e2",
+    "content-hash": "9f8ec7dffaf71fae03be6471443169b4",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -198,6 +198,23 @@
                 "webprofiler"
             ],
             "time": "2017-06-01T17:46:08+00:00"
+        },
+        {
+            "name": "benfurfie/svgclasses",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../site/addons/svg",
+                "reference": "52f6daf1c1d0da564132dc0e984e622a97c82800",
+                "shasum": null
+            },
+            "require": {
+                "oscarotero/inline-svg": "^2.0"
+            },
+            "type": "library",
+            "transport-options": {
+                "symlink": false
+            }
         },
         {
             "name": "classpreloader/classpreloader",
@@ -2136,6 +2153,49 @@
             "time": "2016-09-16T12:04:44+00:00"
         },
         {
+            "name": "oscarotero/inline-svg",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oscarotero/inline-svg.git",
+                "reference": "228507a75da6695c45a644a331d740732c1168d5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oscarotero/inline-svg/zipball/228507a75da6695c45a644a331d740732c1168d5",
+                "reference": "228507a75da6695c45a644a331d740732c1168d5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "InlineSvg\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oscar Otero",
+                    "email": "oom@oscarotero.com",
+                    "homepage": "http://oscarotero.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP library to embed svg in the html",
+            "homepage": "https://github.com/oscarotero/inline-svg",
+            "keywords": [
+                "icons",
+                "svg"
+            ],
+            "time": "2016-08-25T15:42:56+00:00"
+        },
+        {
             "name": "paragonie/random_compat",
             "version": "v1.4.2",
             "source": {
@@ -3908,6 +3968,52 @@
             "time": "2015-06-14T21:17:01+00:00"
         },
         {
+            "name": "erusev/parsedown",
+            "version": "1.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown.git",
+                "reference": "92e9c27ba0e74b8b028b111d1b6f956a15c01fc1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/92e9c27ba0e74b8b028b111d1b6f956a15c01fc1",
+                "reference": "92e9c27ba0e74b8b028b111d1b6f956a15c01fc1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Parsedown": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "Parser for Markdown.",
+            "homepage": "http://parsedown.org",
+            "keywords": [
+                "markdown",
+                "parser"
+            ],
+            "time": "2018-03-08T01:11:30+00:00"
+        },
+        {
             "name": "fzaninotto/faker",
             "version": "v1.6.0",
             "source": {
@@ -5388,7 +5494,8 @@
         "mustangostang/spyc": 20,
         "michelf/php-smartypants": 20,
         "netcarver/textile": 20,
-        "edalzell/powertools": 20
+        "edalzell/powertools": 20,
+        "benfurfie/svgclasses": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

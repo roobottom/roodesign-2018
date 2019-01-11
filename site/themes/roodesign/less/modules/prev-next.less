@@ -1,6 +1,9 @@
 .prev-next {
   border-top: 1px solid black;
+  //border-top: 1px solid var(--c-primary);
   position: relative;
+  clear: right;
+  margin-top: unit(@v-space*2/@base,rem);
 
   li { list-style: none; }
 
@@ -12,22 +15,20 @@
   }
 
   &__items {
-    .grid();
     .gutter();
     .v-space();
+    display: grid;
+    grid-template-columns: ~"[prev] 1fr [next] 1fr";
+    grid-gap: unit(@h-space/@base,rem);
   }
 
   &__item--prev {
-    grid-column: 1 / span 1;
-    .break-min({ grid-column: 1 / span 6; });
-    .break-max({ grid-column: 2 / span 5; });
+    grid-column: prev;
   }
   &__item--next {
-    grid-column: 2 / span 1;
-    .break-min({ grid-column: 7 / span 6; });
-    .break-max({ grid-column: 7 / span 5; });
     justify-self: end;
     text-align: right;
+    grid-column: next;
   }
 
   &__link {

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="427px" height="180px" viewBox="0 0 427 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>product-copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="product-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="427" height="180"></rect>
+        <rect id="Rectangle" x="0" y="0" width="427" height="180"></rect>
+        <text id="Product-Copy-Lead-To" font-family="FiraSans-Ultra, Fira Sans" font-size="19" font-weight="600" line-spacing="28" fill="#404040">
+            <tspan x="20" y="43">Product Copy Lead</tspan>
+            <tspan x="182.127" y="43" font-family="FiraSans-Regular, Fira Sans" font-weight="normal"></tspan>
+            <tspan x="20" y="71" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">To ensure labelling and instructions within </tspan>
+            <tspan x="20" y="99" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">Firefly is as clear as possible so users know </tspan>
+            <tspan x="20" y="127" font-family="FiraSans-Italic, Fira Sans" font-style="italic" font-weight="normal">what choices are available.</tspan>
+        </text>
+    </g>
+</svg>

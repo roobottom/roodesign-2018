@@ -6,6 +6,8 @@
     @p: unit(@gutter-min/@base,rem);
     padding-left: @p;
     padding-right: @p;
+    margin: 0 auto;
+    max-width: unit( (@break-max - (@gutter-max * 2)) / @base,rem);
   });
   .break-mid({
     @p: unit(@gutter-mid/@base,rem);
@@ -28,18 +30,26 @@
 
 .grid() {
   display: grid;
-  grid-column-gap: unit(@grid-gap,px);
-  grid-template-columns: repeat(2,1fr);
-  .break-min({ grid-template-columns: repeat(12,1fr); });
-  margin: 0 auto;
-  max-width: unit( (@break-max - (@gutter-max * 2)) / @base,rem);
+  grid-gap: unit(@v-space/@base,rem) unit(@h-space/@base,rem);
 }
 
-.grid-column(@start: 1; @end: 13; @base-start: 1; @base-end: 3;) {
-  grid-column-start: @base-start;
-  grid-column-end: @base-end;
-  .break-min({
-    grid-column-start: @start;
-    grid-column-end: @end;
-  });
+.grid--listing(@cols: 3) {
+  @m: unit( ((@break-max - (2 * @gutter-max) - ((@cols - 1) * @h-space)) / @cols)/@base,rem);
+  grid-template-columns: repeat(auto-fit,minmax(@m,1fr));
+}
+
+.grid-0 {
+  .gutter();
+  .grid;
+}
+
+.grid-2 {
+  .grid();
+  .grid--listing(2);
+}
+
+.grid-3 {
+  .gutter();
+  .grid();
+  .grid--listing();
 }

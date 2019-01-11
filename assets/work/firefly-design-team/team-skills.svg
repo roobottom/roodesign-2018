@@ -1,0 +1,100 @@
+<svg viewBox="0 0 930 300" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .label {
+            text-anchor: end;
+            font-family: 'Fira Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .role {
+            font-family: 'Fira Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 900;
+        }
+        @media screen and (min-width: 500px) {
+            
+        }
+    </style>
+    <defs>
+        <rect id="skill-unselected" fill="white" stroke="#D4D4D4" width="50" height="20"/>
+        <g id="skill-selected" fill-rule="evenodd" fill="none">
+            <rect x="0" y="0" width="50" height="20" fill="var(--c-primary)"/>
+        </g>
+        <g id="none">
+            <use href="#skill-unselected"/>
+            <use href="#skill-unselected" y="30"/>
+            <use href="#skill-unselected" y="60"/>
+        </g>
+        <g id="low">
+            <use href="#skill-unselected"/>
+            <use href="#skill-unselected" y="30"/>
+            <use href="#skill-selected" y="60"/>
+        </g>
+        <g id="medium">
+            <use href="#skill-unselected"/>
+            <use href="#skill-selected" y="30"/>
+            <use href="#skill-selected" y="60"/>
+        </g>
+        <g id="high">
+            <use href="#skill-selected"/>
+            <use href="#skill-selected" y="30"/>
+            <use href="#skill-selected" y="60"/>
+        </g>
+    </defs>
+    <g>
+        <text x="220" y="24" class="role">UX Researcher</text>
+        <rect width="540" height="38" stroke="#D4D4D4" fill="none"/>    
+    </g>
+    <g>
+        <text x="698" y="40" class="role">UI Designer</text>
+        <rect width="450" height="38" stroke="#D4D4D4" fill="none" x="480" y="16"/>    
+    </g>
+    <g transform="translate(0,70)">
+        <text x="25" y="100" transform="rotate(-90 25 100)" class="label">User research</text>
+        <use href="#high"/>   
+    </g>
+    <g transform="translate(80,70)">
+        <text x="25" y="100" transform="rotate(-90 25 100)" class="label">User modeling</text>
+        <use href="#medium"/>   
+    </g>
+    <g transform="translate(160,70)">
+        <text x="25" y="100" transform="rotate(-90 25 100)" class="label">User testing</text>
+        <use href="#medium"/>   
+    </g>
+    <g transform="translate(240,70)">
+        <text x="25" y="100" transform="rotate(-90 25 100)" class="label">User analytics</text>
+        <use href="#low"/>   
+    </g>
+    <g transform="translate(320,70)">
+        <text x="25" y="100" transform="rotate(-90 25 100)" class="label">Test analysis</text>
+        <use href="#medium"/>   
+    </g>
+    <g transform="translate(400,70)">
+        <text x="25" y="100" transform="rotate(-90 25 100)" class="label">Workshop design</text>
+        <use href="#high"/>   
+    </g>
+    <g transform="translate(480,70)">
+        <text x="25" y="100" transform="rotate(-90 25 100)" class="label">Wireframing</text>
+        <use href="#high"/>   
+    </g>
+    <g transform="translate(560,70)">
+        <text x="25" y="100" transform="rotate(-90 25 100)" class="label">Prototyping</text>
+        <use href="#low"/>   
+    </g>
+    <g transform="translate(640,70)">
+        <text x="25" y="100" transform="rotate(-90 25 100)" class="label">UI design</text>
+        <use href="#low"/>   
+    </g>
+    <g transform="translate(720,70)">
+        <text x="25" y="100" transform="rotate(-90 25 100)" class="label">Motion design</text>
+        <use href="#none"/>   
+    </g>
+    <g transform="translate(800,70)">
+        <text x="25" y="100" transform="rotate(-90 25 100)" class="label">Graphic design</text>
+        <use href="#none"/>   
+    </g>
+    <g transform="translate(880,70)">
+        <text x="25" y="100" transform="rotate(-90 25 100)" class="label">HTML/CSS</text>
+        <use href="#none"/>   
+    </g>
+</svg>

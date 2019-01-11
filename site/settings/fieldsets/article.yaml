@@ -6,6 +6,15 @@ sections:
         display: Title
         type: text
         localizable: true
+      cover:
+        container: main
+        folder: articles
+        restrict: false
+        max_files: 1
+        mode: grid
+        type: assets
+        instructions: 'The article cover image to be used on listing pages and social media links'
+        display: Cover
       content:
         cheatsheet: true
         restrict_assets: false
@@ -14,36 +23,9 @@ sections:
   assets:
     display: Assets
     fields:
-      asset_sets:
-        sets:
-          set:
-            display: Set
-            fields:
-              name:
-                type: text
-                display: Name
-              assets:
-                type: assets
-                display: Assets
-                container: main
-                folder: articles
-              caption:
-                cheatsheet: false
-                restrict_assets: false
-                type: markdown
-                display: Caption
-              width:
-                options:
-                  default: Default
-                  wide: Wide
-                  x_wide: 'Extra Wide'
-                inline: false
-                type: radio
-                display: Width
-                default: default
-        type: replicator
-        instructions: 'A grouping of assets you can refer to with a `{{ figure set="name" }}` tag.'
-        display: 'Asset Sets'
+      asset_sets:    
+        type: partial
+        fieldset: _assets
   sidebar:
     display: Sidebar
     fields:

@@ -1,0 +1,28 @@
+{{ asset_sets }}
+{{ if name == set }}
+  <figure class="figure figure--style-{{ overall_style }} figure--width-{{ width }}">
+    <div class="figure__items">
+      {{ assets:assets }}
+      <div class="figure__item {{ style }}figure__item--{{ value }} {{ /style }}">
+
+        {{ if extension | contains:png or extension | contains:jpeg or extension | contains:jpg and width > 800 }}
+          {{ if overall_style == 'sideBySide' or overall_style == 'sideBySideNarrow' }}
+            <img src="{{ glide:url width='800' }}" class="figure__image" />
+          {{ elseif overall_style == 'brickwall' }}
+            <img src="{{ glide:url width='800' height='600' fit='crop_focal' }}" class="figure__image" />
+          {{ else }}
+            <img src="{{ glide:url width='1280' }}" class="figure__image" />
+          {{ /if }}
+        {{ elseif extension | contains:svg }}
+          {{ url | output }}
+        {{ else }}
+          <img src="{{ url }}" class="figure__image" />
+        {{ /if }}
+      
+      </div>
+      {{ /assets:assets }}
+    </div>
+  {{ if caption }}<figcaption class="figure__caption">{{ caption | markdown | smartypants }}</figcaption>{{ /if }}
+  </figure>
+{{ /if }}
+{{ /asset_sets }}

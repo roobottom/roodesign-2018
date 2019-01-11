@@ -1,21 +1,56 @@
 @base: 16; //base text size
-@gutter: 30; //site gutter
+@prose-width: 640; //max witdth of prose
 
 //gloabl breakpoints
-@break-min: 680;
+@break-min: 480;
 @break-mid: 1020;
-@break-max: 1440;
+@break-max: 1400;
 
 //vertical space
 @v-space: 32;
+//horizontal space
+@h-space: 30;
 
 //grid settings
-@grid-gap: 20;
+@grid-gap: @h-space;
 
 //responsive gutters
+@gutter: 30; //site gutter
 @gutter-min: 40;
 @gutter-mid: 40;
 @gutter-max: 60;
 
 //colours
 @c_grey: #555555;
+
+@c_red: #E97055;
+@c_yellow: #F9CD68;
+@c_green: #71CBAF;
+@c_blue: #004ADB;
+
+:root {
+    --c-primary: white;
+    --c-primary-contrast: black;
+
+    --gutter: unit(@gutter / @base,rem);
+    --break: auto;
+
+    --c-red: @c_red;
+    --c-yellow: @c_yellow;
+    --c-green: @c_green;
+    --c-blue: @c_blue;
+
+    .break-min({
+        --gutter: unit(@gutter-min / @base,rem);
+        --break: unit(@break-min / @base,rem);
+    });
+    .break-mid({
+        --gutter: unit(@gutter-mid / @base,rem);
+        --break: unit(@break-mid / @base,rem);
+    });
+    .break-max({
+        --gutter: unit(@gutter-max / @base,rem);
+        --break: unit(@break-max / @base,rem);
+    });
+
+}

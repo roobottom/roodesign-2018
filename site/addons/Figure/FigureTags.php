@@ -21,12 +21,20 @@ class FigureTags extends Tags
       {
         if($set['name'] == $targetSet)
         {
-          $class = "figure figure--w-".$set['width'];
+          if(count($set['assets']) > 1)
+          {
+            $class = "figure figure--gallery figure--gallery-". count($set['assets']) ." figure--w-".$set['width'];
+          }
+          else
+          {
+            $class = "figure figure--w-".$set['width'];
+          }
           $tag = "<figure class='$class'>";
           foreach($set['assets'] as $file)
           {
             $asset = Asset::wherePath(ltrim($file, '/'));
-            $tag .= "<img src='".$asset->url()."' class='figure__image' data-width='".$asset->width()."' data-height='".$asset->height()."' />";
+            $settings = ['w'=>1200];
+            $tag .= "<img src='".$asset->manipulate($settings)."' class='figure__image' data-width='".$asset->width()."' data-height='".$asset->height()."' />";
 
           }
           if($set['caption'])

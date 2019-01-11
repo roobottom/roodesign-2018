@@ -1,0 +1,29 @@
+fields:
+  card_title:
+    type: text
+    display: Card title
+  card_content:
+    type: markdown
+    display: Card Content
+  card_background_color:
+    type: text
+    display: Background colour
+  card_background_image:
+    type: assets
+    display: Background image
+    max_files: 1
+    container: main
+  card_style:
+    type: radio
+    display: Style
+    options:
+      default: With Image
+      plain: No image
+    default: default
+  card_link:
+    type: text
+    display: URL to the linked page
+  card_link_title:
+    type: text
+    display: The text for this card's call-to-action
+hide: true

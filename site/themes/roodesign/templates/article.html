@@ -1,15 +1,47 @@
-<section class="article">
-<article class="prose article__content">
-  {{ content }}
-</article>
-<aside class="article__meta">
-  <dl class="meta-list  meta-list--inline">
-      <dt class="meta-list__title">I wrote this on</dt>
-      <dd class="meta-list__value">{{ date }}</dd>
-  </dl>
-  <dl class="meta-list meta-list--inline">
-      <dt class="meta-list__title">Tags</dt>
-      <dd class="meta-list__value">{{ tags }}#<a href="{{ url }}">{{ title }}</a>{{ if not last }}, {{ /if }}{{ /tags }}</dd>
-  </dl>
-</aside>
+<section class="article article--main">
+  <aside class="article__aside">
+    <dl class="meta-list">
+        <dt class="meta-list__title">I wrote this on</dt>
+        <dd class="meta-list__value">{{ date }}</dd>
+    </dl>
+    <dl class="meta-list meta-list--inline">
+        <dt class="meta-list__title">Tags</dt>
+        <dd class="meta-list__value">{{ tags }}#<a href="{{ url }}">{{ title }}</a>{{ if not last }}, {{ /if }}{{ /tags }}</dd>
+    </dl>
+  </aside>
+  <article class="prose article__content">
+      {{ content | collapse_whitespace | no_paragraph_antlers | smartypants }}
+  </article>
 </section>
+<nav class="prev-next">
+
+  <svg width="32" height="38" xmlns="http://www.w3.org/2000/svg" class="prev-next__badge">
+    <g fill="none" fill-rule="evenodd">
+      <path d="M15.735 8.851L27.993 21.2 15.735 33.549 3.477 21.2 15.735 8.851z" stroke="#FFF" stroke-width="5" fill="#FFF"/>
+      <path d="M15.735 8.842l4.36-4.39 7.9 7.953-12.26 12.343L3.476 12.405l7.9-7.953 4.36 4.39z" stroke="#FFF" stroke-width="5" fill="#FFF"/>
+      <path stroke="#3F3F3F" d="M15.735 12.4l8.736 8.8-8.736 8.8L7 21.2z"/>
+      <path stroke="#3F3F3F" d="M20.095 8l4.376 4.405-8.736 8.795L7 12.405 11.375 8l4.36 4.39z"/>
+    </g>
+  </svg>
+
+  <ul class="prev-next__items">
+
+    {{ collection:previous in="articles" as="items" limit="1" sort="date:asc" }}
+      {{ items }}
+        <li class="prev-next__item prev-next__item--prev">
+          <h3 class="prev-next__heading"><svg viewBox="0 0 10 14" width="10" height="14" aria-hidden="true" class="prev-next__arrow"><use xlink:href="/site/themes/roodesign/img/icons.svg#icon-prev"/></svg>Previous article</h3>
+          <a href="{{ url }}" rel="prev" class="prev-next__link">{{ title }}</a>
+        </li>
+      {{ /items }}
+    {{ /collection:previous }}
+
+    {{ collection:next in="articles" as="items" limit="1" sort="date:asc" }}
+    {{ items }}
+      <li class="prev-next__item prev-next__item--next">
+        <h3 class="prev-next__heading">Next article<svg viewBox="0 0 10 14" width="10" height="14" aria-hidden="true" class="prev-next__arrow"><use xlink:href="/site/themes/roodesign/img/icons.svg#icon-next"/></svg></h3>
+        <a href="{{ url }}" rel="prev" class="prev-next__link">{{ title }}</a>
+      </li>
+    {{ /items }}
+    {{ /collection:next }}
+  </ul>
+</nav>

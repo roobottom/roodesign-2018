@@ -1,0 +1,91 @@
+.card {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 75%;
+        height: 100%;
+        max-width: unit(440/@base,rem);
+        top: ~"calc(var(--gutter) / 3)";
+        left: 0;
+        background-blend-mode: overlay;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: all .6s ease-out;
+    }
+
+    //default colours
+    &:nth-of-type(3n-2):before {
+        background-color: @c_green;
+    }
+    &:nth-of-type(3n-1):before {
+        background-color: @c_yellow;
+        justify-content: flex-start;
+    }
+    &:nth-of-type(3n):before {
+        background-color: @c_blue;
+    }    
+
+    &__content {
+        padding: ~"calc(var(--gutter) / 1.5)";
+        box-sizing: border-box;
+        box-shadow: 0 0 20px fade(black,20%);
+        max-width: unit(440/@base,rem);
+        min-height: unit(340/@base,rem);
+        width: 100%;
+        //position: relative;
+        margin-left: var(--gutter);
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        transition: all .6s ease-out;
+        .break-min({
+            width: 75%;
+        });
+        background-color: white;
+    }
+
+    &__prose {
+        margin-bottom: 1em;
+    }
+
+    &__cta {
+        margin-top: auto;
+        align-self: flex-start;
+
+        //make whole box clickable
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+        }
+    }
+
+
+    //side-to-side effect
+    &:nth-of-type(even) {
+        justify-content: flex-start;
+    }
+    &:nth-of-type(even):before {
+        left: auto;
+        right: 0;
+    }
+    &:nth-of-type(even) &__content {
+        margin-left: 0;
+        margin-right: var(--gutter);
+    }
+    
+
+   
+
+}
+.card + .card {
+    margin-top: 4em;
+}
