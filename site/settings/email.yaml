@@ -1,3 +1,8 @@
-driver: sendmail
+driver: smtp
 from_email: roo@roodesign.co.uk
 from_name: 'Jon Roobottom'
+host: smtp.mailgun.org
+port: '587'
+encryption: tls
+username: postmaster@roodesign.co.uk
+password: '{env:MAILGUN_PASS}'
